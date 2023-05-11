@@ -1,0 +1,27 @@
+{
+	"$schema": "../schemas/hw-schema.json",
+	"classes": {
+		"English": {
+			"platform": "Moodle",
+			"pageURL": "https://moodle.regis.org/course/view.php?id=1215",
+			"format": "Dated",
+			"pattern": "\\d\\.\\d+",
+			"moodleTabSelector": "last"
+		},
+		"Theology": {
+			"platform": "Moodle",
+			"pageURL": "https://moodle.regis.org/course/view.php?id=150",
+			"format": "Dated",
+			"pattern": "For [a-zA-z]+ \\d\\/\\d+",
+			"moodleTab": "1C Homework"
+		},
+		"History": {
+			"platform": "Assignment Sheet",
+			"filepath": "C:\\Users\\carlf\\Downloads\\1C- Frosh Assignments-Spring 2022-23.docx",
+			"assignmentSheetFileFormat": "Microsoft Word Document (docx)",
+			"format": "Dated",
+			"pattern": "\\d+-[a-zA-z][a-zA-z][a-zA-z]",
+			"assignmentSheetExtraInfo": "In Table"
+		}
+	}
+}

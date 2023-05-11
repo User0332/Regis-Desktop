@@ -1,0 +1,61 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"title": "Homework Configuration",
+	"description": "Configuration of where to look for homework in Regis Desktop",
+	"properties": {
+		"classes": {
+			"description": "The different classes and where the homework is located",
+			"type": "object",
+			"patternProperties": {
+				"^.*$": {
+					"anyOf": [
+						{
+							"type": "object",
+							"properties": {
+								"platform": {
+									"enum": ["OneNote", "Moodle", "Assignment Sheet"],
+									"description": "The platform that the homework is located on"
+								},
+								"filepath": {
+									"type": "string",
+									"description": "If the homework is on an assignment sheet, the file path to the sheet"
+								},
+								"pageURL": {
+									"type": "string",
+									"description": "If the homework is on the web (Moodle, OneNote), the URL to the document it is located on"
+								},
+								"format": {
+									"enum": ["Dated", "Numbered", "Last Post"],
+									"description": "The format that the homework is listed in"
+								},
+								"pattern": {
+									"type": "string",
+									"description": "The regex pattern that the homework fits - be as precise in the pattern as possible"
+								},
+								"moodleTab": {
+									"type": "string",
+									"description": "If on moodle, the tab that the homework is under. Mutually exclusive with 'moodleTabSelector'"
+								},
+								"moodleTabSelector": {
+									"enum": ["first", "last"],
+									"description": "A selector to search in either the first or the last tab in moodle for the homework. Mutually exclusive with 'moodleTab'"
+								},
+								"assignmentSheetFileFormat": {
+									"enum": ["Microsoft Word Document (docx)", "Google Doc (gdoc)", "Plain Text (txt)"],
+									"description": "The file format of the assignment sheet"
+								},
+								"assignmentSheetExtraInfo": {
+									"enum": ["In Table"],
+									"description": "Any extra info that might help in parsing the assignment sheet"
+								}
+							},
+							"additionalProperties": false
+						}
+					],
+					"description": "Class Definition"
+				}
+			},
+			"additionalProperties": false
+		}
+	}
+}
