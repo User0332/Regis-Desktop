@@ -2,7 +2,7 @@ import os
 from selenium import webdriver
 from selenium.common.exceptions import InvalidArgumentException
 
-def makebrowsers() -> tuple[webdriver.Chrome, webdriver.Chrome]:
+def makebrowsers() -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:
 	options = webdriver.ChromeOptions()
 	path = input('Chrome Profile Path: ')
 
@@ -18,14 +18,21 @@ def makebrowsers() -> tuple[webdriver.Chrome, webdriver.Chrome]:
 		options.add_argument("--headless")
 		options.add_argument("--disable-gpu")
 
-	regis = webdriver.Chrome(
-		options=options
-	)
+	regis = webdriver.Chrome(options=options)
+	regisaux = webdriver.Chrome(options=options)
 
 	input("Make sure you are signed in to Regis on the selected profile. Press <enter> to continue. ")
 
 	signin(
 		regis,
+		"https://www.regis.org/login.cfm",
+		"https://intranet.regis.org/myRegis",
+		"myRegis",
+		headless=True
+	)
+
+	signin(
+		regisaux,
 		"https://www.regis.org/login.cfm",
 		"https://intranet.regis.org/myRegis",
 		"myRegis",
@@ -45,14 +52,13 @@ def makebrowsers() -> tuple[webdriver.Chrome, webdriver.Chrome]:
 
 	moodle.minimize_window()
 
-	return regis, moodle
+	return regis, moodle, regisaux
 
 def signin(driver: webdriver.Chrome, signin_page: str, homepage: str, homepage_title: str, headless: bool=False):
 	if headless:
 		try:
 			driver.get(homepage)
-			if driver.title != homepage_title:
-				raise InvalidArgumentException()
+			if driver.title != homepage_title: raise InvalidArgumentException()
 		except InvalidArgumentException:
 			print(f"ERR: You are not signed in to '{homepage}'!")
 			exit(1)

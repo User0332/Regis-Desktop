@@ -1,5 +1,11 @@
+from domapi import Element
+from contextlib import redirect_stdout
+from locals import *
+import datetime
 import textwrap
-import functools
+import tinycss
+
+with redirect_stdout(open("nul",'w')): import pygame
 
 def wrap_text(lines: list[str], width: int):
 	total_lines: int = 0
@@ -18,34 +24,61 @@ def wrap_text(lines: list[str], width: int):
 
 	return [line for wrapped in lines for line in wrapped], parent_map
 
-def parse_schedule(content: str) -> list[str]:
-	unfiltered = [
-		(
-		item.replace("  ", '')
-			.replace("   ", '')
-			.replace("    ", '')
-			.replace("     ", '')
+def parse_schedule(schedule_div: Element) -> list[str]:
+	classes = []
+
+	for child in schedule_div.children:
+		if child.textContent.strip() == "":
+			classes.append("Free") # free mod color
+			continue
+		
+		classes.append(
+			child.textContent.strip()
+			.replace("\n\n", ' ')
 			.replace('\n', ' ')
-			.replace("       ", '') # final whitespace cleanup
-			.strip()
-			if not item.replace(' ', '').replace('\n', '') == ''  
-			else "Free"
-		) for item in
-		content.replace(" | Zoom", '')
-			.split("\n     \n     \n")[1:-1]
-		if item not in ("     ")
-	]
+			.replace(" | Zoom", '')
+		)
 
-	free = 0
-
-	for i, item in enumerate(unfiltered): #concat frees
-		if item == "Free":
-			free+=15
-
-		if ((item != "Free") or (i == len(unfiltered)-1)) and (i > 0) and (unfiltered[i-1] == "Free"):
-			unfiltered.insert(i, f"{free}min Free")
-
-	while "Free" in unfiltered: unfiltered.remove("Free")
-
-	return unfiltered
+	return classes
 	
+def get_schedule_colors(schedule_div: Element) -> tuple[pygame.Color]:
+	colors = []
+
+	for child in schedule_div.children:
+		declarations: list[tinycss.css21.Declaration] = tinycss.CSS21Parser().parse_style_attr(child.getAttribute("style"))[0]
+		if child.textContent.strip() == "":
+			colors.append("#fffbed") # free mod color
+			continue
+		
+		for decl in declarations:
+			if decl.name == "background-color":
+				colors.append(decl.value[0].value)
+				break
+
+	return tuple(
+		[pygame.Color(color) for i, color in enumerate(colors) if (i == 0) or not (color == "#fffbed" == colors[i-1])]
+	)
+
+def schedule_convert_15min(schedule_div: Element) -> tuple[
+	dict[datetime.datetime, str],
+	dict[datetime.datetime, str]
+]:
+	classes: list[str] = []
+
+	for child in schedule_div.children:
+		declarations: list[tinycss.css21.Declaration] = tinycss.CSS21Parser().parse_style_attr(child.getAttribute("style"))[0]
+		for decl in declarations:
+			if decl.name == "height":
+				height: int = decl.value[0].value
+
+				num_blocks = int(height/HEIGHT_PX_15_MIN)
+
+				classes.extend([child.textContent.strip().replace('\n', ' ')]*num_blocks)
+				break
+
+		while "" in classes: classes[classes.index("")] = "Free"
+
+	return (
+		{ TIMES[i]: _class for i, _class in enumerate(classes) },
+		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in classes if x != "Community Time"]) }
+	)
