@@ -247,7 +247,7 @@ def build_homescreen():
 		size()[0]*(3/4)
 	)
 
-def build_list_box(_list: list, title: str, pos: tuple[int, int], maxwidth: int, color_cycle: tuple[tuple[int, int, int]]=("black",), background_color_cycle: tuple[tuple[int, int, int]]=(None,), buttonize: dict={}):
+def build_list_box(_list: list, title: str, pos: tuple[int, int], maxwidth: int, color_cycle: tuple[pygame.Color]=("black",), background_color_cycle: tuple[pygame.Color]=(None,), buttonize: dict={}):
 	lines, line_parent_map = utils.wrap_text(_list, int(maxwidth/font.size('m')[0]))
 
 	screen.blit(
@@ -357,15 +357,19 @@ def make_button(text: str, action: FunctionType, pos: tuple[int, int], color: py
 def changepage(page: str): locals.page = page
 
 def refresh_page():
+	# next: implement smart reload system that reloads pages not used by the current screen if user's mouse is not close to a button, meaning that they are not going to visit another page before the reload finishes
+	# also have draw functions cache data that they will use if a page load times out (e.g.) if a page that needs to be used is being reloaded, use a cached version of the screen (this will allow the user to scroll)
 	while pygame.get_init():
 		time.sleep(10)
 		regis.refresh()
+		time.sleep(5)
 		regisauxpage.refresh()
+		time.sleep(5)
 		moodle.refresh()
 
-PromiseFuncWrap(refresh_page) # refresh every 10 secs
-
 pygame.init()
+
+PromiseFuncWrap(refresh_page) # refresh every 10 secs
 
 info = pygame.display.Info()
 screen = pygame.display.set_mode((info.current_w, info.current_h-100), pygame.RESIZABLE)
@@ -384,9 +388,6 @@ pygame.display.set_caption("Regis Intranet Desktop")
 pygame.display.set_icon(regis_icon)
 
 font = pygame.font.SysFont("Helvetica", 20, bold=True) # get actual font from site
-
-
-# figure out how to make everything rounded
 
 while 1:
 	for event in pygame.event.get():
