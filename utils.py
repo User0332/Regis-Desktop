@@ -1,9 +1,12 @@
 from domapi import Element
+from selenium.webdriver import Chrome
 from contextlib import redirect_stdout
 from locals import *
 import datetime
 import textwrap
 import tinycss
+import perftest
+import locals
 
 with redirect_stdout(open("nul",'w')): import pygame
 
@@ -82,3 +85,23 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 		{ TIMES[i]: _class for i, _class in enumerate(classes) },
 		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in classes if x != "Community Time"]) }
 	)
+
+def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.org/", milliseconds: int=30):
+	res = perftest.timeout(milliseconds=milliseconds)(lambda: browser.page_source)()
+
+	cache_res = locals.cache.get(url_accessing)
+
+	if res is None:
+		print(f"info: {url_accessing} took too long, trying cache")
+		if (cache_res is None) or (locals.cache_fails.get(url_accessing) == 100): # we must wait for the page and update the cache in this case, it has failed too many times OR there is no cache data available to send
+			locals.cache_fails[url_accessing] = 0
+			src = locals.cache[url_accessing] = browser.page_source
+			return src
+		else:
+			locals.cache_fails[url_accessing]+=1
+			return cache_res
+
+	locals.cache[url_accessing] = res
+	locals.cache_fails[url_accessing] = 0
+
+	return res

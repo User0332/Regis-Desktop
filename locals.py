@@ -1,6 +1,8 @@
 import datetime
 
 page = "homescreen"
+cache: dict[str, str] = {}
+cache_fails: dict[str, int] = {}
 
 SCHEDULE_COLOR_CYCLE = (
 	(3, 252, 132),

@@ -38,7 +38,9 @@ def build_lunch():
 	chgauxpage("https://intranet.regis.org/dining/")
 	
 	width, height = size()
-	document = make_document_from_str(regisauxpage.page_source)
+	document = make_document_from_str(
+		utils.cache_get_src(regisauxpage, "https://intranet.regis.org/dining/")
+	)
 
 	sections = document.querySelector(".panel-primary").lastElementChild.children
 	sections_dict = {
@@ -74,7 +76,9 @@ def build_lunch():
 			(width-text.get_size()[0]-5, height-30)
 		)
 
-	document = make_document_from_str(regis.page_source)
+	document = make_document_from_str(
+		utils.cache_get_src(regis)
+	)
 	
 	events_parent = document.querySelector("#myprimarykey_44 > div > div > div.row > div > div > div.panel-body > table > tbody")
 	events_list = [
@@ -93,7 +97,9 @@ def build_lunch():
 
 
 def build_comm_time_events():
-	document = make_document_from_str(regis.page_source)
+	document = make_document_from_str(
+		utils.cache_get_src(regis)
+	)
 
 	boilerpage(from_sched=True)
 
@@ -123,15 +129,21 @@ def build_comm_time_events():
 def build_schedule():
 	boilerpage()
 
-	document = make_document_from_str(regis.page_source)
+	document = make_document_from_str(
+		utils.cache_get_src(regis)
+	)
 
 	make_schedule_box(document, (5, 100))
 
 def build_assignments():
 	boilerpage()
 
-	document = make_document_from_str(regis.page_source)
-	moodle_document = make_document_from_str(moodle.page_source)
+	document = make_document_from_str(
+		utils.cache_get_src(regis)
+	)
+	moodle_document = make_document_from_str(
+		utils.cache_get_src(moodle, "https://moodle.regis.org/my/", milliseconds=50), 
+	)
 
 	tests_div = document.querySelector("#myprimarykey_34 > div > div")
 	tests = [test.textContent.strip().replace("\n\n \n", " - ").replace("     \n\n     - ", ", ") for test in tests_div.children[1:]]
@@ -147,7 +159,9 @@ def build_assignments():
 def build_homescreen():
 	boilerpage(home=True)
 
-	document = make_document_from_str(regis.page_source)
+	document = make_document_from_str(
+		utils.cache_get_src(regis)
+	)
 
 	firstname = document.querySelector("body > nav > div > div.navbar-header > div > span:nth-child(1)").textContent.split()[0]
 
@@ -357,15 +371,25 @@ def make_button(text: str, action: FunctionType, pos: tuple[int, int], color: py
 def changepage(page: str): locals.page = page
 
 def refresh_page():
-	# next: implement smart reload system that reloads pages not used by the current screen if user's mouse is not close to a button, meaning that they are not going to visit another page before the reload finishes
-	# also have draw functions cache data that they will use if a page load times out (e.g.) if a page that needs to be used is being reloaded, use a cached version of the screen (this will allow the user to scroll)
+	regisaux_not_reloaded = False
+	moodle_not_reloaded = False
+
 	while pygame.get_init():
 		time.sleep(10)
 		regis.refresh()
-		time.sleep(5)
-		regisauxpage.refresh()
-		time.sleep(5)
-		moodle.refresh()
+
+		if page not in ("lunch",): regisauxpage.refresh()
+		elif regisaux_not_reloaded:
+			regisauxpage.refresh()
+			regisaux_not_reloaded = False
+		else: regisaux_not_reloaded = True
+
+
+		if page not in ("assignments",): moodle.refresh()
+		elif moodle_not_reloaded:
+			moodle.refresh()
+			moodle_not_reloaded = False
+		else: moodle_not_reloaded = True
 
 pygame.init()
 
