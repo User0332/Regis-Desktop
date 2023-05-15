@@ -13,12 +13,14 @@ import signin
 
 with redirect_stdout(open("nul",'w')): import pygame
 
+utils.load_nonvolatile_cache()
+
 regis, moodle, regisauxpage = signin.makebrowsers()
 
 BUTTON_HANDLERS: list[dict[str, pygame.Rect | FunctionType | pygame.Surface]] = []
 
 def chgauxpage(page: str):
-	if regisauxpage.current_url != page: regisauxpage.get(page)
+	if regisauxpage.current_url != page: PromiseFuncWrap(lambda: regisauxpage.get(page))
 
 def boilerpage(home=False, from_sched=False):
 	BUTTON_HANDLERS.clear() # remove old page handlers, which will be recreated on return
@@ -81,12 +83,13 @@ def build_lunch():
 	)
 	
 	events_parent = document.querySelector("#myprimarykey_44 > div > div > div.row > div > div > div.panel-body > table > tbody")
-	events_list = [
+	if events_parent: events_list = [
 		event for event in [
 			f"{child.firstElementChild.firstElementChild.textContent.strip()} ({child.lastElementChild.textContent.strip()})"
 			for child in events_parent.children
 		] if ("12:00 PM -" in event)
 	]
+	else: events_list = ["No Community Events Today :("]
 
 	build_list_box(
 		events_list,
@@ -95,6 +98,12 @@ def build_lunch():
 		width
 	)
 
+	lunch_balance = document.querySelector("body > div > div > div.col-md-3 > div > div > div:nth-child(7) > div > a").textContent
+
+	screen.blit(
+		get_default_text(f"Lunch Balance: {lunch_balance}"),
+		(width/2, 700)
+	)
 
 def build_comm_time_events():
 	document = make_document_from_str(
@@ -104,12 +113,13 @@ def build_comm_time_events():
 	boilerpage(from_sched=True)
 
 	events_parent = document.querySelector("#myprimarykey_44 > div > div > div.row > div > div > div.panel-body > table > tbody")
-	events_list = [
+	if events_parent: events_list = [
 		event for event in [
 			f"{child.firstElementChild.firstElementChild.textContent.strip()} ({child.lastElementChild.textContent.strip()})"
 			for child in events_parent.children
 		] if ("10:30 AM -" in event)
 	]
+	else: events_list = ["No Community Events Today :("]
 
 	build_list_box(
 		events_list,
@@ -142,7 +152,7 @@ def build_assignments():
 		utils.cache_get_src(regis)
 	)
 	moodle_document = make_document_from_str(
-		utils.cache_get_src(moodle, "https://moodle.regis.org/my/", milliseconds=50), 
+		utils.cache_get_src(moodle, "https://moodle.regis.org/my/", milliseconds=70), 
 	)
 
 	tests_div = document.querySelector("#myprimarykey_34 > div > div")
@@ -248,11 +258,13 @@ def build_homescreen():
 
 	# TODO: add events next to the current/next mod section
 
+
 	events_parent = document.querySelector("#myprimarykey_44 > div > div > div.row > div > div > div.panel-body > table > tbody")
-	events_list = [
+	if events_parent: events_list = [
 		f"{child.firstElementChild.firstElementChild.textContent.strip()} ({child.lastElementChild.textContent.strip()})"
 		for child in events_parent.children
 	]
+	else: events_list = ["No Community Events Today :("]
 
 	build_list_box(
 		events_list,
@@ -426,6 +438,7 @@ while 1:
 			regis.quit()
 			regisauxpage.quit()
 			moodle.quit()
+			utils.write_nonvolatile_cache()
 			exit(0)
 
 	globals()[f"build_{locals.page}"]()

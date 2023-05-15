@@ -1,6 +1,7 @@
 import os
 from selenium import webdriver
-from selenium.common.exceptions import InvalidArgumentException
+from selenium.webdriver.common.by import By
+from selenium.common import InvalidArgumentException
 
 def makebrowsers() -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:
 	options = webdriver.ChromeOptions()

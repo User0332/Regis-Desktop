@@ -1,0 +1,1 @@
+foreach ($file in Get-ChildItem "cache") { Remove-Item "cache/${file}" }

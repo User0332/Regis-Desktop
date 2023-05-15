@@ -1,5 +1,5 @@
 {
-	"$schema": "../schemas/hw-schema.json",
+	"$schema": "hw-schema.json",
 	"classes": {
 		"English": {
 			"platform": "Moodle",

@@ -7,6 +7,8 @@ import textwrap
 import tinycss
 import perftest
 import locals
+import shutil
+import os
 
 with redirect_stdout(open("nul",'w')): import pygame
 
@@ -81,6 +83,10 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 
 		while "" in classes: classes[classes.index("")] = "Free"
 
+	while classes.count("Assembly") not in (1, 0): classes.remove("Assembly")
+
+	if "Assembly" in classes: classes[classes.index("Assembly")] = "Assembly (Probably Free)"
+
 	return (
 		{ TIMES[i]: _class for i, _class in enumerate(classes) },
 		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in classes if x != "Community Time"]) }
@@ -93,7 +99,7 @@ def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.or
 
 	if res is None:
 		print(f"info: {url_accessing} took too long, trying cache")
-		if (cache_res is None) or (locals.cache_fails.get(url_accessing) == 100): # we must wait for the page and update the cache in this case, it has failed too many times OR there is no cache data available to send
+		if (cache_res is None) or (locals.cache_fails.get(url_accessing) == 1000): # we must wait for the page and update the cache in this case, it has failed too many times OR there is no cache data available to send
 			locals.cache_fails[url_accessing] = 0
 			src = locals.cache[url_accessing] = browser.page_source
 			return src
@@ -105,3 +111,27 @@ def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.or
 	locals.cache_fails[url_accessing] = 0
 
 	return res
+
+def was_created_today(file: str) -> bool:
+	today = datetime.datetime.now().date()
+	return datetime.datetime.fromtimestamp(os.stat(file).st_mtime).date() == today
+
+def write_nonvolatile_cache():
+	if os.listdir("cache"): return # if there are files in the cache, that means they are current and don't have to be replaced
+
+	for i, (site, data) in enumerate(locals.cache.items()):
+		if "moodle" in site: continue # moodle is volatile
+
+		with open(f"cache/{i}", 'w', encoding="utf-8") as f:
+			f.write(f"{site}\n{data}")
+
+def load_nonvolatile_cache():
+	for file in os.listdir("cache"):
+		if not was_created_today(f"cache/{file}"):
+			os.remove(f"cache/{file}")
+			continue # old file, remove
+		
+		with open(f"cache/{file}", 'r', encoding="utf-8") as f:
+			split = f.read().splitlines()
+			locals.cache[split[0]] = '\n'.join(split[1:])
+			locals.cache_fails[split[0]] = 0
