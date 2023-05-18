@@ -3,26 +3,22 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common import InvalidArgumentException
 
-def makebrowsers() -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:
+def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:
 	options = webdriver.ChromeOptions()
-	path = input('Chrome Profile Path: ')
 
-	if path:
-		split = os.path.normpath(path).split('\\')
-		pathdir = '\\'.join(split[:-1])
-		profile = split[-1]
+	split = os.path.normpath(path).split('\\')
+	pathdir = '\\'.join(split[:-1])
+	profile = split[-1]
 
-		options.binary_location
-		options.add_argument(f"--user-data-dir={pathdir}")
-		options.add_argument(f"--profile-directory={profile}")
-		options.add_argument("--no-sandbox")
-		options.add_argument("--headless")
-		options.add_argument("--disable-gpu")
+	options.binary_location
+	options.add_argument(f"--user-data-dir={pathdir}")
+	options.add_argument(f"--profile-directory={profile}")
+	options.add_argument("--no-sandbox")
+	options.add_argument("--headless")
+	options.add_argument("--disable-gpu")
 
 	regis = webdriver.Chrome(options=options)
 	regisaux = webdriver.Chrome(options=options)
-
-	input("Make sure you are signed in to Regis on the selected profile. Press <enter> to continue. ")
 
 	signin(
 		regis,

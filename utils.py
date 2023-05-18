@@ -7,7 +7,7 @@ import textwrap
 import tinycss
 import perftest
 import locals
-import shutil
+import json
 import os
 
 with redirect_stdout(open("nul",'w')): import pygame
@@ -29,6 +29,14 @@ def wrap_text(lines: list[str], width: int):
 
 	return [line for wrapped in lines for line in wrapped], parent_map
 
+def strip_class(_class: str) ->  str:
+	return (
+		_class.strip()
+		.replace("\n\n", ' ')
+		.replace('\n', ' ')
+		.replace(" | Zoom", '')
+	)
+
 def parse_schedule(schedule_div: Element) -> list[str]:
 	classes = []
 
@@ -37,12 +45,18 @@ def parse_schedule(schedule_div: Element) -> list[str]:
 			classes.append("Free") # free mod color
 			continue
 		
-		classes.append(
-			child.textContent.strip()
-			.replace("\n\n", ' ')
-			.replace('\n', ' ')
-			.replace(" | Zoom", '')
-		)
+		classes.append(strip_class(child.textContent))
+
+	free_mins = 0
+
+	for i, item in enumerate(classes): #concat frees
+		if item == "Free":
+			free_mins+=15
+
+		if ((item != "Free") or (i == len(classes)-1)) and (i > 0) and (classes[i-1] == "Free"):
+			classes.insert(i, f"{free_mins}min Free")
+
+	while "Free" in classes: classes.remove("Free")
 
 	return classes
 	
@@ -78,7 +92,7 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 
 				num_blocks = int(height/HEIGHT_PX_15_MIN)
 
-				classes.extend([child.textContent.strip().replace('\n', ' ')]*num_blocks)
+				classes.extend([strip_class(child.textContent)]*num_blocks)
 				break
 
 		while "" in classes: classes[classes.index("")] = "Free"
@@ -112,13 +126,43 @@ def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.or
 
 	return res
 
+def get_current_and_next_class(schedule_div: Element) -> str:
+	normal_schedule, late_schedule = schedule_convert_15min(schedule_div)
+
+	curr_time = datetime.datetime.now().time()
+
+	normal_classes = ["No class!", "No class!"]
+	late_classes = ["No class!", "No class!"]
+
+	for i, classtime in enumerate(normal_schedule.keys()):
+		if (i == 0) and (curr_time < classtime) and (curr_time > BEFORE_NORMAL_TIME):
+			normal_classes[1] = normal_schedule[classtime]
+			break
+
+		if (curr_time < classtime) and (curr_time > tuple(normal_schedule.keys())[i-1]):
+			normal_classes = [tuple(normal_schedule.values())[i-1], normal_schedule[classtime]]
+			break
+
+	for i, classtime in enumerate(late_schedule.keys()):
+		if (i == 0) and (curr_time < classtime) and (curr_time > BEFORE_LATE_TIME):
+			normal_classes[1] = normal_schedule[classtime]
+			break
+		
+		if (curr_time < classtime) and (curr_time > tuple(late_schedule.keys())[i-1]):
+			late_classes = [tuple(late_schedule.values())[i-1], late_schedule[classtime]]
+			break
+	
+	if (curr_time < LAST_MOD_END) and (curr_time > TIMES[-1]):
+		normal_classes[0] = tuple(normal_schedule.values())[-1]
+		late_classes[0] = tuple(normal_schedule.values())[-1]
+
+	return normal_classes, late_classes
+
 def was_created_today(file: str) -> bool:
 	today = datetime.datetime.now().date()
 	return datetime.datetime.fromtimestamp(os.stat(file).st_mtime).date() == today
 
 def write_nonvolatile_cache():
-	if os.listdir("cache"): return # if there are files in the cache, that means they are current and don't have to be replaced
-
 	for i, (site, data) in enumerate(locals.cache.items()):
 		if "moodle" in site: continue # moodle is volatile
 
@@ -135,3 +179,6 @@ def load_nonvolatile_cache():
 			split = f.read().splitlines()
 			locals.cache[split[0]] = '\n'.join(split[1:])
 			locals.cache_fails[split[0]] = 0
+
+def load_config() -> dict[str, str]:
+	return json.load(open("installation/config.json"))

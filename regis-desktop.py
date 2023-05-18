@@ -4,7 +4,6 @@ from promiseapi import PromiseFuncWrap
 from types import FunctionType
 from domapi import make_document_from_str, Document, Element
 from locals import *
-import datetime
 import time
 import string
 import utils
@@ -13,9 +12,11 @@ import signin
 
 with redirect_stdout(open("nul",'w')): import pygame
 
+CONFIG = utils.load_config()
+
 utils.load_nonvolatile_cache()
 
-regis, moodle, regisauxpage = signin.makebrowsers()
+regis, moodle, regisauxpage = signin.makebrowsers(CONFIG["profilePath"])
 
 BUTTON_HANDLERS: list[dict[str, pygame.Rect | FunctionType | pygame.Surface]] = []
 
@@ -195,36 +196,9 @@ def build_homescreen():
 		
 		return
 
-	normal_schedule, late_schedule = utils.schedule_convert_15min(
+	normal_classes, late_classes = utils.get_current_and_next_class(
 		document.querySelector("#myprimarykey_43 > div > div > div:nth-child(6)").children[string.ascii_uppercase.index(letter_day)+1]
 	)
-
-	curr_time = datetime.datetime.now().time()
-
-	normal_classes = ["No class!", "No class!"]
-	late_classes = ["No class!", "No class!"]
-
-	for i, classtime in enumerate(normal_schedule.keys()):
-		if (i == 0) and (curr_time < classtime) and (curr_time > BEFORE_NORMAL_TIME):
-			normal_classes[1] = normal_schedule[classtime]
-			break
-
-		if (curr_time < classtime) and (curr_time > tuple(normal_schedule.keys())[i-1]):
-			normal_classes = [tuple(normal_schedule.values())[i-1], normal_schedule[classtime]]
-			break
-
-	for i, classtime in enumerate(late_schedule.keys()):
-		if (i == 0) and (curr_time < classtime) and (curr_time > BEFORE_LATE_TIME):
-			normal_classes[1] = normal_schedule[classtime]
-			break
-		
-		if (curr_time < classtime) and (curr_time > tuple(late_schedule.keys())[i-1]):
-			late_classes = [tuple(late_schedule.values())[i-1], late_schedule[classtime]]
-			break
-	
-	if (curr_time < LAST_MOD_END) and (curr_time > TIMES[-1]):
-		normal_classes[0] = tuple(normal_schedule.values())[-1]
-		late_classes[0] = tuple(normal_schedule.values())[-1]
 
 	screen.blit(
 		largefont.render("Normal Timing", False, "black"),
