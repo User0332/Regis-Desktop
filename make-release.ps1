@@ -11,7 +11,10 @@ python -m nuitka regis-desktop.py --standalone --windows-icon-from-ico=assets/re
 python -m nuitka regis-desktop.py --standalone --windows-icon-from-ico=assets/regis-icon.ico --include-package-data=selenium --output-dir=build/release/latest --include-data-dir=assets=assets --include-data-dir=bare-installation=installation --disable-console
 
 Remove-Item build/debug-test/latest/regis-desktop.build -Recurse
+Rename-Item -Path build/debug-test/latest/regis-desktop.dist/regis-desktop.exe -NewName Regis.exe
 Rename-Item -Path build/debug-test/latest/regis-desktop.dist -NewName "Regis Desktop"
 
+
 Remove-Item build/release/latest/regis-desktop.build -Recurse
+Rename-Item -Path build/release/latest/regis-desktop.dist/regis-desktop.exe -NewName Regis.exe
 Rename-Item -Path build/release/latest/regis-desktop.dist -NewName "Regis Desktop"
