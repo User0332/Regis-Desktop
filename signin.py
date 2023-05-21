@@ -1,6 +1,6 @@
 import os
+from sys import exit
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.common import InvalidArgumentException
 
 def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:

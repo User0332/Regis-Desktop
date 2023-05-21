@@ -4,6 +4,7 @@ from promiseapi import PromiseFuncWrap
 from types import FunctionType
 from domapi import make_document_from_str, Document, Element
 from locals import *
+from sys import exit
 import time
 import string
 import utils

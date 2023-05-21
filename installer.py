@@ -1,4 +1,5 @@
 import os
+import json
 import subprocess
 import msvcrt
 import sys
@@ -14,7 +15,7 @@ print("If the installation does not work, please run this installer as an admini
 try:
 	RELEASE_BUILD = False if (len(sys.argv) > 1 and (sys.argv[1] == "debug")) else True
 
-	print("installing application")
+	print("installing application...")
 
 	# TODO: Replace the request below and just clone the whole git repo, and then extract the desired build file
 
@@ -35,11 +36,24 @@ try:
 
 	print("done installing application")
 
-	print("creating cache")
+	print("creating cache...")
 	os.mkdir("cache")
 	print("done creating cache")
 
 	print("done installing regis desktop")
+
+	print("Configuring application...")
+	profile_path = input("Enter the Chrome profile path to use with the application")
+	
+	with open("installation/config.json", 'r') as f:
+		obj = json.load(f)
+
+		obj["profilePath"] = profile_path
+
+	with open("installation/config.json", 'w') as f:
+		json.dump(obj, f, indent='\t')
+
+	print("done configuring application")
 
 	print("press any key to continue...")
 	msvcrt.getch()
