@@ -1,7 +1,12 @@
 import os
 from sys import exit
+from subprocess import CREATE_NO_WINDOW
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.common import InvalidArgumentException
+
+chrome_service = Service("chromedriver")
+chrome_service.creation_flags = CREATE_NO_WINDOW
 
 def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:
 	options = webdriver.ChromeOptions()
@@ -17,8 +22,8 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 	options.add_argument("--headless")
 	options.add_argument("--disable-gpu")
 
-	regis = webdriver.Chrome(options=options)
-	regisaux = webdriver.Chrome(options=options)
+	regis = webdriver.Chrome(options=options, service=chrome_service)
+	regisaux = webdriver.Chrome(options=options, service=chrome_service)
 
 	signin(
 		regis,
@@ -36,7 +41,7 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 		headless=True
 	)
 
-	moodle = webdriver.Chrome()
+	moodle = webdriver.Chrome(service=chrome_service)
 
 	signin(
 		moodle,
