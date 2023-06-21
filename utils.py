@@ -5,7 +5,7 @@ from locals import *
 import datetime
 import textwrap
 import tinycss
-import perftest
+import perfcount
 import locals
 import json
 import os
@@ -107,7 +107,7 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 	)
 
 def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.org/", milliseconds: int=30):
-	res = perftest.timeout(milliseconds=milliseconds)(lambda: browser.page_source)()
+	res = perfcount.timeout(milliseconds=milliseconds)(lambda: browser.page_source)()
 
 	cache_res = locals.cache.get(url_accessing)
 
