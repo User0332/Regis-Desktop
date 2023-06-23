@@ -1,10 +1,10 @@
 from contextlib import redirect_stdout
-from ctypes import windll
 from promiseapi import PromiseFuncWrap
-from types import FunctionType
+from typing import Callable
 from domapi import make_document_from_str, Document, Element
 from locals import *
 from sys import exit
+import secrets
 import time
 import string
 import utils
@@ -19,22 +19,23 @@ utils.load_nonvolatile_cache()
 
 regis, moodle, regisauxpage = signin.makebrowsers(CONFIG["profilePath"])
 
-BUTTON_HANDLERS: list[dict[str, pygame.Rect | FunctionType | pygame.Surface]] = []
+BUTTON_HANDLERS: dict[str, dict[str, pygame.Rect | Callable[[dict[str]], None] | pygame.Surface | dict[str]]] = {}
 
 def chgauxpage(page: str):
 	if regisauxpage.current_url != page: PromiseFuncWrap(lambda: regisauxpage.get(page))
 
 def boilerpage(home=False, from_sched=False):
-	BUTTON_HANDLERS.clear() # remove old page handlers, which will be recreated on return
-	screen.fill("white")
+	screen.fill(
+		DEFAULT_SCREEN_BACKGROUND_COLOR
+	)
 	screen.blit(logo_box, logo_rect())
 
 	if home: return
 	if from_sched:
-		make_button("Back to Schedule", lambda: changepage("schedule"), (size()[0]-200, 5))
+		make_button("Back to Schedule", lambda: changepage("schedule"), (size()[0]-200, 5), "back-btn")
 		return
 
-	make_button("Back to Home", lambda: changepage("homescreen"), (size()[0]-150, 5))
+	make_button("Back to Home", lambda: changepage("homescreen"), (size()[0]-150, 5), "back-btn")
 
 def build_lunch():
 	boilerpage(from_sched=True)
@@ -180,18 +181,18 @@ def build_homescreen():
 	largefont = pygame.font.SysFont("Helvetica", 30, bold=True)
 
 	screen.blit(
-		largefont.render(f"Welcome, {firstname}! Here's what's happening today:", False, "black"),
+		largefont.render(f"Welcome, {firstname}! Here's what's happening today:", True, "black"),
 		(10, 75+locals.SCROLL_OFFSET)
 	)
 
-	make_button("Assignments :)", lambda: changepage("assignments"), (5, 380))
-	make_button("Schedule :)", lambda: changepage("schedule"), (5, 410))
+	make_button("Assignments :)", lambda: changepage("assignments"), (5, 380), "see-assns")
+	make_button("Schedule :)", lambda: changepage("schedule"), (5, 410), "see-schedule")
 
 	letter_day = get_letter_day(document.querySelector("#myprimarykey_43 > div > div > div:nth-child(4)"))
 
 	if letter_day == "not a school/letter":
 		screen.blit(
-			largefont.render("Today isn't a school/letter day!", False, "black"),
+			largefont.render("Today isn't a school/letter day!", True, "black"),
 			(10, 130+locals.SCROLL_OFFSET)
 		)
 		
@@ -202,12 +203,12 @@ def build_homescreen():
 	)
 
 	screen.blit(
-		largefont.render("Normal Timing", False, "black"),
+		largefont.render("Normal Timing", True, "black"),
 		(10, 130+locals.SCROLL_OFFSET)
 	)
 
 	screen.blit(
-		largefont.render("Late Start Timing", False, "black"),
+		largefont.render("Late Start Timing", True, "black"),
 		(10, 250+locals.SCROLL_OFFSET)
 	)
 
@@ -263,6 +264,7 @@ def build_list_box(_list: list, title: str, pos: tuple[int, int], maxwidth: int,
 			make_button(
 				line, buttonize[parent_lineno],
 				(pos[0], (i*30)+50+pos[1]),
+				f"buttonized-{secrets.token_urlsafe(5)}",
 				color=color_cycle[parent_lineno%len(color_cycle)],
 				background_color=background_color_cycle[parent_lineno%len(background_color_cycle)]
 			)
@@ -328,12 +330,26 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 	)
 	
 def get_default_text(text: str, color: pygame.Color="black", background: pygame.Color=None):
-	return font.render(f" {text} ", False, color, background) # f" {text} " for background padding
+	return font.render(f" {text} ", True, color, background) # f" {text} " for background padding
 
-def make_button(text: str, action: FunctionType, pos: tuple[int, int], color: pygame.Color="white", background_color: pygame.Color="red"):
+def default_button_hover(values: dict[str, ]):
+	values["background_color"] = BUTTON_HOVER_COLOR
+
+def default_button_update(values: dict[str]):
+	values.pop("background_color") # let the next call decide the color
+
+def make_button(text: str, action: Callable[[], None], pos: tuple[int, int], _id: str, hover: Callable[[dict[str]], None]=default_button_hover, update: Callable[[dict[str]], None]=default_button_update, color: pygame.Color="white", background_color: pygame.Color="red"):
 	size = font.size(text)
 	button = pygame.Surface((size[0]+20, size[1]+2))
-	button.fill("white")
+	button.fill(DEFAULT_SCREEN_BACKGROUND_COLOR)
+
+	if BUTTON_HANDLERS.get(_id):
+		values = BUTTON_HANDLERS[_id]["values"]
+
+		text, color, background_color = values.get("text", text), values.get("color", color), values.get("background_color", background_color)
+		action = BUTTON_HANDLERS[_id]["handler"]
+		hover = BUTTON_HANDLERS[_id]["hover"]
+		update = BUTTON_HANDLERS[_id]["update"]
 
 	text_surf = get_default_text(text, color)
 
@@ -344,18 +360,25 @@ def make_button(text: str, action: FunctionType, pos: tuple[int, int], color: py
 
 	text_rect = button.get_rect(topleft=(pos[0], pos[1]+locals.SCROLL_OFFSET))
 
-	BUTTON_HANDLERS.append(
-		{
-			"rect": text_rect,
-			"handler": action
+	BUTTON_HANDLERS[_id] = {
+		"rect": text_rect,
+		"handler": action,
+		"hover": hover,
+		"update": update,
+		"values": {
+			"text": text,
+			"color": color,
+			"background_color": background_color
 		}
-	)
+	}
 
 	screen.blit(button, text_rect)
 
 	return button, text_rect
 
-def changepage(page: str): locals.page = page
+def changepage(page: str):
+	BUTTON_HANDLERS.clear() # clear these so the next page can add its own
+	locals.page = page
 
 def refresh_page():
 	regisaux_not_reloaded = False
@@ -404,8 +427,13 @@ while 1:
 	for event in pygame.event.get():
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			if logo_rect().collidepoint(*pygame.mouse.get_pos()): changepage("homescreen")
-			for handler in BUTTON_HANDLERS:
-				if handler["rect"].collidepoint(*pygame.mouse.get_pos()): handler["handler"]()
+			# click button
+			try:
+				for handler in BUTTON_HANDLERS.values():
+					if handler["rect"].collidepoint(*pygame.mouse.get_pos()): handler["handler"]()
+			except RuntimeError as e:
+				if str(e) == "dictionary changed size during iteration": continue # this means the page changed and BUTTON_HANDLERS was cleared
+				raise
 		if event.type == pygame.MOUSEWHEEL:
 			locals.SCROLL_OFFSET = min(max(locals.SCROLL_OFFSET+event.y*10, -800), 0)
 		if event.type == pygame.QUIT:
@@ -416,6 +444,13 @@ while 1:
 			utils.write_nonvolatile_cache()
 			exit(0)
 
+	# hover effect for buttons
+	for handler in BUTTON_HANDLERS.values():
+		if handler["rect"].collidepoint(*pygame.mouse.get_pos()): handler["hover"](handler["values"])
+		
 	globals()[f"build_{locals.page}"]()
+
+	# button update func
+	for handler in BUTTON_HANDLERS.values(): handler["update"](handler["values"])
 
 	pygame.display.update()
