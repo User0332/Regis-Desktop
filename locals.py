@@ -1,9 +1,13 @@
+from contextlib import redirect_stdout
 import datetime
+
+with redirect_stdout(open("nul",'w')): import pygame
 
 page = "homescreen"
 cache: dict[str, str] = {}
 cache_fails: dict[str, int] = {}
 
+in_widget_add_menu = 0 # this is an int value used to set the height of the widget menu
 SCHEDULE_COLOR_CYCLE = (
 	(3, 252, 132),
 	(219, 3, 252),
@@ -14,6 +18,8 @@ SCHEDULE_COLOR_CYCLE = (
 )
 DEFAULT_TEXT_BACKGROUND_COLOR = (200, 50, 50)
 DEFAULT_SCREEN_BACKGROUND_COLOR = (247, 244, 215)
+DEFAULT_WIDGET_BACKGROUND_COLOR = (42, 219, 216)
+DEFAULT_WIDGET_MENU_BACKGROUND_COLOR = (149, 255, 125)
 HEIGHT_PX_15_MIN = 90
 BUTTON_HOVER_COLOR = (166, 5, 5)
 NOTICE_COLOR = (50, 168, 168)
@@ -51,3 +57,13 @@ TIMES = (
 	datetime.time(15)
 )
 LATE_TIMES = TIMES[3:]
+ALLOWED_WIDGETS = {
+	"currentClass": "Current & Next Class",
+	"communityTime": "Community Time Events"
+}
+WIDGET_SURFS: dict[str, dict[str, pygame.Surface, pygame.Rect]] = {
+    # name: {
+	#   "surf": pygame.Surface,
+	#	"rect": pygame.Rect
+	# }
+}

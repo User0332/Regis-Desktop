@@ -180,5 +180,30 @@ def load_nonvolatile_cache():
 			locals.cache[split[0]] = '\n'.join(split[1:])
 			locals.cache_fails[split[0]] = 0
 
-def load_config() -> dict[str, str]:
-	return json.load(open("installation/config.json"))
+def load_config() -> dict[str, str | list[str]]:
+	conf: dict[str, str | list[str]] = json.load(open("installation/config.json"))
+
+	if not conf.get("profilePath"):
+		# make this a gui message
+		print("Fatal Error: Chrome profile path not specified in config! Run the Regis Desktop Installer to configure (unable to autofix)")
+		exit(1)
+
+	widgets: list[str] = conf.get("userWidgets")
+
+	if widgets is None:
+		print("Error: User widgets not specified -- autofixing")
+		conf["userWidgets"] = []
+
+	for widget in widgets:
+		if widget not in ALLOWED_WIDGETS:
+			print(f"Error: The widget {widget!r} from the config is not a valid widget! -- autofixing")
+			conf["userWidgets"].remove(widget)
+
+		if widgets.count(widget) > 1:
+			print(f"Error: The widget {widget!r} from the config is specified more than once! -- autofixing")		
+			while widgets.count(widgets) != 1: widgets.remove(widget)
+
+	return conf
+
+def write_config(conf: dict[str, str | list[str]]):
+	json.dump(conf, open("installation/config.json", 'w'), indent='\t')
