@@ -176,9 +176,23 @@ def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 
 	pygame.draw.rect(surf, DEFAULT_WIDGET_BACKGROUND_COLOR, (0, 0, *surf.get_size()), border_radius=7)
 
-	letter_day = get_letter_day(document.querySelector("#myprimarykey_43 > div > div > div:nth-child(4)"))
+	surf_rect = surf.get_rect(topleft=(10, 130+locals.SCROLL_OFFSET))
 
-	letter_day = 'A'
+	def update(values: dict[str]):
+		values["parent_rect"] = surf_rect
+
+	make_button_using_surf(
+		"Delete Current Class Widget",
+		del_widget_icon,
+		lambda: (CONFIG["userWidgets"].remove("currentClass"), BUTTON_HANDLERS.pop("delete-current-class-widget")),
+		(surf.get_width()-del_widget_icon.get_width()-5, 5),
+		"delete-current-class-widget",
+		update=update,
+		blit_to=surf
+	)
+
+
+	letter_day = get_letter_day(document.querySelector("#myprimarykey_43 > div > div > div:nth-child(4)"))
 
 	if letter_day == "not a school/letter":
 		surf.blit(
@@ -186,7 +200,7 @@ def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 			(10, 10)
 		)
 		
-		return surf
+		return surf, surf_rect
 
 	normal_classes, late_classes = utils.get_current_and_next_class(
 		document.querySelector("#myprimarykey_43 > div > div > div:nth-child(6)").children[string.ascii_uppercase.index(letter_day)+1]
@@ -220,23 +234,6 @@ def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 	surf.blit(
 		get_default_text(f"Next Mod: {late_classes[1]}", "black"),
 		(10, 200)
-	)
-
-	surf_rect = surf.get_rect(topleft=(10, 130+locals.SCROLL_OFFSET))
-
-	def update(values: dict[str]):
-		if "parent_rect" in values: return
-
-		values["parent_rect"] = surf_rect
-
-	make_button_using_surf(
-		"Delete Widget",
-		del_widget_icon,
-		lambda: CONFIG["userWidgets"].remove("currentClass"),
-		(surf.get_width()-del_widget_icon.get_width(), 0),
-		"delete-current-class-widget",
-		update=update,
-		blit_to=surf
 	)
 
 	return surf, surf_rect
@@ -273,15 +270,13 @@ def get_community_time_widget(document: Document):
 	surf_rect = surf.get_rect(topleft=(700, 75+locals.SCROLL_OFFSET))
 
 	def update(values: dict[str]):
-		if "parent_rect" in values: return
-
 		values["parent_rect"] = surf_rect
 
 	make_button_using_surf(
-		"Delete Widget",
+		"Delete Community Time Widget",
 		del_widget_icon,
-		lambda: CONFIG["userWidgets"].remove("communityTime"),
-		(surf.get_width()-del_widget_icon.get_width(), 0),
+		lambda: (CONFIG["userWidgets"].remove("communityTime"), BUTTON_HANDLERS.pop("delete-community-time-widget")),
+		(surf.get_width()-del_widget_icon.get_width()-5, 5),
 		"delete-community-time-widget",
 		update=update,
 		blit_to=surf,
@@ -622,15 +617,16 @@ def build_widget_menu(maxheight: int):
 	curr_y = 10
 
 	def update(vals: dict[str]):
-		if "parent_rect" in vals: return
-
 		vals["parent_rect"] = rect
 
 	for (_id, widget_surf) in display:
+		onclick = eval(f'lambda: (CONFIG["userWidgets"].append({_id!r}), BUTTON_HANDLERS.pop(f"add-widget [{_id}]"))')
+		
+		
 		make_button_using_surf(
-			"Add Widget",
+			f"Add Widget (Widget ID: {_id})",
 			widget_surf,
-			lambda: CONFIG["userWidgets"].append(_id),
+			onclick,
 			(10, curr_y),
 			f"add-widget [{_id}]",
 			update=update,
@@ -706,14 +702,17 @@ while 1:
 			if logo_rect().collidepoint(*pygame.mouse.get_pos()): changepage("homescreen")
 			# click button
 			try:
-				mouse_pos = pygame.mouse.get_pos()
+				original_mouse_pos = pygame.mouse.get_pos()
 				for handler in BUTTON_HANDLERS.values():
+					mouse_pos = original_mouse_pos
 					if "parent_rect" in handler["values"]:
 						parent_rect: pygame.Rect = handler["values"]["parent_rect"]
 
-						mouse_pos: tuple[int, int] = (mouse_pos[0]-parent_rect.topleft[0], mouse_pos[1]-parent_rect.topleft[1])
+						mouse_pos: tuple[int, int] = (original_mouse_pos[0]-parent_rect.topleft[0], original_mouse_pos[1]-parent_rect.topleft[1])
+
 
 					if handler["values"]["rect"].collidepoint(mouse_pos): handler["handler"]()
+					else: continue
 			except RuntimeError as e:
 				if str(e) == "dictionary changed size during iteration": continue # this means the page changed and BUTTON_HANDLERS was cleared
 				raise
