@@ -185,10 +185,11 @@ def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 		"Delete Current Class Widget",
 		del_widget_icon,
 		lambda: (CONFIG["userWidgets"].remove("currentClass"), BUTTON_HANDLERS.pop("delete-current-class-widget")),
-		(surf.get_width()-del_widget_icon.get_width()-5, 5),
+		(surf.get_width()-del_widget_icon.get_width()-5, 5-locals.SCROLL_OFFSET), # negate make_button's scrolling effects
 		"delete-current-class-widget",
 		update=update,
-		blit_to=surf
+		blit_to=surf,
+		force_update=True
 	)
 
 
@@ -276,10 +277,11 @@ def get_community_time_widget(document: Document):
 		"Delete Community Time Widget",
 		del_widget_icon,
 		lambda: (CONFIG["userWidgets"].remove("communityTime"), BUTTON_HANDLERS.pop("delete-community-time-widget")),
-		(surf.get_width()-del_widget_icon.get_width()-5, 5),
+		(surf.get_width()-del_widget_icon.get_width()-5, 5-locals.SCROLL_OFFSET), # negate make_button's scrolling effects
 		"delete-community-time-widget",
 		update=update,
 		blit_to=surf,
+		force_update=True
 	)
 
 	return surf, surf_rect
@@ -627,7 +629,7 @@ def build_widget_menu(maxheight: int):
 			f"Add Widget (Widget ID: {_id})",
 			widget_surf,
 			onclick,
-			(10, curr_y),
+			(10, curr_y-locals.SCROLL_OFFSET), # subtract scroll offset to negate the effects of make_button
 			f"add-widget [{_id}]",
 			update=update,
 			blit_to=menu,
@@ -708,8 +710,7 @@ while 1:
 					if "parent_rect" in handler["values"]:
 						parent_rect: pygame.Rect = handler["values"]["parent_rect"]
 
-						mouse_pos: tuple[int, int] = (original_mouse_pos[0]-parent_rect.topleft[0], original_mouse_pos[1]-parent_rect.topleft[1])
-
+						mouse_pos: tuple[int, int] = (original_mouse_pos[0]-parent_rect.topleft[0], (original_mouse_pos[1]-parent_rect.topleft[1]))
 
 					if handler["values"]["rect"].collidepoint(mouse_pos): handler["handler"]()
 					else: continue
