@@ -170,7 +170,7 @@ def build_assignments():
 	build_list_box(assns, "Upcoming Assignments", (600, 100), width-width/10)
 
 def get_current_class_widget(largefont: pygame.font.Font, document: Document):
-	surf = pygame.Surface((500, 230))
+	surf = pygame.Surface((600, 230))
 
 	surf.fill(DEFAULT_SCREEN_BACKGROUND_COLOR)
 

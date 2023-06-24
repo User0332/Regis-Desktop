@@ -97,13 +97,15 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 
 		while "" in classes: classes[classes.index("")] = "Free"
 
-	while classes.count("Assembly") not in (1, 0): classes.remove("Assembly")
+	late_classes = classes.copy()
 
-	if "Assembly" in classes: classes[classes.index("Assembly")] = "Assembly (Probably Free)"
+	while late_classes.count("Assembly") not in (1, 0): late_classes.remove("Assembly")
+
+	if "Assembly" in late_classes: late_classes[late_classes.index("Assembly")] = "Assembly (Probably Free)"
 
 	return (
 		{ TIMES[i]: _class for i, _class in enumerate(classes) },
-		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in classes if x != "Community Time"]) }
+		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in late_classes if x != "Community Time"]) }
 	)
 
 def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.org/", milliseconds: int=30):
@@ -112,7 +114,7 @@ def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.or
 	cache_res = locals.cache.get(url_accessing)
 
 	if res is None:
-		print(f"info: {url_accessing} took too long, trying cache")
+		# print(f"info: {url_accessing} took too long, trying cache") # removed print statement because it slows down the application
 		if (cache_res is None) or (locals.cache_fails.get(url_accessing) == 1000): # we must wait for the page and update the cache in this case, it has failed too many times OR there is no cache data available to send
 			locals.cache_fails[url_accessing] = 0
 			src = locals.cache[url_accessing] = browser.page_source
@@ -145,7 +147,7 @@ def get_current_and_next_class(schedule_div: Element) -> str:
 
 	for i, classtime in enumerate(late_schedule.keys()):
 		if (i == 0) and (curr_time < classtime) and (curr_time > BEFORE_LATE_TIME):
-			normal_classes[1] = normal_schedule[classtime]
+			late_classes[1] = late_schedule[classtime]
 			break
 		
 		if (curr_time < classtime) and (curr_time > tuple(late_schedule.keys())[i-1]):
