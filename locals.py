@@ -1,7 +1,10 @@
 from contextlib import redirect_stdout
+from sys import platform as sys_platform
 import datetime
 
-with redirect_stdout(open("nul",'w')): import pygame
+NULL_DEV = "nul" if sys_platform == "win32" else "/dev/null"
+
+with redirect_stdout(open(NULL_DEV, 'w')): import pygame
 
 page = "homescreen"
 cache: dict[str, str] = {}
