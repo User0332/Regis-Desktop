@@ -1,5 +1,7 @@
+import pyshortcuts
 from tkinter import filedialog
 import tkinter as tk
+import tkinter.ttk as ttk
 import requests
 import webbrowser
 import subprocess
@@ -9,33 +11,42 @@ import os
 
 PY_DOWNLOAD = "https://www.python.org/downloads/"
 
+
 STABLE_FILES = (
 	"regis-desktop.pyc",
 	"locals.pyc",
 	"signin.pyc",
 	"utils.pyc",
-	"RegisLauncher.exe",
 	"installation/config.json",
-	"schemas/config-schema.json"
+	"requirements.txt"
 )
 
 OTHER_FILES = (
 	"assets/del-icon.png",
-	"plus-icon.png",
-	"regis-icon.ico",
-	"regis-icon.png",
-	"regis-logo-rectangle.png"
+	"assets/plus-icon.png",
+	"assets/regis-icon.ico",
+	"assets/regis-icon.icns",
+	"assets/regis-icon.png",
+	"assets/regis-logo-rectangle.png",
+	"schemas/config-schema.json"
 )
 
 NUM_FILES = len(STABLE_FILES)+len(OTHER_FILES)
 
+PRINT_REPO_URL = "https://github.com/User0332/Regis-Desktop"
 REPO_URL = "https://raw.githubusercontent.com/User0332/Regis-Desktop/master/"
+
+INSTALLING: str = None
 
 root = tk.Tk()
 root.title("Regis Desktop Installer")
 root.geometry("700x400")
 
-def exit_install(): # TODO: add cleanup code
+def exit_install():
+	if INSTALLING:
+		try: shutil.rmtree(INSTALLING)
+		except PermissionError: pass
+
 	root.destroy()
 	sys.exit(0)
 
@@ -102,13 +113,20 @@ def validate_python(): # TODO: print errors to user on tkinter window
 		return validate_python()
 	
 def chg_filesvar(var: tk.StringVar, val: int):
-	pre, suff = f"Fetching from {REPO_URL}: ", f"/{NUM_FILES} Files"
+	pre, suff = f"Fetching from {PRINT_REPO_URL}: ", f"/{NUM_FILES} Files"
 
 	var.set(
 		pre + str(val) + suff
 	)
 
+def pack_leave():
+	leave = tk.Button(root, text=" Exit Installer ", command=exit_install)
+	leave.pack()
+
+	return leave
+
 def main():
+	global INSTALLING
 	# TODO: search for exisiting installation
 
 	try: validate_python()
@@ -145,6 +163,8 @@ def main():
 
 	inner = f"{directory}/Regis Desktop Installation"
 
+	INSTALLING = inner
+
 	if os.path.exists(inner): shutil.rmtree(inner)
 	os.mkdir(inner)
 	os.chdir(inner)
@@ -154,14 +174,22 @@ def main():
 	os.mkdir("schemas")
 	os.mkdir("installation")
 
-	complete = tk.StringVar(root, value=f"Fetching from {REPO_URL}: 0/{NUM_FILES} Files")
+	complete = tk.StringVar(value=f"Fetching from {PRINT_REPO_URL}: 0/{NUM_FILES} Files")
+	fetching = tk.StringVar(value="None")
 
 	files_complete = 0
 
 	download_label = tk.Label(root, textvariable=complete)
 	download_label.pack()
 
+	fetch_label = tk.Label(root, textvariable=fetching)
+	fetch_label.pack()
+
+	leave = pack_leave()
+	
 	for file in STABLE_FILES:
+		fetching.set(f"stable/{file}")
+
 		text = requests.get(f"{REPO_URL}/stable/{file}").content
 		
 		with open(file, "wb") as f:
@@ -170,7 +198,11 @@ def main():
 		files_complete+=1
 		chg_filesvar(complete, files_complete)
 
+		root.update()
+
 	for file in OTHER_FILES:
+		fetching.set(file)
+
 		text = requests.get(f"{REPO_URL}/{file}").content
 		
 		with open(file, "wb") as f:
@@ -179,9 +211,55 @@ def main():
 		files_complete+=1
 		chg_filesvar(complete, files_complete)
 
-	download_label.destroy()
-	print("all done!")
+		root.update()
 
+	fetching.set("None")
+	leave.destroy()
+
+	deps = tk.Label(root, text="Installing dependencies...")
+	deps.pack()
+
+	output = tk.StringVar(value="")
+
+	pipoutput = tk.Label(root, textvariable=output)
+
+	details = tk.Button(root, text=" View details ", command=lambda: pipoutput.pack() if not pipoutput.winfo_ismapped() else None)
+	details.pack()
+
+	pip = subprocess.Popen(["python", "-m", "pip" "install", "requirements.txt"], stdout=subprocess.PIPE)
+
+	while 1:
+		try: output.set(output.get()+pip.stdout.read(1))
+		except EOFError: break
+
+	details.destroy()
+	pipoutput.destroy()
+
+	shortcut = tk.Label(root, text="Creating shortcut...")
+	shortcut.pack()
+
+	leave = pack_leave()
+
+	pyshortcuts.make_shortcut(
+		script="regis-desktop.pyc",
+		name="Regis Desktop",
+		description="Regis Desktop Launcher Shortcut",
+		icon=("assets/regis-icon.ico" if os.name == "nt" else "assets/regis-icon.icns"),
+		working_dir=inner,
+		terminal=False
+	)
+
+	leave.destroy()
+	
+	INSTALLING = None
+
+	alldone = tk.Label(root, text="All Done!")
+	alldone.pack()
+
+	launch = tk.Button(root, text=" Launch Regis Desktop ", command=lambda: (root.after(10, exit_install), subprocess.call(["python", "regis-desktop.pyc"])))
+	launch.pack()
+
+	leave = pack_leave()
 
 MAIN_CALLBACK_ID = root.after(10, main)
 root.mainloop()

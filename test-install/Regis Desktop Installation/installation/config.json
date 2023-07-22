@@ -1,1 +1,5 @@
-404: Not Found
+{
+    "$schema": "../schemas/config-schema.json",
+    "profilePath": "",
+	"userWidgets": []
+}
