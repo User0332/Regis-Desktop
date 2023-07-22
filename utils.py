@@ -10,7 +10,7 @@ import locals
 import json
 import os
 
-with redirect_stdout(open("nul",'w')): import pygame
+with redirect_stdout(open(NULL_DEV,'w')): import pygame
 
 def wrap_text(lines: list[str], width: int):
 	total_lines: int = 0

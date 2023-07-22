@@ -11,7 +11,7 @@ import utils
 import locals
 import signin
 
-with redirect_stdout(open("nul",'w')): import pygame
+with redirect_stdout(open(NULL_DEV,'w')): import pygame
 
 CONFIG = utils.load_config()
 

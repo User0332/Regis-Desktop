@@ -1,6 +1,7 @@
 import os
-from sys import exit
-from subprocess import CREATE_NO_WINDOW
+from sys import exit, platform as sys_platform
+if sys_platform == "win32": from subprocess import CREATE_NO_WINDOW
+else: CREATE_NO_WINDOW = 0 # figure how to emulate on linux + mac
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.common import InvalidArgumentException
