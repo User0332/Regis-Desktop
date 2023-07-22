@@ -4,6 +4,14 @@
 		"profilePath": {
 			"description": "Chrome profile path to use with Regis Intranet Desktop Edition",
 			"type": "string"
+		},
+		"userWidgets": {
+			"description": "List of widgets to display on the home screen",
+			"type": "array",
+			"items": {
+				"description": "Name of widget",
+				"type": "string"
+			}
 		}
 	}
 }

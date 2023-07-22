@@ -1,3 +1,0 @@
-error here so it is seen:
-	use nuitka, but standalone version (not onefile)
-	installer.exe will be onefile OR standalone (whichever works) and will setup all the directories and files needed for the `Regis.exe` executable
