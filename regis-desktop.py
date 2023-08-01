@@ -766,5 +766,3 @@ while 1:
 	for handler in BUTTON_HANDLERS.values(): handler["update"](handler["values"])
 
 	pygame.display.update()
-
-zipapphandler = lambda: None

@@ -1,7 +1,8 @@
+import time
+import json
 import pyshortcuts
 from tkinter import filedialog
 import tkinter as tk
-import tkinter.ttk as ttk
 import requests
 import webbrowser
 import subprocess
@@ -11,6 +12,11 @@ import os
 
 PY_DOWNLOAD = "https://www.python.org/downloads/"
 
+DEFAULT_CONFIG = {
+	"$schema": "../schemas/config-schema.json",
+	"profilePath": "",
+	"userWidgets": []
+}
 
 STABLE_FILES = (
 	"regis-desktop.pyc",
@@ -125,7 +131,52 @@ def pack_leave():
 
 	return leave
 
-def main():
+def configure():
+	configure_box = tk.Frame(root)
+
+	title = tk.Label(configure_box, font=("Segoe UI", 15), text="Please enter the Chrome Profile that you use to login to the Intranet")
+	title.grid(row=0, column=0)
+
+	label2 = tk.Label(configure_box, text="Chrome Profile Path:")
+	label2.grid(row=1, column=0, columnspan=3)
+
+	profilevar = tk.StringVar(configure_box, value="")
+
+	profile_path = tk.Entry(configure_box, textvariable=profilevar)
+	profile_path.grid(row=1, column=1)
+
+	how = tk.Label(
+		configure_box,
+		text=" To get your Chrome Profile Path, open Chrome in the profile that you use to login to the Intranet and go to chrome://version. Copy the filepath next to 'Profile Path' "
+	)
+	how.grid(row=2, column=0, columnspan=5)
+
+	btnbox = tk.Frame(configure_box)
+
+	okbtn = tk.Button(btnbox, text=" Ok ", command=configure_box.destroy)
+	okbtn.grid(row=0, column=0, padx=10)
+
+	leave = tk.Button(btnbox, text=" Exit Installer ", command=exit_install)
+	leave.grid(row=0, column=1)
+
+	btnbox.grid(row=3, column=0, columnspan=2)
+
+	configure_box.pack()
+
+	configure_box.wait_window()
+
+	path = profilevar.get()
+	
+	with open("installation/config.json", 'r') as f:
+		try: config = json.load(f)
+		except json.decoder.JSONDecodeError: config = DEFAULT_CONFIG
+
+	config["profilePath"] = path
+
+	with open("installation/config.json", 'w') as f:
+		json.dump(config, f, indent=4)
+
+def install():
 	global INSTALLING
 	# TODO: search for exisiting installation
 
@@ -175,7 +226,7 @@ def main():
 	os.mkdir("installation")
 
 	complete = tk.StringVar(value=f"Fetching from {PRINT_REPO_URL}: 0/{NUM_FILES} Files")
-	fetching = tk.StringVar(value="None")
+	fetching = tk.StringVar(value="Fetching: None")
 
 	files_complete = 0
 
@@ -188,7 +239,7 @@ def main():
 	leave = pack_leave()
 	
 	for file in STABLE_FILES:
-		fetching.set(f"stable/{file}")
+		fetching.set(f"Fetching: stable/{file}")
 
 		text = requests.get(f"{REPO_URL}/stable/{file}").content
 		
@@ -201,7 +252,7 @@ def main():
 		root.update()
 
 	for file in OTHER_FILES:
-		fetching.set(file)
+		fetching.set(f"Fetching: {file}")
 
 		text = requests.get(f"{REPO_URL}/{file}").content
 		
@@ -213,7 +264,7 @@ def main():
 
 		root.update()
 
-	fetching.set("None")
+	fetching.set("Fetching: None")
 	leave.destroy()
 
 	deps = tk.Label(root, text="Installing dependencies...")
@@ -226,11 +277,20 @@ def main():
 	details = tk.Button(root, text=" View details ", command=lambda: pipoutput.pack() if not pipoutput.winfo_ismapped() else None)
 	details.pack()
 
-	pip = subprocess.Popen(["python", "-m", "pip" "install", "requirements.txt"], stdout=subprocess.PIPE)
+	pip = subprocess.Popen(["python", "-m", "pip", "install", "-r", "requirements.txt"], stdout=subprocess.PIPE)
 
 	while 1:
-		try: output.set(output.get()+pip.stdout.read(1))
-		except EOFError: break
+		byte = pip.stdout.read(1).decode()
+		
+		if not byte: break # don't use pip.poll() in case user wants to see all details
+
+		output.set(
+			(output.get()+byte)[-3200:]
+		)
+
+		root.update()
+
+	time.sleep(1) # allow user to read details
 
 	details.destroy()
 	pipoutput.destroy()
@@ -250,7 +310,19 @@ def main():
 	)
 
 	leave.destroy()
-	
+
+	done = tk.Label(root, text="Done Installing!")
+	done.pack()
+
+	root.update()
+
+	time.sleep(1)
+
+	for child in root.winfo_children(): # clear root
+		child.destroy()
+
+	configure()
+
 	INSTALLING = None
 
 	alldone = tk.Label(root, text="All Done!")
@@ -261,5 +333,5 @@ def main():
 
 	leave = pack_leave()
 
-MAIN_CALLBACK_ID = root.after(10, main)
+MAIN_CALLBACK_ID = root.after(10, install)
 root.mainloop()
