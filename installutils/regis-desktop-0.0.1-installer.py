@@ -255,6 +255,7 @@ def install():
 	os.mkdir("assets")
 	os.mkdir("schemas")
 	os.mkdir("installation")
+	os.mkdir("installation/planners")
 
 	complete = tk.StringVar(value=f"Fetching from {PRINT_REPO_URL}: 0/{NUM_FILES} Files")
 	fetching = tk.StringVar(value="Fetching: None")
