@@ -14,7 +14,7 @@ PY_DOWNLOAD = "https://www.python.org/downloads/"
 
 DEFAULT_CONFIG = {
 	"$schema": "../schemas/config-schema.json",
-	"profilePath": "",
+	"profilePath": "None",
 	"userWidgets": []
 }
 
@@ -24,6 +24,7 @@ STABLE_FILES = (
 	"signin.pyc",
 	"utils.pyc",
 	"installation/config.json",
+	"installation/planners/default.json",
 	"requirements.txt"
 )
 
@@ -34,7 +35,8 @@ OTHER_FILES = (
 	"assets/regis-icon.icns",
 	"assets/regis-icon.png",
 	"assets/regis-logo-rectangle.png",
-	"schemas/config-schema.json"
+	"schemas/config-schema.json",
+	"schemas/planner-schema.json"
 )
 
 NUM_FILES = len(STABLE_FILES)+len(OTHER_FILES)

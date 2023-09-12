@@ -1,0 +1,3 @@
+title=Regis Mobile
+author=Carl Furtado
+orientation=portrait

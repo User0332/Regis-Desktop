@@ -1,5 +1,6 @@
 from contextlib import redirect_stdout
 from sys import platform as sys_platform
+import os
 import datetime
 
 NULL_DEV = "nul" if sys_platform == "win32" else "/dev/null"
@@ -70,3 +71,7 @@ WIDGET_SURFS: dict[str, dict[str, pygame.Surface, pygame.Rect]] = {
 	#	"rect": pygame.Rect
 	# }
 }
+
+VIEW_PLANNER: str = None
+VIEW_CLASS_ASSNS: str = None
+SELF_PATH = os.path.abspath('.')

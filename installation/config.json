@@ -1,5 +1,8 @@
 {
 	"$schema": "../schemas/config-schema.json",
-	"profilePath": "C:\\Users\\carlf\\AppData\\Local\\Google\\Chrome\\User Data\\Default",
-	"userWidgets": []
+	"profilePath": "C:\\Users\\carlf\\AppData\\Local\\Google\\Chrome\\User Data CopyTest\\Default",
+	"userWidgets": [
+		"communityTime",
+		"currentClass"
+	]
 }

@@ -1,6 +1,8 @@
 from domapi import Element
 from selenium.webdriver import Chrome
 from contextlib import redirect_stdout
+from dataclasses import dataclass
+from typing import TypedDict
 from locals import *
 import datetime
 import textwrap
@@ -11,6 +13,16 @@ import json
 import os
 
 with redirect_stdout(open(NULL_DEV,'w')): import pygame
+
+class Assignment(TypedDict):
+	date: str
+	description: str
+
+@dataclass
+class Planner:
+	name: str
+	assignments: list[Assignment]
+	notes: list[str]
 
 def wrap_text(lines: list[str], width: int):
 	total_lines: int = 0
@@ -55,6 +67,7 @@ def parse_schedule(schedule_div: Element) -> list[str]:
 
 		if ((item != "Free") or (i == len(classes)-1)) and (i > 0) and (classes[i-1] == "Free"):
 			classes.insert(i, f"{free_mins}min Free")
+			free_mins = 0
 
 	while "Free" in classes: classes.remove("Free")
 
@@ -181,6 +194,18 @@ def load_nonvolatile_cache():
 			split = f.read().splitlines()
 			locals.cache[split[0]] = '\n'.join(split[1:])
 			locals.cache_fails[split[0]] = 0
+
+def load_planners() -> list[Planner]:
+	planners = []
+
+	for plannerfile in os.listdir("installation/planners"):
+		data = json.load(open(f"installation/planners/{plannerfile}", 'r'))
+
+		planners.append(
+			Planner(data["name"], data["assignments"], data["notes"])
+		)
+
+	return planners
 
 def load_config() -> dict[str, str | list[str]]:
 	conf: dict[str, str | list[str]] = json.load(open("installation/config.json"))

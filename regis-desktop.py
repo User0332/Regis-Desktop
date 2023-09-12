@@ -1,9 +1,12 @@
 from contextlib import redirect_stdout
 from promiseapi import PromiseFuncWrap
+from selenium.webdriver.common.by import By as ElementFindMethod
+from selenium.common.exceptions import NoSuchElementException
 from typing import Callable
 from domapi import make_document_from_str, Document, Element
 from locals import *
 from sys import exit
+import webbrowser
 import secrets
 import time
 import string
@@ -24,7 +27,7 @@ BUTTON_HANDLERS: dict[str, dict[str, pygame.Rect | Callable[[dict[str]], None] |
 def chgauxpage(page: str):
 	if regisauxpage.current_url != page: PromiseFuncWrap(lambda: regisauxpage.get(page))
 
-def boilerpage(home=False, from_sched=False):
+def boilerpage(home=False, from_sched=False, from_planner=False):
 	screen.fill(
 		DEFAULT_SCREEN_BACKGROUND_COLOR
 	)
@@ -32,9 +35,10 @@ def boilerpage(home=False, from_sched=False):
 
 	if home: return
 	if from_sched:
-		make_button("Back to Schedule", lambda: changepage("schedule"), (size()[0]-200, 5), "back-btn")
-		return
-
+		make_button("Back to Schedule", lambda: changepage("schedule"), (size()[0]-320, 5), "back-to-sched")
+	if from_planner:
+		make_button("Back to My Planners", lambda: changepage("planner_menu"), (size()[0]-350, 5), "back-to-plan")
+	
 	make_button("Back to Home", lambda: changepage("homescreen"), (size()[0]-150, 5), "back-btn")
 
 def build_lunch():
@@ -148,6 +152,86 @@ def build_schedule():
 
 	make_schedule_box(document, (5, 100))
 
+def build_planner():
+	boilerpage(from_planner=True)
+
+def build_planner_menu():
+	boilerpage()
+
+	planners = utils.load_planners()
+
+	def view_planner(planner: utils.Planner):
+		locals.VIEW_PLANNER: utils.Planner = planner
+
+		changepage("planner")
+
+	y = 100
+
+	for planner in planners:
+		make_button(planner.name, lambda: view_planner(planner), (10, y), f"see-planner-{y}")
+		y+=40
+	
+def build_view_class_assns():
+	boilerpage(from_sched=True)
+
+	subj = locals.VIEW_CLASS_ASSNS
+
+	document = make_document_from_str(
+		utils.cache_get_src(regis)
+	)
+
+	moodle_document = make_document_from_str(
+		utils.cache_get_src(moodle, "https://moodle.regis.org/my/", milliseconds=70)
+	)
+
+	tests_div = document.querySelector("#myprimarykey_34 > div > div")
+	tests = [test.textContent.strip().replace("\n\n \n", " - ").replace("     \n\n     - ", "<splitthis>") for test in tests_div.children[1:]]
+
+	for i, test in enumerate(tests):
+		if "<splitthis>" in test:
+			for splittest in test.split("<splitthis>"):
+				tests.insert(i, splittest)
+
+			tests.remove(test)
+
+	tests = [test for test in tests if subj in test]
+
+	# TODO: SHOW ASSIGNMENTS FOR THE CLASS
+
+	# assn_elements = moodle.find_elements(ElementFindMethod.CSS_SELECTOR, "#inst21750 > div > div > div > div > div.event")
+	
+	# assns = []
+
+	# for elem in assn_elements:
+	# 	elem.find_element(ElementFindMethod.CSS_SELECTOR, "a[data-type=event]").click() # click assn to see class
+		
+
+	# 	# classname = moodle.find_element(ElementFindMethod.CSS_SELECTOR, "#page-my-index > div.modal.moodle-has-zindex.show > div > div > div.modal-body > div > div > div:nth-child(4) > div.col-11 > a").text
+
+	# 	while 1:
+	# 		try:
+	# 			moodle.find_element(ElementFindMethod.CSS_SELECTOR, "#page-my-index > div.modal.moodle-has-zindex.show > div > div > div.modal-header.calendar_event_course > button") # click cancel button to go back to reg screen
+	# 			break
+	# 		except NoSuchElementException: continue
+
+	# 	# if not classname.startswith(subj): continue
+
+	# 	assns.append(elem.find_element(ElementFindMethod.CSS_SELECTOR, 'a').text+f" ({elem.find_element(ElementFindMethod.CSS_SELECTOR, 'div.date').text})")
+	
+	# # assn_links = [child.querySelector('a').getAttribute("href") for child in assns_div.children[1:]]
+
+
+	width = size()[0]
+
+	build_list_box(tests, f"Upcoming Tests for {subj}", (5, 100), width-(width/6.5))
+
+	screen.blit(
+		get_default_text("See Assignments on the Assignments page for now", color="white", background=DEFAULT_TEXT_BACKGROUND_COLOR),
+		(600, 100+locals.SCROLL_OFFSET)
+	)
+
+	# build_list_box(assns, f"Upcoming Assignments for {subj}", (600, 100), width-width/10, background_color_cycle=(DEFAULT_SCREEN_BACKGROUND_COLOR,))
+
 def build_assignments():
 	boilerpage()
 
@@ -163,11 +247,20 @@ def build_assignments():
 
 	assns_div = moodle_document.querySelector("#inst21750 > div > div > div > div")
 	assns = [child.querySelector('a').textContent+f" ({child.querySelector('div.date').textContent})" for child in assns_div.children[1:]]
+	assn_links = [child.querySelector('a').getAttribute("href") for child in assns_div.children[1:]]
+
+	buttonize = {}
+
+	def createaction(link: str):
+		return lambda: webbrowser.open(link)
+
+	for i, link in enumerate(assn_links):
+		buttonize[i] = createaction(link)
 
 	width = size()[0]
 
 	build_list_box(tests, "Upcoming Tests", (5, 100), width-(width/6.5))
-	build_list_box(assns, "Upcoming Assignments", (600, 100), width-width/10)
+	build_list_box(assns, "Upcoming Assignments", (600, 100), width-width/10, background_color_cycle=(DEFAULT_SCREEN_BACKGROUND_COLOR,), buttonize=buttonize)
 
 def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 	surf = pygame.Surface((600, 230))
@@ -304,6 +397,7 @@ def build_homescreen():
 
 	make_button("Assignments :)", lambda: changepage("assignments"), (5, 400), "see-assns")
 	make_button("Schedule :)", lambda: changepage("schedule"), (5, 430), "see-schedule")
+	make_button("Digital Planners :)", lambda: changepage("planner_menu"), (5, 460), "see-planner")
 
 	width, height = size()
 
@@ -434,6 +528,19 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 
 	if "Community Time" in todays_schedule:
 		buttonize[todays_schedule.index("Community Time")] = lambda: changepage("comm_time_events")
+
+	def make_action(subj: str):
+		def inner():
+			locals.VIEW_CLASS_ASSNS = subj[:subj.index('(')].strip()
+			changepage("view_class_assns")
+
+		return inner
+
+	for i, subj in enumerate(todays_schedule):
+		if subj in ("Lunch", "Community Time", "Assembly"): continue
+		if ("Advisement" in subj) or subj.endswith("Free"): continue
+		
+		buttonize[i] = make_action(subj)
 
 	build_list_box(
 		todays_schedule,
@@ -698,6 +805,8 @@ del_widget_icon = pygame.transform.scale(
 
 widget_menu, widget_menu_rect = (None, None)
 
+selected_button_handler: dict = None
+
 while 1:
 	for event in pygame.event.get():
 		if event.type == pygame.MOUSEBUTTONDOWN:
@@ -712,11 +821,23 @@ while 1:
 
 						mouse_pos: tuple[int, int] = (original_mouse_pos[0]-parent_rect.topleft[0], (original_mouse_pos[1]-parent_rect.topleft[1]))
 
-					if handler["values"]["rect"].collidepoint(mouse_pos): handler["handler"]()
+					if handler["values"]["rect"].collidepoint(mouse_pos): selected_button_handler = handler
 					else: continue
 			except RuntimeError as e:
 				if str(e) == "dictionary changed size during iteration": continue # this means the page changed and BUTTON_HANDLERS was cleared
 				raise
+		if event.type == pygame.MOUSEBUTTONUP:
+			if (selected_button_handler is not None):
+				mouse_pos = pygame.mouse.get_pos()
+				if "parent_rect" in selected_button_handler["values"]:
+					parent_rect: pygame.Rect = selected_button_handler["values"]["parent_rect"]
+
+					mouse_pos: tuple[int, int] = (original_mouse_pos[0]-parent_rect.topleft[0], (original_mouse_pos[1]-parent_rect.topleft[1]))
+
+				if selected_button_handler["values"]["rect"].collidepoint(mouse_pos):
+					selected_button_handler["handler"]()
+
+			selected_button_handler = None
 		if event.type == pygame.MOUSEWHEEL:
 			locals.SCROLL_OFFSET = min(max(locals.SCROLL_OFFSET+event.y*10, -800), 0)
 		if event.type == pygame.QUIT:

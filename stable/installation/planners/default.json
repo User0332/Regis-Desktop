@@ -1,0 +1,6 @@
+{
+	"$schema": "../../schemas/planner-schema.json",
+	"name": "My Planner",
+	"assignments": [],
+	"notes": []
+}

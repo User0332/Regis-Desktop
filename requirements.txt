@@ -4,3 +4,4 @@ selenium
 tinycss
 perfcount
 notify-py
+pygame
