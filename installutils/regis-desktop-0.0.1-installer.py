@@ -47,10 +47,10 @@ DEFAULT_CONFIG = {
 }
 
 STABLE_FILES = (
-	"regis-desktop.pyc",
-	"locals.pyc",
-	"signin.pyc",
-	"utils.pyc",
+	"regis-desktop.py",
+	"locals.py",
+	"signin.py",
+	"utils.py",
 	"is_same_device.py",
 	"installation/config.json",
 	"installation/planners/default.json",
@@ -296,6 +296,8 @@ def install():
 
 		root.update()
 
+	open("is-same-device", 'w').close()
+
 	fetching.set("Fetching: None")
 	leave.destroy()
 
@@ -333,7 +335,7 @@ def install():
 	leave = pack_leave()
 
 	pyshortcuts.make_shortcut(
-		script="regis-desktop.pyc",
+		script="regis-desktop.py",
 		name="Regis Desktop",
 		description="Regis Desktop Launcher Shortcut",
 		icon=("assets/regis-icon.ico" if os.name == "nt" else "assets/regis-icon.icns"),
@@ -360,7 +362,7 @@ def install():
 	alldone = tk.Label(root, text="All Done!")
 	alldone.pack()
 
-	launch = tk.Button(root, text=" Launch Regis Desktop ", command=lambda: (root.after(10, exit_install), subprocess.call(["python", "regis-desktop.pyc"])))
+	launch = tk.Button(root, text=" Launch Regis Desktop ", command=lambda: (root.after(10, exit_install), subprocess.call(["python", "regis-desktop.py"])))
 	launch.pack()
 
 	leave = pack_leave()

@@ -20,7 +20,7 @@ for file in files:
 
 		py_compile.compile(TEMP, f"stable/{file}c")
 	
-		continue
+		# continue ## dont continue so we can also run raw scripts
 
 	shutil.copy(file, f"stable/{file}")
 
