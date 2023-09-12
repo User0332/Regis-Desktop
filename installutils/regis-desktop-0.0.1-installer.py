@@ -1,5 +1,5 @@
 import uuid
-UUID = 345052807176
+UUID = None
 
 import sys
 
