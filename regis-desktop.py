@@ -6,6 +6,10 @@ from typing import Callable
 from domapi import make_document_from_str, Document, Element
 from locals import *
 from sys import exit
+
+RECOGNITION = False
+
+if RECOGNITION: import is_same_device
 import webbrowser
 import secrets
 import time
@@ -170,7 +174,7 @@ def build_planner_menu():
 	for planner in planners:
 		make_button(planner.name, lambda: view_planner(planner), (10, y), f"see-planner-{y}")
 		y+=40
-	
+
 def build_view_class_assns():
 	boilerpage(from_sched=True)
 

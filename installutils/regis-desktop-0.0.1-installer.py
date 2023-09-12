@@ -1,14 +1,42 @@
+import uuid
+UUID: int = None
+
+import sys
+
+if UUID == None:
+	with open(sys.argv[0], 'r') as f:
+		code = f.read().splitlines()
+
+		code[1] = f"UUID = {uuid.getnode()}"
+
+
+	with open(sys.argv[0], 'w') as f:
+		f.write(
+			'\n'.join(code)
+		)
+else:
+	if UUID != uuid.getnode():
+		raise RuntimeError("Application was moved to another device")
+
 import time
 import json
-import pyshortcuts
+import os
+try: import pyshortcuts
+except ImportError:
+	os.system("python -m pip install pyshortcuts")
+	import pyshortcuts
+
 from tkinter import filedialog
 import tkinter as tk
-import requests
+try: import requests
+except ImportError:
+	os.system("python -m pip install requests")
+	import requests
+
 import webbrowser
 import subprocess
 import shutil
-import sys
-import os
+
 
 PY_DOWNLOAD = "https://www.python.org/downloads/"
 
@@ -23,6 +51,7 @@ STABLE_FILES = (
 	"locals.pyc",
 	"signin.pyc",
 	"utils.pyc",
+	"is_same_device.py"
 	"installation/config.json",
 	"installation/planners/default.json",
 	"requirements.txt"
