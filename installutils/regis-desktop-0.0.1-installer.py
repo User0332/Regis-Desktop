@@ -1,5 +1,5 @@
 import uuid
-UUID: int = None
+UUID = 345052807176
 
 import sys
 
@@ -23,14 +23,14 @@ import json
 import os
 try: import pyshortcuts
 except ImportError:
-	os.system("python -m pip install pyshortcuts")
+	os.system("py -m pip install pyshortcuts")
 	import pyshortcuts
 
 from tkinter import filedialog
 import tkinter as tk
 try: import requests
 except ImportError:
-	os.system("python -m pip install requests")
+	os.system("py -m pip install requests")
 	import requests
 
 import webbrowser
