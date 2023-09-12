@@ -3,7 +3,7 @@ UUID = None
 
 import sys
 
-if UUID == None:
+if UUID is None:
 	with open(sys.argv[0], 'r') as f:
 		code = f.read().splitlines()
 
@@ -51,7 +51,7 @@ STABLE_FILES = (
 	"locals.pyc",
 	"signin.pyc",
 	"utils.pyc",
-	"is_same_device.py"
+	"is_same_device.py",
 	"installation/config.json",
 	"installation/planners/default.json",
 	"requirements.txt"
