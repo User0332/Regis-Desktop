@@ -6,9 +6,11 @@ x, y, r, t = "12", ''.join((chr(76), chr(54), chr(52), chr(80))), "144", "ab9dn"
 pwd = y+y+"102mmd"+x+r+t
 
 def get_uuid():
-	if os.name == "nt": return subprocess.check_output(
-		["wmic", "csproduct", "get", "uuid"]
-	).decode().splitlines()[1]
+	if os.name == "nt": return ''.join(
+		subprocess.check_output(
+			["wmic", "csproduct", "get", "uuid"]
+		).decode().split()
+	) # split & join to remove whitespace
 		
 	## only other platform this will be running on is macos
 
@@ -27,6 +29,7 @@ def init():
 		if not contents: return True
 
 		if contents != get_uuid():
+			print(contents, get_uuid())
 			raise RuntimeError("Application moved to unknown device")
 
 	return False

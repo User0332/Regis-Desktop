@@ -1,13 +1,15 @@
-UUID: str = None
+UUID = None
 
 import sys
 import os
 import subprocess
 
 def get_uuid():
-	if os.name == "nt": return subprocess.check_output(
-		["wmic", "csproduct", "get", "uuid"]
-	).decode().splitlines()[1]
+	if os.name == "nt": return ''.join(
+		subprocess.check_output(
+			["wmic", "csproduct", "get", "uuid"]
+		).decode().split()
+	) # split & join to remove whitespace
 		
 	## only other platform this will be running on is macos
 
