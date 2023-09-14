@@ -1,13 +1,26 @@
-import uuid
-UUID = 345052807176
+UUID: str = None
 
 import sys
+import os
+import subprocess
+
+def get_uuid():
+	if os.name == "nt": return subprocess.check_output(
+		["wmic", "csproduct", "get", "uuid"]
+	).decode().splitlines()[1]
+		
+	## only other platform this will be running on is macos
+
+	return subprocess.check_output(
+		"ioreg -d2 -c IOPlatformExpertDevice | awk -F\\\" '/IOPlatformUUID/{print $(NF-1)}'",
+		shell=True
+	)
 
 if UUID is None:
 	with open(sys.argv[0], 'r') as f:
 		code = f.read().splitlines()
 
-		code[1] = f"UUID = {uuid.getnode()}"
+		code[0] = f"UUID = {get_uuid()!r}"
 
 
 	with open(sys.argv[0], 'w') as f:
@@ -15,7 +28,7 @@ if UUID is None:
 			'\n'.join(code)
 		)
 else:
-	if UUID != uuid.getnode():
+	if UUID != get_uuid():
 		raise RuntimeError("Application was moved to another device")
 
 import time
