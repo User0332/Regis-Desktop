@@ -1,11 +1,12 @@
 import uuid
 import os
+
 x, y, r, t = "12", ''.join((chr(76), chr(54), chr(52), chr(80))), "144", "ab9dn"
 
 pwd = y+y+"102mmd"+x+r+t
 
 def init():
-	if not os.path.exists("is-same-device"):
+	if not os.path.exists(f"is-same-device:{pwd}"):
 		raise FileNotFoundError("Necessary program files were not found")
 
 	with open(f"is-same-device:{pwd}", 'r') as f:

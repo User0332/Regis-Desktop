@@ -19,7 +19,6 @@ else:
 		raise RuntimeError("Application was moved to another device")
 
 import time
-import json
 import os
 try: import pyshortcuts
 except ImportError:
@@ -27,6 +26,8 @@ except ImportError:
 	import pyshortcuts
 
 from tkinter import filedialog
+from win32com.shell import shell, shellcon
+import win32com
 import tkinter as tk
 try: import requests
 except ImportError:
@@ -296,7 +297,10 @@ def install():
 
 		root.update()
 
-	open("is-same-device", 'w').close()
+	x, y, r, t = "12", ''.join((chr(76), chr(54), chr(52), chr(80))), "144", "ab9dn"
+
+	pwd = y+y+"102mmd"+x+r+t
+	open(f"is-same-device:{pwd}", 'w').close()
 
 	fetching.set("Fetching: None")
 	leave.destroy()
@@ -329,19 +333,33 @@ def install():
 	details.destroy()
 	pipoutput.destroy()
 
-	shortcut = tk.Label(root, text="Creating shortcut...")
-	shortcut.pack()
+	shortcutlbl= tk.Label(root, text="Creating shortcut...")
+	shortcutlbl.pack()
 
 	leave = pack_leave()
 
-	pyshortcuts.make_shortcut(
-		script="regis-desktop.py",
-		name="Regis Desktop",
-		description="Regis Desktop Launcher Shortcut",
-		icon=("assets/regis-icon.ico" if os.name == "nt" else "assets/regis-icon.icns"),
-		working_dir=inner,
-		terminal=False
-	)
+	## create shortcut
+	if os.name == "nt":
+		desktopfolder = shell.SHGetFolderPath(0, shellcon.CSIDL_DESKTOP, None, 0)
+
+		_WSHELL = win32com.client.Dispatch("Wscript.Shell")
+		wscript = _WSHELL.CreateShortCut(f"{desktopfolder}/Regis Desktop.lnk")
+		wscript.Targetpath = f'"{os.path.abspath(sys.executable)}"'
+		wscript.Arguments = f'"{os.path.abspath("regis-desktop.py")}"'
+		wscript.WorkingDirectory = f'"{os.path.abspath(inner)}"'
+		wscript.WindowStyle = 0
+		wscript.Description = "Regis Desktop Launcher Shortcut"
+		wscript.IconLocation = os.path.abspath("assets/regis-icon.ico")
+		wscript.save()
+	else: ## mac
+		pyshortcuts.make_shortcut(
+			script=os.path.abspath("regis-desktop.py"),
+			name="Regis Desktop",
+			description="Regis Desktop Launcher Shortcut",
+			icon=("assets/regis-icon.ico" if os.name == "nt" else "assets/regis-icon.icns"),
+			working_dir=inner,
+			terminal=False
+		)
 
 	leave.destroy()
 
