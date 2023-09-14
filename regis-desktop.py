@@ -263,7 +263,7 @@ def build_assignments():
 	build_list_box(assns, "Upcoming Assignments", (600, 100), width-width/10, background_color_cycle=(DEFAULT_SCREEN_BACKGROUND_COLOR,), buttonize=buttonize)
 
 def get_current_class_widget(largefont: pygame.font.Font, document: Document):
-	surf = pygame.Surface((600, 230))
+	surf = pygame.Surface((650, 230))
 
 	surf.fill(DEFAULT_SCREEN_BACKGROUND_COLOR)
 

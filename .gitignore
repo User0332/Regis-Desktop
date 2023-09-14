@@ -1,5 +1,6 @@
 /__pycache__
 API_KEY
 /.vscode
-/user-data
-test-install/
+/regis-data
+/moodle-data
+/test-install/

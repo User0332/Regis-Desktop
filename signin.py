@@ -13,23 +13,20 @@ chrome_service = Service()
 chrome_service.creation_flags = CREATE_NO_WINDOW
 
 def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriver.Chrome]:
-	split = os.path.normpath(path).split('\\')
-	pathdir = '\\'.join(split[:-1])
-	profile = split[-1]
-	
 	options = webdriver.ChromeOptions()
-	options.add_argument(f"--user-data-dir={locals.SELF_PATH}/user-data/")
+	options.add_argument(f"--user-data-dir={locals.SELF_PATH}/regis-data/")
 	options.add_argument(f"--profile-directory=Default")
-	# options.add_argument("--no-sandbox")
-	# options.add_argument("--headless")
-	# options.add_argument("--disable-gpu")
 
 	headless = webdriver.ChromeOptions()
-	headless.add_argument(f"--user-data-dir={locals.SELF_PATH}/user-data/")
+	headless.add_argument(f"--user-data-dir={locals.SELF_PATH}/regis-data/")
 	headless.add_argument(f"--profile-directory=Default")
 	headless.add_argument("--no-sandbox")
 	headless.add_argument("--headless")
 	headless.add_argument("--disable-gpu")
+
+	moodleopt = webdriver.ChromeOptions()
+	moodleopt.add_argument(f"--user-data-dir={locals.SELF_PATH}/moodle-data/")
+	moodleopt.add_argument(f"--profile-directory=Default")	
 
 	regis = webdriver.Chrome(options=options, service=chrome_service)
 
@@ -51,9 +48,7 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 		"Regis Intranet",
 	)
 
-	regisaux.minimize_window()
-
-	moodle = webdriver.Chrome(service=chrome_service)
+	moodle = webdriver.Chrome(options=moodleopt, service=chrome_service)
 
 	signin(
 		moodle,
