@@ -346,11 +346,12 @@ def install():
 		wscript = _WSHELL.CreateShortCut(f"{desktopfolder}/Regis Desktop.lnk")
 		wscript.Targetpath = f'"{os.path.abspath(sys.executable)}"'
 		wscript.Arguments = f'"{os.path.abspath("regis-desktop.py")}"'
-		wscript.WorkingDirectory = f'"{os.path.abspath(inner)}"'
+		wscript.WorkingDirectory = os.path.abspath(inner)
 		wscript.WindowStyle = 0
 		wscript.Description = "Regis Desktop Launcher Shortcut"
 		wscript.IconLocation = os.path.abspath("assets/regis-icon.ico")
 		wscript.save()
+		
 	else: ## mac
 		pyshortcuts.make_shortcut(
 			script=os.path.abspath("regis-desktop.py"),
