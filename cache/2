@@ -1,15 +1,15 @@
-https://moodle.regis.org/calendar/view.php
+https://moodle.regis.org/my/
 <html dir="ltr" lang="en" xml:lang="en" class="yui3-js-enabled"><head>
-    <title>Regis Moodle: Calendar: Upcoming events</title>
+    <title>Dashboard</title>
     <link rel="shortcut icon" href="https://moodle.regis.org/theme/image.php/boost/theme/1688205623/favicon">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="keywords" content="moodle, Regis Moodle: Calendar: Upcoming events">
-<link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_17_2_1_1694718568935_8" src="https://moodle.regis.org/theme/yui_combo.php?m/1688205623/core/event/event-min.js&amp;m/1688205623/filter_mathjaxloader/loader/loader-min.js" async=""></script><link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1694718568935_19" href="https://moodle.regis.org/theme/yui_combo.php?3.17.2/cssbutton/cssbutton-min.css"><script charset="utf-8" id="yui_3_17_2_1_1694718568935_20" src="https://moodle.regis.org/theme/yui_combo.php?m/1688205623/core/widget/widget-focusafterclose-min.js&amp;3.17.2/plugin/plugin-min.js&amp;m/1688205623/core/lockscroll/lockscroll-min.js&amp;m/1688205623/core/notification/notification-dialogue-min.js&amp;m/1688205623/core/notification/notification-alert-min.js&amp;m/1688205623/core/notification/notification-exception-min.js&amp;m/1688205623/core/notification/notification-ajaxexception-min.js&amp;m/1688205623/filter_glossary/autolinker/autolinker-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/styles.php/boost/1688205623_1/all">
+<meta name="keywords" content="moodle, Dashboard">
+<link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_17_2_1_1694718596718_8" src="https://moodle.regis.org/theme/yui_combo.php?m/1688205623/core/event/event-min.js&amp;m/1688205623/filter_mathjaxloader/loader/loader-min.js" async=""></script><link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1694718596718_19" href="https://moodle.regis.org/theme/yui_combo.php?3.17.2/cssbutton/cssbutton-min.css"><script charset="utf-8" id="yui_3_17_2_1_1694718596718_20" src="https://moodle.regis.org/theme/yui_combo.php?m/1688205623/core/widget/widget-focusafterclose-min.js&amp;3.17.2/plugin/plugin-min.js&amp;m/1688205623/core/lockscroll/lockscroll-min.js&amp;m/1688205623/core/notification/notification-dialogue-min.js&amp;m/1688205623/core/notification/notification-alert-min.js&amp;m/1688205623/core/notification/notification-exception-min.js&amp;m/1688205623/core/notification/notification-ajaxexception-min.js&amp;m/1688205623/filter_glossary/autolinker/autolinker-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/styles.php/boost/1688205623_1/all">
 <script>
 //<![CDATA[
 var M = {}; M.yui = {};
 M.pageloadstarttime = new Date();
-M.cfg = {"wwwroot":"https:\/\/moodle.regis.org","sesskey":"S4dq4XkpzS","sessiontimeout":"14400","themerev":"1688205623","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1688205623","admin":"admin","svgicons":true,"usertimezone":"America\/New_York","contextid":1,"langrev":1688205623,"templaterev":"1688205623"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+M.cfg = {"wwwroot":"https:\/\/moodle.regis.org","sesskey":"S4dq4XkpzS","sessiontimeout":"14400","themerev":"1688205623","slasharguments":1,"theme":"boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1688205623","admin":"admin","svgicons":true,"usertimezone":"America\/New_York","contextid":93127,"langrev":1688205623,"templaterev":"1688205623"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
 var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
 if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
 YUI_config = {"debug":false,"base":"https:\/\/moodle.regis.org\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.regis.org\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.regis.org\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.regis.org\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.regis.org\/theme\/yui_combo.php?m\/1688205623\/","combine":true,"comboBase":"https:\/\/moodle.regis.org\/theme\/yui_combo.php?","ext":false,"root":"m\/1688205623\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.regis.org\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.regis.org\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1688205623\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.regis.org\/lib\/javascript.php\/1688205623\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.regis.org\/lib\/javascript.php\/1688205623\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
@@ -27,7 +27,7 @@ MathJax.Hub.Config({
     messageStyle: "none"
 });
 </script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/first" src="https://moodle.regis.org/lib/requirejs.php/1688205623/core/first.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="core/event" src="https://moodle.regis.org/lib/requirejs.php/1688205623/core/event.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="https://moodle.regis.org/lib/javascript.php/1688205623/lib/jquery/jquery-3.4.1.min.js"></script></head>
-<body id="page-calendar-view" class="format-site  path-calendar chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-regis-org pagelayout-standard course-1 context-1  jsenabled">
+<body id="page-my-index" class="format-site  path-my chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-regis-org pagelayout-mydashboard course-1 context-93127  jsenabled">
 <div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
 
 <div id="page-wrapper" class="d-print-block">
@@ -62,10 +62,10 @@ document.body.className += ' jsenabled';
                 <li class="nav-item">
     <a class="nav-item nav-link" href="https://my.regis.org">myRegis</a>
 </li><li class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-65035a684b82765035a6832e224" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-65035a684b82765035a6832e224">
+    <a class="dropdown-toggle nav-link" id="drop-down-65035a843412565035a840aeb58" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-65035a843412565035a840aeb58">
         Courses
     </a>
-    <div class="dropdown-menu" role="menu" id="drop-down-menu-65035a684b82765035a6832e224" aria-labelledby="drop-down-65035a684b82765035a6832e224">
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-65035a843412565035a840aeb58" aria-labelledby="drop-down-65035a843412565035a840aeb58">
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=15">Advisement Groups</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=11">Arts</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=2">Computer Science</a>
@@ -81,10 +81,10 @@ document.body.className += ' jsenabled';
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=20">J Term</a>
     </div>
 </li><li class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-65035a684b97165035a6832e225" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-65035a684b97165035a6832e225">
+    <a class="dropdown-toggle nav-link" id="drop-down-65035a843426f65035a840aeb59" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-65035a843426f65035a840aeb59">
         Groups
     </a>
-    <div class="dropdown-menu" role="menu" id="drop-down-menu-65035a684b97165035a6832e225" aria-labelledby="drop-down-65035a684b97165035a6832e225">
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-65035a843426f65035a840aeb59" aria-labelledby="drop-down-65035a843426f65035a840aeb59">
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=13">Admin Depts</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=16">Athletics</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=18">Committees</a>
@@ -92,10 +92,10 @@ document.body.className += ' jsenabled';
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=1">Miscellaneous</a>
     </div>
 </li><li class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-65035a684ba1c65035a6832e226" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-65035a684ba1c65035a6832e226">
+    <a class="dropdown-toggle nav-link" id="drop-down-65035a843431665035a840aeb510" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-65035a843431665035a840aeb510">
         REACH
     </a>
-    <div class="dropdown-menu" role="menu" id="drop-down-menu-65035a684ba1c65035a6832e226" aria-labelledby="drop-down-65035a684ba1c65035a6832e226">
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-65035a843431665035a840aeb510" aria-labelledby="drop-down-65035a843431665035a840aeb510">
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=17">Courses</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/view.php?id=205">Mentors</a>
     </div>
@@ -110,12 +110,12 @@ document.body.className += ' jsenabled';
                 <!-- navbar_plugin_output -->
                 <li class="nav-item">
                     <div class="popover-region collapsed popover-region-notifications" id="nav-notification-popover-container" data-userid="3732" data-region="popover-region">
-    <div class="popover-region-toggle nav-link" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-65035a684c0b065035a6832e227" aria-haspopup="true" aria-label="Show notification window with no new notifications" tabindex="0">
+    <div class="popover-region-toggle nav-link" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-65035a843497f65035a840aeb511" aria-haspopup="true" aria-label="Show notification window with no new notifications" tabindex="0">
                 <i class="icon fa fa-bell fa-fw " title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
         <div class="count-container hidden" data-region="count-container" aria-label="There are 0 unread notifications">0</div>
 
     </div>
-    <div id="popover-region-container-65035a684c0b065035a6832e227" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Notification window" role="region">
+    <div id="popover-region-container-65035a843497f65035a840aeb511" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Notification window" role="region">
         <div class="popover-region-header-container">
             <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
             <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button" href="#" title="Mark all as read" data-action="mark-all-read" role="button" aria-label="Mark all as read">
@@ -142,7 +142,7 @@ document.body.className += ' jsenabled';
                 </a>
     </div>
 </div><div class="popover-region collapsed" data-region="popover-region-messages">
-    <a id="message-drawer-toggle-65035a684cb4a65035a6832e228" class="nav-link d-inline-block popover-region-toggle position-relative" href="#" role="button">
+    <a id="message-drawer-toggle-65035a843539465035a840aeb512" class="nav-link d-inline-block popover-region-toggle position-relative" href="#" role="button">
         <i class="icon fa fa-comment fa-fw " title="Toggle messaging drawer" aria-label="Toggle messaging drawer"></i>
         <div class="count-container hidden" data-region="count-container" aria-label="There are 0 unread conversations">0</div>
     </a>
@@ -244,13 +244,13 @@ document.body.className += ' jsenabled';
                         </a>
                     </li>
                     <li>
-                        <a class="list-group-item list-group-item-action active active_tree_node " href="https://moodle.regis.org/calendar/view.php?view=month" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
+                        <a class="list-group-item list-group-item-action  " href="https://moodle.regis.org/calendar/view.php?view=month" data-key="calendar" data-isexpandable="0" data-indent="0" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="1">
                             <div class="ml-0">
                                 <div class="media">
                                         <span class="media-left">
                                             <i class="icon fa fa-calendar fa-fw " aria-hidden="true"></i>
                                         </span>
-                                    <span class="media-body font-weight-bold">Calendar</span>
+                                    <span class="media-body ">Calendar</span>
                                 </div>
                             </div>
                         </a>
@@ -388,13 +388,13 @@ document.body.className += ' jsenabled';
                         </a>
                     </li>
                     <li>
-                        <a class="list-group-item list-group-item-action  " href="https://moodle.regis.org/my/" data-key="courseindexpage" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="0" data-isactive="0" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
+                        <a class="list-group-item list-group-item-action active active_tree_node " href="https://moodle.regis.org/my/" data-key="courseindexpage" data-isexpandable="0" data-indent="1" data-showdivider="0" data-type="60" data-nodetype="0" data-collapse="0" data-forceopen="1" data-isactive="1" data-hidden="0" data-preceedwithhr="0" data-parent-key="mycourses">
                             <div class="ml-1">
                                 <div class="media">
                                         <span class="media-left">
                                             <i class="icon fa fa-fw fa-fw " aria-hidden="true"></i>
                                         </span>
-                                    <span class="media-body ">More...</span>
+                                    <span class="media-body font-weight-bold">More...</span>
                                 </div>
                             </div>
                         </a>
@@ -406,34 +406,22 @@ document.body.className += ' jsenabled';
     <div id="page" class="container-fluid d-print-block">
         <header id="page-header" class="row">
     <div class="col-12 pt-3 pb-3">
-        <div class="card ">
-            <div class="card-body ">
+        <div class="card border-0 bg-transparent">
+            <div class="card-body p-2">
                 <div class="d-sm-flex align-items-center">
-                    <div class="mr-auto">
-                        <div class="page-context-header"><div class="page-header-headings"><h1>Calendar</h1></div></div>
-                    </div>
 
                     <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
                     </div>
                 </div>
                 <div class="d-flex flex-wrap">
-                    <div id="page-navbar">
-                        <nav aria-label="Navigation bar">
-    <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="https://moodle.regis.org/my/">Dashboard</a>
-                </li>
-        
-                <li class="breadcrumb-item">Site pages</li>
-        
-                <li class="breadcrumb-item">
-                    <a href="https://moodle.regis.org/calendar/view.php?view=month" aria-current="page">Calendar</a>
-                </li>
-        </ol>
-</nav>
-                    </div>
                     <div class="ml-auto d-flex">
-                        
+                        <div class="singlebutton">
+    <form method="post" action="https://moodle.regis.org/my/index.php">
+            <input type="hidden" name="edit" value="1">
+            <input type="hidden" name="sesskey" value="S4dq4XkpzS">
+        <button type="submit" class="btn btn-secondary" id="single_button65035a840aeb51" title="">Customise this page</button>
+    </form>
+</div>
                     </div>
                     <div id="course-header">
                         
@@ -449,453 +437,468 @@ document.body.className += ' jsenabled';
                 <section id="region-main" class="has-blocks mb-3" aria-label="Content">
 
                     <span class="notifications" id="user-notifications"></span>
-                    <div role="main"><span id="maincontent"></span><div data-region="calendar" class="maincalendar"><div class="heightcontainer"><div id="calendar-upcoming-65035a686891765035a6832e2218" data-template="core_calendar/upcoming_detailed">
-    <div class="header d-flex flex-wrap p-1">
-        <div data-region="view-selector">
-            <button id="calendarviewdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="d-sm-inline-block" data-active-item-text="">
-                    
-                    
-                    Upcoming events
-                </span>
-            </button>
-            <ul class="dropdown-menu" data-show-active-item="" aria-labelledby="calendarviewdropdown">
-                <li>
-                    <a class="dropdown-item " href="#" data-view="month" data-year="2023" data-month="9" data-day="14" data-courseid="1" data-categoryid="0">
-                        Month
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item " href="#" data-view="day" data-year="2023" data-month="9" data-day="14" data-courseid="1" data-categoryid="0">
-                        Day
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item active" href="#" data-view="upcoming" data-year="2023" data-month="9" data-day="14" data-courseid="1" data-categoryid="0">
-                        Upcoming events
-                    </a>
-                </li>
-            </ul>
+                    <div role="main"><span id="maincontent"></span><aside id="block-region-content" class="block-region" data-blockregion="content" data-droptarget="1"><a href="#sb-6" class="sr-only sr-only-focusable">Skip Course overview</a>
+
+<section id="inst21746" class=" block_myoverview block  card mb-3" role="complementary" data-block="myoverview" aria-labelledby="instance-21746-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-21746-header" class="card-title d-inline">Course overview</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="block-myoverview-65035a84317ea65035a840aeb55" class="block-myoverview block-cards" data-region="myoverview" role="navigation" data-init="true">
+
+            <div data-region="filter" class="d-flex align-items-center flex-wrap" aria-label="Course overview controls">
+                <div class="dropdown mb-1 mr-auto">
+                    <button id="groupingdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Grouping drop-down menu">
+                        <i class="icon fa fa-filter fa-fw " aria-hidden="true"></i>
+                        <span class="d-sm-inline-block" data-active-item-text="">
+                            
+                            All (except removed from view)
+                            
+                            
+                            
+                            
+                            
+                            
+                        </span>
+                    </button>
+                    <ul class="dropdown-menu" data-show-active-item="" data-active-item-text="" aria-labelledby="groupingdropdown">
+                        <li class="dropdown-divider" role="presentation">
+                            <span class="filler">&nbsp;</span>
+                        </li>
+                        <li>
+                            <a class="dropdown-item active" href="#" data-filter="grouping" data-value="all" data-pref="all" aria-label="Show all courses except courses removed from view" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                All (except removed from view)
+                            </a>
+                        </li>
+                        <li class="dropdown-divider" role="presentation">
+                            <span class="filler">&nbsp;</span>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="inprogress" data-pref="inprogress" aria-label="Show courses in progress" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                In progress
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="future" data-pref="future" aria-label="Show future courses" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                Future
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="past" data-pref="past" aria-label="Show past courses" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                Past
+                            </a>
+                        </li>
+                        <li class="dropdown-divider" role="presentation">
+                            <span class="filler">&nbsp;</span>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="favourites" data-pref="favourites" aria-label="Show starred courses" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                Starred
+                            </a>
+                        </li><li class="dropdown-divider" role="presentation">
+                            <span class="filler">&nbsp;</span>
+                        </li>
+                        <li>
+                            <a class="dropdown-item " href="#" data-filter="grouping" data-value="hidden" data-pref="hidden" aria-label="Show courses removed from view" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                Removed from view
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <div class="mb-1 mr-1 d-flex align-items-center">
+                    <div class="dropdown">
+                        <button id="sortingdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Sorting drop-down menu">
+                            <i class="icon fa fa-sort-amount-asc fa-fw " aria-hidden="true"></i>
+                            <span class="d-sm-inline-block" data-active-item-text="">
+                                Course name
+                                
+                                
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" data-show-active-item="" aria-labelledby="sortingdropdown">
+                            <li>
+                                <a class="dropdown-item active" href="#" data-filter="sort" data-pref="title" data-value="fullname" aria-label="Sort courses by course name" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                    Course name
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item " href="#" data-filter="sort" data-pref="lastaccessed" data-value="ul.timeaccess desc" aria-label="Sort courses by last accessed date" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                    Last accessed
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <div class="dropdown mb-1">
+                        <button id="displaydropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Display drop-down menu">
+                            <i class="icon fa fa-th fa-fw " aria-hidden="true"></i>
+                            <span class="d-sm-inline-block" data-active-item-text="">
+                                Card
+                                
+                                
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu" data-show-active-item="" aria-labelledby="displaydropdown">
+                                <li>
+                                    <a class="dropdown-item active" href="#" data-display-option="display" data-value="card" data-pref="card" aria-label="Switch to card view" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                        Card
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="#" data-display-option="display" data-value="list" data-pref="list" aria-label="Switch to list view" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                        List
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item " href="#" data-display-option="display" data-value="summary" data-pref="summary" aria-label="Switch to summary view" aria-controls="courses-view-65035a84317ea65035a840aeb55">
+                                        Summary
+                                    </a>
+                                </li>
+                        </ul>
+                    </div>
+            </div>
+
+    <div class="container-fluid p-0">
+        <div id="courses-view-65035a84317ea65035a840aeb55" data-region="courses-view" data-display="card" data-grouping="all" data-customfieldname="" data-customfieldvalue="" data-sort="fullname" data-prev-display="card" data-paging="0" data-nocoursesimg="https://moodle.regis.org/theme/image.php/boost/block_myoverview/1688205623/courses" data-totalcoursecount="22" data-displaycategories="on">
+            <div data-region="course-view-content">
+                <div data-region="loading-placeholder-content" aria-hidden="true">
+                </div>
+            </div>
         </div>
-            <label class="sr-only" for="course">List of courses</label><select class="select custom-select cal_courses_flt ml-1 mr-auto" id="course" name="course"><option selected="selected" value="1">All courses</option><option value="1279">Arts 10: Sauer</option><option value="18">Computer Science 10: Christie</option><option value="1214">English 10: Henry</option><option value="729">School Counseling Seminar 10: O'Gorman</option><option value="129">US History: Anselme</option><option value="1269">Christian Service 10: Smith</option><option value="411">French II: Acosta</option><option value="1053">Math 10 (Alg 2): Gallagher</option><option value="1112">Health Education: Edwards</option><option value="1113">Phys Ed 10: Edwards</option><option value="1116">Chemistry 10: Martorell</option><option value="1299">Theology 10: D'Antonio</option><option value="1134">Advisement 2D-2: Martorell</option><option value="218">Catalyst</option><option value="219">Chess</option><option value="224">Computer</option><option value="229">Engineering</option><option value="1147">Flight</option><option value="257">Liturgical Music Club</option><option value="216">Orchestra-Band</option><option value="261">Soccer</option></select>
-        <button class="btn btn-secondary float-sm-right float-right" data-context-id="2" data-action="new-event-button">
-            New event
-        </button>
-    </div>    <div class="calendarwrapper" data-view="upcoming" data-context-id="2" data-courseid="1">
-        <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
-            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
-        </span>
-            <h2 class="current text-center">Upcoming events</h2>
-            <div class="eventlist my-1">
-            <div data-type="event" data-course-id="1053" data-event-id="42301" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="Inequalities HW Due 9/15 is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">Inequalities HW Due 9/15 is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694790900">Tomorrow</a>, 11:15 AM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><p dir="ltr" style="text-align:left;">Textbook **Written Exercises**&nbsp;<span style="font-size:.9375rem;">pgs. 67-68, questions 5, 11, 17, 19, 25, 29, 31</span></p><p dir="ltr" style="text-align:left;">You need to graph every question and write your answers in interval notation (even if the book says otherwise).<br>That's what I will ask you to do on the quiz.</p></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1053">Math 10 (Alg 2): Gallagher</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74887" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1299" data-event-id="42289" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="Reading and Discussion Questions for Fri. Sept. 15 - 2D-2 is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">Reading and Discussion Questions for Fri. Sept. 15 - 2D-2 is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694801700">Tomorrow</a>, 2:15 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><p dir="ltr" style="text-align:left;">For this Friday's class, please <strong>read the first chapter of your textbook</strong>, <em>Studying the Old Testament</em>, by Rhonda Burnette-Bletsch: "Preparing for the Journey," pp. 1-22</p><p dir="ltr" style="text-align:left;">In class on Friday, we will be going over the history of the Israelites, the literary history of the Bible, and the major interpretative methods currently used for the academic study of the Bible. Many of you on your index cards asked about the historical context of the Old Testament, and the transmission and history of the text of the Bible, so hopefully Friday's class begins to answer some of those questions!</p><p dir="ltr" style="text-align:left;">For your homework, in the CD-ROM materials (also located on Moodle under "General Resources"):&nbsp;in the <strong>Questions for Review for Chapter 1</strong>, please <strong>read over all the questions as preparation for our discussion on Friday</strong>. Please <strong>answer questions 2, 3, and 10 in a sentence or two and submit all three in a Word document (.doc or .docx) before the start of our class on Fri. Sept. 15 at 2:15 pm.</strong></p></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1299">Theology 10: D'Antonio</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74873&amp;action=editsubmission" class="card-link">Add submission</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="411" data-event-id="42239" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="pour vendredi le 15 septembre (jour E) is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">pour vendredi le 15 septembre (jour E) is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694805000">Tomorrow</a>, 3:10 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><h3 style="text-align:left;"></h3><h3><span><strong>pour vendredi le 14 septembre (jour E)</strong></span></h3><h3></h3><p><span><span lang="fr" xml:lang="fr"><strong>faites un exposé oral d'une minute plus ou moins pour vous présenter; utilisez surtout le présent de l'indicatif; parlez de vous, de votre famille, de ce que vous aimez faire, ce que vous comptez faire cette année scolaire&nbsp;; vous pouvez dire par exemple: «&nbsp;Cette année scolaire, j’espère pouvoir….&nbsp;», etc.</strong></span></span></p><br></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=411">French II: Acosta</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74777" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1116" data-event-id="41823" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="PSET 1 - due 9/15 @ 3:30p is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">PSET 1 - due 9/15 @ 3:30p is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694806200">Tomorrow</a>, 3:30 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><p dir="ltr" style="text-align:left;">PSET 1. Always drop off PSETs on the appropriate bin next to my desk. Make sure your name is on it.&nbsp;</p></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1116">Chemistry 10: Martorell</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74068" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1116" data-event-id="42042" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="Prelecture_2 reading: chapter 1.4. and sig fig rules. Due 9/18 is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">Prelecture_2 reading: chapter 1.4. and sig fig rules. Due 9/18 is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695054600">Monday, 18 September</a>, 12:30 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><p dir="ltr" style="text-align:left;">1.4. Units of measurement and part of 1.5 for rules of significant figures.&nbsp;</p></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1116">Chemistry 10: Martorell</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74479" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1116" data-event-id="42043" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="Lab 1: safety and introduction. Due 9/18  is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">Lab 1: safety and introduction. Due 9/18  is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695065400">Monday, 18 September</a>, 3:30 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1116">Chemistry 10: Martorell</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74480" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1279" data-event-id="42231" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="HW 7 Fundamentals of YOUR song - 2D-2 September 20, 9:45am  is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">HW 7 Fundamentals of YOUR song - 2D-2 September 20, 9:45am  is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695217500">Wednesday, 20 September</a>, 9:45 AM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><p dir="ltr" style="text-align:left;"></p><p dir="ltr">Review the presentation from our first meeting - also available&nbsp;<a href="https://docs.google.com/presentation/d/15D6yTz2HW7qlG1t-pQSUJkvRfeFxDHrkXEs-mah5O_o/edit?usp=drive_link">here</a></p><p dir="ltr">Prepare a&nbsp; document - include your NAME and ADVISEMENT<br></p><p dir="ltr">Your TASK is to choose a song - any song, any genre, any music you like. Listen attentively to the song and decide how each of the 7 fundamentals of music are represented. Feel free to write in sentences or simply create a list. As a helpful hint, think about "who's job" is each of the fundamentals.</p><p dir="ltr">Make sure to share the document with me (as editor), so I can grade and return with feedback.</p><p dir="ltr"><br></p><p dir="ltr"><br></p><br><p></p></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1279">Arts 10: Sauer</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74768" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1116" data-event-id="41824" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="PSETs 2-4. Due 9/25  is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">PSETs 2-4. Due 9/25  is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695645900">Monday, 25 September</a>, 8:45 AM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><p dir="ltr" style="text-align:left;">PSETs 2-4 will be checked IN CLASS. Make sure you have them completed<span> </span><u>before</u> class.&nbsp;</p></div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1116">Chemistry 10: Martorell</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74069" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1116" data-event-id="42045" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="Lab 2: Density. Due: 9/25 is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">Lab 2: Density. Due: 9/25 is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695670200">Monday, 25 September</a>, 3:30 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1116">Chemistry 10: Martorell</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74482" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-            <div data-type="event" data-course-id="1116" data-event-id="42259" class="event m-t-1" data-event-component="mod_assign" data-event-eventtype="due" data-eventtype-course="1" data-event-title="Exam 1: Unit 1 is due" data-event-count="">
-                <div class="card rounded">
-                    <div class="box card-header clearfix calendar_event_course">
-                        <div class="commands float-sm-right">
-                        </div>
-                        <div class="d-inline-block mt-1 align-top"><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></div>
-                        <div class="d-inline-block">
-                            <h3 class="name d-inline-block">Exam 1: Unit 1 is due</h3>
-                        </div>
-                    </div>
-                    <div class="description card-body">
-                        <div class="row">
-                            <div class="col-1"><i class="icon fa fa-clock-o fa-fw " title="When" aria-label="When"></i></div>
-                            <div class="col-11"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695835800">Wednesday, 27 September</a>, 1:30 PM</div>
-                        </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-calendar fa-fw " title="Event type" aria-label="Event type"></i></div>
-                                <div class="col-11">Course event</div>
-                            </div>
-                            <div class="row mt-1">
-                                <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
-                                <div class="col-11"><a href="https://moodle.regis.org/course/view.php?id=1116">Chemistry 10: Martorell</a></div>
-                            </div>
-                    </div>
-                        <div class="card-footer text-right bg-transparent">
-                            <a href="https://moodle.regis.org/mod/assign/view.php?id=74825" class="card-link">Go to activity</a>
-                        </div>
-                </div>
-            </div>
-    </div>    </div>
-</div></div><div class="bottom">
-        <div class="singlebutton">
-            <form method="get" action="https://moodle.regis.org/calendar/export.php">
-                <button type="submit" class="btn btn-secondary" id="single_button65035a6832e2219" title="">Export calendar</button>
-            </form>
+    </div>
+</div>
+            <div class="footer"></div>
+            
         </div>
-        <div class="singlebutton">
-            <form method="get" action="https://moodle.regis.org/calendar/managesubscriptions.php">
-                <button type="submit" class="btn btn-secondary" id="single_button65035a6832e2220" title="">Manage subscriptions</button>
-            </form>
+
+    </div>
+
+</section>
+
+  <span id="sb-6"></span><a href="#sb-7" class="sr-only sr-only-focusable">Skip Recently accessed courses</a>
+
+<section id="inst21751" class=" block_recentlyaccessedcourses block  card mb-3" role="complementary" data-block="recentlyaccessedcourses" aria-labelledby="instance-21751-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-21751-header" class="card-title d-inline">Recently accessed courses</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="block-recentlyaccessedcourses-65035a84326cb65035a840aeb56" class="block-recentlyaccessedcourses block-cards" data-region="recentlyaccessedcourses" data-userid="3732" data-displaycoursecategory="1">
+    <div class="container-fluid p-0">
+        <div id="recentlyaccessedcourses-view-65035a84326cb65035a840aeb56" data-region="recentlyaccessedcourses-view">
+            <div data-region="loading-placeholder">
+                <div class="card-deck dashboard-card-deck one-row overflow-hidden" style="height: 13.05rem">
+                    <div class="card dashboard-card border-0">
+                        <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                        </div>
+                        <div class="card-body pr-1 course-info-container">
+                            <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                        </div>
+                    </div>
+                    <div class="card dashboard-card border-0">
+                        <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                        </div>
+                        <div class="card-body pr-1 course-info-container">
+                            <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                        </div>
+                    </div>
+                    <div class="card dashboard-card border-0">
+                        <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                        </div>
+                        <div class="card-body pr-1 course-info-container">
+                            <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                        </div>
+                    </div>
+                    <div class="card dashboard-card border-0">
+                        <div class="card-img-top bg-pulse-grey w-100" style="height: 7rem">
+                        </div>
+                        <div class="card-body pr-1 course-info-container">
+                            <div class="bg-pulse-grey w-100" style="height: 1rem"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden" data-region="view-content">
+                    <div class="d-flex paging-bar-container mb-3" data-region="paging-bar-container">
+                        <div data-region="paging-control-container" class="d-flex">
+                        
+                            <nav id="paging-bar-65035a84326cb65035a840aeb56" class="" data-region="paging-bar" data-ignore-control-while-loading="" data-hide-control-on-single-page="" data-active-page-number="1" data-items-per-page="" aria-label="Pagination navigation" data-aria-label-components-pagination-item="pagedcontentnavigationitem, core" data-aria-label-components-pagination-active-item="pagedcontentnavigationactiveitem, core">
+                        
+                                <ul class="pagination mb-0">
+                                                                <li class="page-item  " data-region="page-item" data-control="previous">
+                        
+                            <a href="#" class="page-link" data-region="page-link" aria-label="Previous page">
+                        <span class="icon-no-margin dir-rtl-hide" aria-hidden="true"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                        <span class="icon-no-margin dir-ltr-hide" aria-hidden="true"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+                                        <li class="page-item  " data-region="page-item" data-control="next">
+                        
+                            <a href="#" class="page-link" data-region="page-link" aria-label="Next page">
+                        <span class="icon-no-margin dir-rtl-hide" aria-hidden="true"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"></i></span>
+                        <span class="icon-no-margin dir-ltr-hide" aria-hidden="true"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"></i></span>
+                            </a>
+                        </li>
+        </ul>
+                            </nav>
+                        </div>
+                    </div>
+                        
+        <div class="card-deck dashboard-card-deck one-row fixed-width-cards justify-content-center overflow-hidden" data-region="card-deck" role="list">
         </div>
-</div></div></div>
+    </div>
+            <div class="hidden text-xs-center text-center mt-3" data-region="empty-message">
+                <img class="empty-placeholder-image-lg mt-1" src="https://moodle.regis.org/theme/image.php/boost/block_recentlyaccessedcourses/1688205623/courses" alt="No recent courses" role="presentation">
+                <p class="text-muted mt-3">No recent courses</p>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-7"></span></aside></div>
                     
                     
 
                 </section>
                 <section data-region="blocks-column" class="d-print-none" aria-label="Blocks">
-                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip Events key</a>
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip My courses</a>
 
-<section id="block-65035a68471cf" class=" block block_fake  card mb-3" role="complementary" data-block="_fake" aria-labelledby="instance-fakeid-65035a68471d3-header">
+<section id="inst21747" class=" block_course_list block list_block  card mb-3" role="navigation" data-block="course_list" aria-labelledby="instance-21747-header">
 
     <div class="card-body p-3">
 
-            <h5 id="instance-fakeid-65035a68471d3-header" class="card-title d-inline">Events key</h5>
+            <h5 id="instance-21747-header" class="card-title d-inline">My courses</h5>
 
 
         <div class="card-text content mt-3">
-            <div id="event-filter-65035a6832e1f65035a6832e221" class="calendar_filters mt-2">
-    <ul>
-            <li>
-                <a href="#" data-action="filter-event-type" data-eventtype="site" data-eventtype-hidden="">
-                        <span class="calendar_event_site">
-                            <i class="icon fa fa-eye fa-fw " title="Hide site events" aria-label="Hide site events"></i>
-                        </span>
-                            <i class="icon fa fa-globe fa-fw " aria-hidden="true"></i>
-                        <span class="eventname">Hide site events</span>
-                
-                </a>
-            </li>
-            <li>
-                <a href="#" data-action="filter-event-type" data-eventtype="category" data-eventtype-hidden="">
-                        <span class="calendar_event_category">
-                            <i class="icon fa fa-eye fa-fw " title="Hide category events" aria-label="Hide category events"></i>
-                        </span>
-                            <i class="icon fa fa-cubes fa-fw " aria-hidden="true"></i>
-                        <span class="eventname">Hide category events</span>
-                
-                </a>
-            </li>
-            <li>
-                <a href="#" data-action="filter-event-type" data-eventtype="course" data-eventtype-hidden="">
-                        <span class="calendar_event_course">
-                            <i class="icon fa fa-eye fa-fw " title="Hide course events" aria-label="Hide course events"></i>
-                        </span>
-                            <i class="icon fa fa-graduation-cap fa-fw " aria-hidden="true"></i>
-                        <span class="eventname">Hide course events</span>
-                
-                </a>
-            </li>
-            <li>
-                <a href="#" data-action="filter-event-type" data-eventtype="group" data-eventtype-hidden="">
-                        <span class="calendar_event_group">
-                            <i class="icon fa fa-eye fa-fw " title="Hide group events" aria-label="Hide group events"></i>
-                        </span>
-                            <i class="icon fa fa-group fa-fw " aria-hidden="true"></i>
-                        <span class="eventname">Hide group events</span>
-                
-                </a>
-            </li>
-            <li>
-                <a href="#" data-action="filter-event-type" data-eventtype="user" data-eventtype-hidden="">
-                        <span class="calendar_event_user">
-                            <i class="icon fa fa-eye fa-fw " title="Hide user events" aria-label="Hide user events"></i>
-                        </span>
-                            <i class="icon fa fa-user fa-fw " aria-hidden="true"></i>
-                        <span class="eventname">Hide user events</span>
-                
-                </a>
-            </li>
-            <li>
-                <a href="#" data-action="filter-event-type" data-eventtype="other" data-eventtype-hidden="">
-                        <span class="calendar_event_other">
-                            <i class="icon fa fa-eye fa-fw " title="Hide other events" aria-label="Hide other events"></i>
-                        </span>
-                            <i class="icon fa fa-calendar fa-fw " aria-hidden="true"></i>
-                        <span class="eventname">Hide other events</span>
-                
-                </a>
-            </li>
-    </ul>
+            <ul class="unlist"><li class="r0"><div class="column c1"><a title="Arts 10: Sauer" href="https://moodle.regis.org/course/view.php?id=1279"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Arts 10: Sauer</a></div></li>
+<li class="r1"><div class="column c1"><a title="Computer Science 10: Christie" href="https://moodle.regis.org/course/view.php?id=18"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Computer Science 10: Christie</a></div></li>
+<li class="r0"><div class="column c1"><a title="English 10: Henry" href="https://moodle.regis.org/course/view.php?id=1214"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>English 10: Henry</a></div></li>
+<li class="r1"><div class="column c1"><a title="School Counseling Seminar 10: O'Gorman" href="https://moodle.regis.org/course/view.php?id=729"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>School Counseling Seminar 10: O'Gorman</a></div></li>
+<li class="r0"><div class="column c1"><a title="US History: Anselme" href="https://moodle.regis.org/course/view.php?id=129"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>US History: Anselme</a></div></li>
+<li class="r1"><div class="column c1"><a title="Christian Service 10: Smith" href="https://moodle.regis.org/course/view.php?id=1269"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Christian Service 10: Smith</a></div></li>
+<li class="r0"><div class="column c1"><a title="French II: Acosta" href="https://moodle.regis.org/course/view.php?id=411"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>French II: Acosta</a></div></li>
+<li class="r1"><div class="column c1"><a title="Math 10 (Alg 2): Gallagher" href="https://moodle.regis.org/course/view.php?id=1053"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Math 10 (Alg 2): Gallagher</a></div></li>
+<li class="r0"><div class="column c1"><a title="Health Education: Edwards" href="https://moodle.regis.org/course/view.php?id=1112"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Health Education: Edwards</a></div></li>
+<li class="r1"><div class="column c1"><a title="Phys Ed 10: Edwards" href="https://moodle.regis.org/course/view.php?id=1113"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Phys Ed 10: Edwards</a></div></li>
+<li class="r0"><div class="column c1"><a title="Chemistry 10: Martorell" href="https://moodle.regis.org/course/view.php?id=1116"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Chemistry 10: Martorell</a></div></li>
+<li class="r1"><div class="column c1"><a title="Theology 10: D'Antonio" href="https://moodle.regis.org/course/view.php?id=1299"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Theology 10: D'Antonio</a></div></li>
+<li class="r0"><div class="column c1"><a title="Advisement 2D-2: Martorell" href="https://moodle.regis.org/course/view.php?id=1134"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Advisement 2D-2: Martorell</a></div></li>
+<li class="r1"><div class="column c1"><a title="Catalyst" href="https://moodle.regis.org/course/view.php?id=218"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Catalyst</a></div></li>
+<li class="r0"><div class="column c1"><a title="Chess" href="https://moodle.regis.org/course/view.php?id=219"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Chess Club</a></div></li>
+<li class="r1"><div class="column c1"><a title="Computer" href="https://moodle.regis.org/course/view.php?id=224"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Computer Club</a></div></li>
+<li class="r0"><div class="column c1"><a title="Engineering" href="https://moodle.regis.org/course/view.php?id=229"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Engineering Club</a></div></li>
+<li class="r1"><div class="column c1"><a title="Flight" href="https://moodle.regis.org/course/view.php?id=1147"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Flight Club</a></div></li>
+<li class="r0"><div class="column c1"><a title="Liturgical Music Club" href="https://moodle.regis.org/course/view.php?id=257"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Liturgical Music Club</a></div></li>
+<li class="r1"><div class="column c1"><a title="Orchestra-Band" href="https://moodle.regis.org/course/view.php?id=216"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Orchestra/Band</a></div></li>
+<li class="r0"><div class="column c1"><a title="Soccer" href="https://moodle.regis.org/course/view.php?id=261"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i>Soccer Club</a></div></li></ul>
+            <div class="footer"><a href="https://moodle.regis.org/course/index.php">All courses</a> ...</div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Skip Latest badges</a>
+
+<section id="inst21748" class=" block_badges block  card mb-3" role="complementary" data-block="badges" aria-labelledby="instance-21748-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-21748-header" class="card-title d-inline">Latest badges</h5>
+
+
+        <div class="card-text content mt-3">
+            You have no badges to display
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-2"></span><a href="#sb-3" class="sr-only sr-only-focusable">Skip Calendar</a>
+
+<section id="inst21749" class=" block_calendar_month block  card mb-3" role="complementary" data-block="calendar_month" aria-labelledby="instance-21749-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-21749-header" class="card-title d-inline">Calendar</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="calendar-month-2023-September-65035a8412e0465035a840aeb52" data-template="core_calendar/month_mini" data-includenavigation="true" data-mini="true">
+    <div id="month-mini-2023-September-65035a8412e0465035a840aeb52" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="9" data-year="2023" data-day="14" data-view="month">
+        <span class="overlay-icon-container" data-region="overlay-icon-container">
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
+        </span>
+        <table class="minicalendar calendartable">
+            <caption class="calendar-controls">
+                    <a href="#" class="arrow_link previous" title="Previous month" data-year="2023" data-month="8">
+                        <span class="arrow">◄</span>
+                    </a>
+                    <span class="hide"> | </span>
+                    <span class="current">
+                        <a href="https://moodle.regis.org/calendar/view.php?view=month&amp;time=1694718596" title="This month">September 2023</a>
+                    </span>
+                    <span class="hide"> | </span>
+                    <a href="#" class="arrow_link next" title="Next month" data-year="2023" data-month="10">
+                        <span class="arrow">►</span>
+                    </a>
+            </caption>
+            <thead>
+              <tr>
+                    <th class="header text-xs-center" scope="col" aria-label="Sunday">
+                        Sun
+                    </th>
+                    <th class="header text-xs-center" scope="col" aria-label="Monday">
+                        Mon
+                    </th>
+                    <th class="header text-xs-center" scope="col" aria-label="Tuesday">
+                        Tue
+                    </th>
+                    <th class="header text-xs-center" scope="col" aria-label="Wednesday">
+                        Wed
+                    </th>
+                    <th class="header text-xs-center" scope="col" aria-label="Thursday">
+                        Thu
+                    </th>
+                    <th class="header text-xs-center" scope="col" aria-label="Friday">
+                        Fri
+                    </th>
+                    <th class="header text-xs-center" scope="col" aria-label="Saturday">
+                        Sat
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-region="month-view-week">
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="dayblank">&nbsp;</td>
+                        <td class="day text-center" data-day-timestamp="1693540800">
+                                1
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1693627200">
+                                2
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center weekend" data-day-timestamp="1693713600">
+                                3
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1693800000">
+                                4
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1693886400">
+                                5
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1693972800">
+                                6
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1694059200">
+                                7
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1694145600">
+                                8
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1694232000">
+                                9
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center weekend" data-day-timestamp="1694318400">
+                                10
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1694404800">
+                                11
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1694491200">
+                                12
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1694577600">
+                                13
+                            </td>
+                        <td class="day text-center today" data-day-timestamp="1694664000">
+                                    <a id="calendar-day-popover-link-1-2023-256-65035a8412e0465035a840aeb52" href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694664000" data-container="body" data-toggle="popover" data-html="true" data-region="mini-day-link" data-trigger="hover focus" data-placement="top" data-year="2023" data-month="9" data-courseid="1" data-categoryid="0" data-title="Today Thursday, 14 September" data-alternate="No events" aria-label="Today Thursday, 14 September" data-original-title="" title="">14</a>
+    <div class="hidden">
+        
+    </div>
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1694750400">
+                                15
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1694836800">
+                                16
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center weekend" data-day-timestamp="1694923200">
+                                17
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695009600">
+                                18
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695096000">
+                                19
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695182400">
+                                20
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695268800">
+                                21
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695355200">
+                                22
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1695441600">
+                                23
+                            </td>
+                </tr>
+                <tr data-region="month-view-week">
+                        <td class="day text-center weekend" data-day-timestamp="1695528000">
+                                24
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695614400">
+                                25
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695700800">
+                                26
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695787200">
+                                27
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695873600">
+                                28
+                            </td>
+                        <td class="day text-center" data-day-timestamp="1695960000">
+                                29
+                            </td>
+                        <td class="day text-center weekend" data-day-timestamp="1696046400">
+                                30
+                            </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
             <div class="footer"></div>
             
@@ -905,468 +908,498 @@ document.body.className += ' jsenabled';
 
 </section>
 
-  <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Skip Monthly view</a>
+  <span id="sb-3"></span><a href="#sb-4" class="sr-only sr-only-focusable">Skip Upcoming events</a>
 
-<section id="block-65035a6847460" class=" block block_fake  card mb-3" role="complementary" data-block="_fake" aria-labelledby="instance-fakeid-65035a6847462-header">
+<section id="inst21750" class=" block_calendar_upcoming block  card mb-3" role="complementary" data-block="calendar_upcoming" aria-labelledby="instance-21750-header">
 
     <div class="card-body p-3">
 
-            <h5 id="instance-fakeid-65035a6847462-header" class="card-title d-inline">Monthly view</h5>
+            <h5 id="instance-21750-header" class="card-title d-inline">Upcoming events</h5>
 
 
         <div class="card-text content mt-3">
-            <div id="calendar-multi-65035a6844aa265035a6832e222">
-        <div data-period="month" class="calendarwrapper" data-previous-year="2023" data-previous-month="7" data-next-year="2023" data-next-month="9">
-            <div id="calendar-month-2023-August-65035a6844aa265035a6832e222" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
-                <div id="month-mini-2023-August-65035a6844aa265035a6832e222" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="8" data-year="2023" data-day="1" data-view="month">
-                    <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
-                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
-                    </span>
-                    <table class="minicalendar calendartable">
-                        <caption class="calendar-controls">
-                                <h3>
-                                    <a href="https://moodle.regis.org/calendar/view.php?view=month&amp;time=1690862400" title="This month">August 2023</a>
-                                </h3>
-                        </caption>
-                        <thead>
-                          <tr>
-                                <th class="header text-xs-center" scope="col" aria-label="Sunday">
-                                    Sun
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Monday">
-                                    Mon
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Tuesday">
-                                    Tue
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Wednesday">
-                                    Wed
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Thursday">
-                                    Thu
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Friday">
-                                    Fri
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Saturday">
-                                    Sat
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-region="month-view-week">
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="day text-center" data-day-timestamp="1690862400">
-                                            1
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1690948800">
-                                            2
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691035200">
-                                            3
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691121600">
-                                            4
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1691208000">
-                                            5
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1691294400">
-                                            6
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691380800">
-                                            7
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691467200">
-                                            8
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691553600">
-                                            9
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691640000">
-                                            10
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691726400">
-                                            11
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1691812800">
-                                            12
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1691899200">
-                                            13
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1691985600">
-                                            14
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692072000">
-                                            15
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692158400">
-                                            16
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692244800">
-                                            17
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692331200">
-                                            18
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1692417600">
-                                            19
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1692504000">
-                                            20
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692590400">
-                                            21
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692676800">
-                                            22
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692763200">
-                                            23
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692849600">
-                                            24
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1692936000">
-                                            25
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1693022400">
-                                            26
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1693108800">
-                                            27
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693195200">
-                                            28
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693281600">
-                                            29
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693368000">
-                                            30
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693454400">
-                                            31
-                                        </td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div id="calendar-upcoming-block-65035a842887765035a840aeb53" data-template="core_calendar/upcoming_mini">
+    <div class="card-text content calendarwrapper" id="month-upcoming-mini-65035a842887765035a840aeb53" data-context-id="2" data-courseid="1" data-categoryid="0">
+        <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
+        </span>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42301" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1053&amp;time=1694790900#event_42301">Inequalities HW Due 9/15 is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694790900">Tomorrow</a>, 11:15 AM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42289" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1299&amp;time=1694801700#event_42289">Reading and Discussion Questions for Fri. Sept. 15 - 2D-2 is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694801700">Tomorrow</a>, 2:15 PM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42239" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=411&amp;time=1694805000#event_42239">pour vendredi le 15 septembre (jour E) is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694805000">Tomorrow</a>, 3:10 PM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="41823" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1116&amp;time=1694806200#event_41823">PSET 1 - due 9/15 @ 3:30p is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694806200">Tomorrow</a>, 3:30 PM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42042" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1116&amp;time=1695054600#event_42042">Prelecture_2 reading: chapter 1.4. and sig fig rules. Due 9/18 is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695054600">Monday, 18 September</a>, 12:30 PM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42043" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1116&amp;time=1695065400#event_42043">Lab 1: safety and introduction. Due 9/18  is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695065400">Monday, 18 September</a>, 3:30 PM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42231" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1279&amp;time=1695217500#event_42231">HW 7 Fundamentals of YOUR song - 2D-2 September 20, 9:45am  is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695217500">Wednesday, 20 September</a>, 9:45 AM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="41824" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1116&amp;time=1695645900#event_41824">PSETs 2-4. Due 9/25  is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695645900">Monday, 25 September</a>, 8:45 AM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42045" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1116&amp;time=1695670200#event_42045">Lab 2: Density. Due: 9/25 is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695670200">Monday, 25 September</a>, 3:30 PM</div>
+                <hr>
+            </div>
+            <div class="event" data-eventtype-course="1" data-region="event-item">
+                <span><img class="icon " alt="Activity event" title="Activity event" src="https://moodle.regis.org/theme/image.php/boost/assign/1688205623/icon"></span>
+                <a data-type="event" data-action="view-event" data-event-id="42259" href="https://moodle.regis.org/calendar/view.php?view=day&amp;course=1116&amp;time=1695835800#event_42259">Exam 1: Unit 1 is due</a>
+                <div class="date"><a href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1695835800">Wednesday, 27 September</a>, 1:30 PM</div>
+                <hr>
+            </div>
+    </div>
+</div>
+            <div class="footer"><div class="gotocal"><a href="https://moodle.regis.org/calendar/view.php?view=upcoming">Go to calendar...</a></div></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-4"></span><a href="#sb-5" class="sr-only sr-only-focusable">Skip Timeline</a>
+
+<section id="inst21752" class=" block_timeline block  card mb-3" role="complementary" data-block="timeline" aria-labelledby="instance-21752-header">
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-21752-header" class="card-title d-inline">Timeline</h5>
+
+
+        <div class="card-text content mt-3">
+            <div id="block-timeline-65035a842cf2865035a840aeb54" class="block-timeline" data-region="timeline">
+    <div class="container p-0 pb-3 border-bottom">
+        <div class="row no-gutters">
+            <div class="col-sm d-flex justify-content-start">
+                <div data-region="day-filter" class="dropdown">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle icon-no-margin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Filter timeline items" aria-controls="menudayfilter">
+                        <i class="icon fa fa-clock-o fa-fw " aria-hidden="true"></i>
+                        <span class="sr-only" data-active-item-text="">
+                            
+                            
+                             Next 7 days 
+                            
+                            
+                            
+                        </span>
+                    </button>
+                    <div id="menudayfilter" role="menu" class="dropdown-menu" data-show-active-item="">
+                        <a class="dropdown-item " href="#" data-from="-14" data-filtername="all" aria-label="All filter option" role="menuitem">
+                            All
+                        </a>
+                        <a class="dropdown-item " href="#" data-from="-14" data-to="0" data-filtername="overdue" aria-label="Overdue filter option" role="menuitem">
+                            Overdue
+                        </a>
+                        <div class="dropdown-divider" role="separator"></div>
+                        <h6 class="dropdown-header">Due date</h6>
+                        <a class="dropdown-item  active " href="#" data-from="0" data-to="7" data-filtername="next7days" aria-label="Next 7 days filter option" role="menuitem" aria-current="true">
+                            Next 7 days
+                        </a>
+                        <a class="dropdown-item " href="#" data-from="0" data-to="30" data-filtername="next30days" aria-label="Next 30 days filter option" role="menuitem">
+                            Next 30 days
+                        </a>
+                        <a class="dropdown-item " href="#" data-from="0" data-to="90" data-filtername="next3months" aria-label="Next 3 months filter option" role="menuitem">
+                            Next 3 months
+                        </a>
+                        <a class="dropdown-item " href="#" data-from="0" data-to="180" data-filtername="next6months" aria-label="Next 6 months filter option" role="menuitem">
+                            Next 6 months
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm d-flex justify-content-end">
+                <div data-region="view-selector" class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary dropdown-toggle icon-no-margin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Sort timeline items" aria-controls="menusortby">
+                        <i class="icon fa fa-sort-amount-asc fa-fw " aria-hidden="true"></i>
+                        <span class="sr-only" data-active-item-text="">
+                            
+                            Sort by dates
+                        </span>
+                    </button>
+                    <div id="menusortby" role="menu" class="dropdown-menu dropdown-menu-right list-group hidden" data-show-active-item="" data-skip-active-class="true">
+                        <a class="dropdown-item active" href="#view_dates_65035a842cf2865035a840aeb54" data-toggle="tab" data-filtername="sortbydates" aria-label="Sort by dates sort option" role="menuitem" aria-current="true">
+                            Sort by dates
+                        </a>
+                        <a class="dropdown-item " href="#view_courses_65035a842cf2865035a840aeb54" data-toggle="tab" data-filtername="sortbycourses" aria-label="Sort by courses sort option" role="menuitem">
+                            Sort by courses
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div data-period="month" class="calendarwrapper" data-previous-year="2023" data-previous-month="8" data-next-year="2023" data-next-month="10">
-            <div id="calendar-month-2023-September-65035a6844aa265035a6832e222" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
-                <div id="month-mini-2023-September-65035a6844aa265035a6832e222" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="9" data-year="2023" data-day="14" data-view="month">
-                    <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
-                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
-                    </span>
-                    <table class="minicalendar calendartable">
-                        <caption class="calendar-controls">
-                                <h3>
-                                    <a href="https://moodle.regis.org/calendar/view.php?view=month&amp;time=1694718568" title="This month">September 2023</a>
-                                </h3>
-                        </caption>
-                        <thead>
-                          <tr>
-                                <th class="header text-xs-center" scope="col" aria-label="Sunday">
-                                    Sun
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Monday">
-                                    Mon
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Tuesday">
-                                    Tue
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Wednesday">
-                                    Wed
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Thursday">
-                                    Thu
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Friday">
-                                    Fri
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Saturday">
-                                    Sat
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-region="month-view-week">
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="day text-center" data-day-timestamp="1693540800">
-                                            1
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1693627200">
-                                            2
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1693713600">
-                                            3
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693800000">
-                                            4
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693886400">
-                                            5
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1693972800">
-                                            6
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1694059200">
-                                            7
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1694145600">
-                                            8
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1694232000">
-                                            9
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1694318400">
-                                            10
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1694404800">
-                                            11
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1694491200">
-                                            12
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1694577600">
-                                            13
-                                        </td>
-                                    <td class="day text-center today" data-day-timestamp="1694664000">
-                                                            <a id="calendar-day-popover-link-1-2023-256-65035a6844aa265035a6832e222" href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1694664000" data-container="body" data-toggle="popover" data-html="true" data-region="mini-day-link" data-trigger="hover focus" data-placement="top" data-year="2023" data-month="9" data-courseid="1" data-categoryid="0" data-title="Today Thursday, 14 September" data-alternate="No events" aria-label="Today Thursday, 14 September">14</a>
-                <div class="hidden">
-                    
+    </div>
+    <div class="container p-0">
+        <div data-region="timeline-view">
+            <div class="tab-content">
+                <div class="tab-pane active show fade" data-limit="5" data-region="view-dates" id="view_dates_65035a842cf2865035a840aeb54">
+                    <div data-region="timeline-view-dates">
+                        <div data-region="event-list-container" data-days-offset="0" data-days-limit="7" data-course-id="" data-midnight="1694664000">
+                            <div data-region="event-list-loading-placeholder">
+                                <ul class="pl-0 list-group list-group-flush">
+                                    <li class="list-group-item pl-0 pr-0">
+                                        <div class="row">
+                                            <div class="col-8 pr-0">
+                                                <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                    <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                    <div style="flex: 1" class="pl-2">
+                                                        <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                        <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 pr-3">
+                                                <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                    <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item pl-0 pr-0">
+                                        <div class="row">
+                                            <div class="col-8 pr-0">
+                                                <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                    <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                    <div style="flex: 1" class="pl-2">
+                                                        <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                        <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 pr-3">
+                                                <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                    <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item pl-0 pr-0">
+                                        <div class="row">
+                                            <div class="col-8 pr-0">
+                                                <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                    <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                    <div style="flex: 1" class="pl-2">
+                                                        <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                        <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 pr-3">
+                                                <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                    <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item pl-0 pr-0">
+                                        <div class="row">
+                                            <div class="col-8 pr-0">
+                                                <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                    <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                    <div style="flex: 1" class="pl-2">
+                                                        <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                        <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 pr-3">
+                                                <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                    <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item pl-0 pr-0">
+                                        <div class="row">
+                                            <div class="col-8 pr-0">
+                                                <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                    <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                    <div style="flex: 1" class="pl-2">
+                                                        <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                        <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 pr-3">
+                                                <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                    <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="pt-3 d-flex justify-content-between">
+                                    <div class="w-25 bg-pulse-grey" style="height: 35px"></div>
+                                    <div class="w-25 bg-pulse-grey" style="height: 35px"></div>
+                                </div>
+                            </div>
+                            <div data-region="event-list-content"></div>
+                            <div class="hidden text-xs-center text-center mt-3" data-region="empty-message">
+                                <img src="https://moodle.regis.org/theme/image.php/boost/block_timeline/1688205623/activities" alt="No upcoming activities due" role="presentation" style="height: 70px; width: 70px">
+                                <p class="text-muted mt-1">No upcoming activities due</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1694750400">
-                                            15
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1694836800">
-                                            16
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1694923200">
-                                            17
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695009600">
-                                            18
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695096000">
-                                            19
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695182400">
-                                            20
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695268800">
-                                            21
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695355200">
-                                            22
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1695441600">
-                                            23
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1695528000">
-                                            24
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695614400">
-                                            25
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695700800">
-                                            26
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695787200">
-                                            27
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695873600">
-                                            28
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1695960000">
-                                            29
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1696046400">
-                                            30
-                                        </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="tab-pane  fade" data-region="view-courses" data-midnight="1694664000" data-limit="2" data-offset="0" data-days-limit="30" data-days-offset="0" data-no-events-url="https://moodle.regis.org/theme/image.php/boost/block_timeline/1688205623/activities" id="view_courses_65035a842cf2865035a840aeb54">
+                    <div data-region="course-items-loading-placeholder">
+                        <ul class="list-group unstyled">
+                            <li class="list-group-item mt-3 p-0 border-0">
+                                <div class="w-50 bg-pulse-grey mb-2" style="height: 20px"></div>
+                                <div>
+                                    <ul class="pl-0 list-group list-group-flush">
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="pt-3 d-flex justify-content-between">
+                                        <div class="w-25 bg-pulse-grey" style="height: 35px"></div>
+                                        <div class="w-25 bg-pulse-grey" style="height: 35px"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item mt-3 p-0 border-0">
+                                <div class="w-50 bg-pulse-grey mb-2" style="height: 20px"></div>
+                                <div>
+                                    <ul class="pl-0 list-group list-group-flush">
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item pl-0 pr-0">
+                                            <div class="row">
+                                                <div class="col-8 pr-0">
+                                                    <div class="d-flex flex-row align-items-center" style="height: 32px">
+                                                        <div class="bg-pulse-grey rounded-circle" style="height: 32px; width: 32px;"></div>
+                                                        <div style="flex: 1" class="pl-2">
+                                                            <div class="bg-pulse-grey w-100" style="height: 15px;"></div>
+                                                            <div class="bg-pulse-grey w-75 mt-1" style="height: 10px;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4 pr-3">
+                                                    <div class="d-flex flex-row justify-content-end" style="height: 32px; padding-top: 2px">
+                                                        <div class="bg-pulse-grey w-75" style="height: 15px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="pt-3 d-flex justify-content-between">
+                                        <div class="w-25 bg-pulse-grey" style="height: 35px"></div>
+                                        <div class="w-25 bg-pulse-grey" style="height: 35px"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="bg-pulse-grey mt-1" style="width: 100px; height: 30px; margin-left: auto; margin-right: auto"></div>
+                    </div>
+                    <ul class="list-group unstyled" data-region="courses-list"></ul>
+                    <div class="hidden text-xs-center text-center pt-3" data-region="more-courses-button-container">
+                        <button type="button" class="btn btn-secondary" data-action="more-courses">
+                            More courses
+                            <span class="hidden" data-region="loading-icon-container">
+                                <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="hidden text-xs-center text-center mt-3" data-region="no-courses-empty-message">
+                        <img src="https://moodle.regis.org/theme/image.php/boost/block_timeline/1688205623/activities" alt="No in-progress courses" role="presentation" style="height: 70px; width: 70px">
+                        <p class="text-muted mt-1">No in-progress courses</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div data-period="month" class="calendarwrapper" data-previous-year="2023" data-previous-month="9" data-next-year="2023" data-next-month="11">
-            <div id="calendar-month-2023-October-65035a6844aa265035a6832e222" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
-                <div id="month-mini-2023-October-65035a6844aa265035a6832e222" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="10" data-year="2023" data-day="1" data-view="month">
-                    <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
-                        <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
-                    </span>
-                    <table class="minicalendar calendartable">
-                        <caption class="calendar-controls">
-                                <h3>
-                                    <a href="https://moodle.regis.org/calendar/view.php?view=month&amp;time=1696132800" title="This month">October 2023</a>
-                                </h3>
-                        </caption>
-                        <thead>
-                          <tr>
-                                <th class="header text-xs-center" scope="col" aria-label="Sunday">
-                                    Sun
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Monday">
-                                    Mon
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Tuesday">
-                                    Tue
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Wednesday">
-                                    Wed
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Thursday">
-                                    Thu
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Friday">
-                                    Fri
-                                </th>
-                                <th class="header text-xs-center" scope="col" aria-label="Saturday">
-                                    Sat
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1696132800">
-                                            1
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696219200">
-                                            2
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696305600">
-                                            3
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696392000">
-                                            4
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696478400">
-                                            5
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696564800">
-                                            6
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1696651200">
-                                            7
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1696737600">
-                                            8
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696824000">
-                                            9
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696910400">
-                                            10
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1696996800">
-                                            11
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697083200">
-                                            12
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697169600">
-                                            13
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1697256000">
-                                            14
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1697342400">
-                                            15
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697428800">
-                                            16
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697515200">
-                                            17
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697601600">
-                                            18
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697688000">
-                                            19
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1697774400">
-                                            20
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1697860800">
-                                            21
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1697947200">
-                                            22
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698033600">
-                                            23
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698120000">
-                                            24
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698206400">
-                                            25
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698292800">
-                                            26
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698379200">
-                                            27
-                                        </td>
-                                    <td class="day text-center weekend" data-day-timestamp="1698465600">
-                                            28
-                                        </td>
-                            </tr>
-                            <tr data-region="month-view-week">
-                                    <td class="day text-center weekend" data-day-timestamp="1698552000">
-                                            29
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698638400">
-                                            30
-                                        </td>
-                                    <td class="day text-center" data-day-timestamp="1698724800">
-                                            31
-                                        </td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                                    <td class="dayblank">&nbsp;</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+        </div>    </div>
 </div>
             <div class="footer"></div>
             
@@ -1376,13 +1409,13 @@ document.body.className += ' jsenabled';
 
 </section>
 
-  <span id="sb-2"></span></aside>
+  <span id="sb-5"></span></aside>
                 </section>
             </div>
         </div>
     </div>
-    <div id="drawer-65035a684f20665035a6832e2217" class=" drawer bg-white hidden" aria-expanded="false" aria-hidden="true" data-region="right-hand-drawer" role="region" tabindex="0">
-            <div id="message-drawer-65035a684f20665035a6832e2217" class="message-app" data-region="message-drawer" role="region">
+    <div id="drawer-65035a8437cd665035a840aeb521" class=" drawer bg-white hidden" aria-expanded="false" aria-hidden="true" data-region="right-hand-drawer" role="region" tabindex="0">
+            <div id="message-drawer-65035a8437cd665035a840aeb521" class="message-app" data-region="message-drawer" role="region">
             <div class="closewidget bg-light border-bottom text-right">
                 <a class="text-dark" data-action="closedrawer" href="#">
                      <i class="icon fa fa-window-close fa-fw " title="Close" aria-label="Close"></i>
@@ -1515,12 +1548,12 @@ document.body.className += ' jsenabled';
                         <div class="p-3 border-bottom">
                             <ul class="nav nav-pills nav-fill" role="tablist">
                                 <li class="nav-item">
-                                    <a id="contacts-tab-65035a684f20665035a6832e2217" class="nav-link active" href="#contacts-tab-panel-65035a684f20665035a6832e2217" data-toggle="tab" data-action="show-contacts-section" role="tab" aria-controls="contacts-tab-panel-65035a684f20665035a6832e2217" aria-selected="true">
+                                    <a id="contacts-tab-65035a8437cd665035a840aeb521" class="nav-link active" href="#contacts-tab-panel-65035a8437cd665035a840aeb521" data-toggle="tab" data-action="show-contacts-section" role="tab" aria-controls="contacts-tab-panel-65035a8437cd665035a840aeb521" aria-selected="true">
                                         Contacts
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="requests-tab-65035a684f20665035a6832e2217" class="nav-link" href="#requests-tab-panel-65035a684f20665035a6832e2217" data-toggle="tab" data-action="show-requests-section" role="tab" aria-controls="requests-tab-panel-65035a684f20665035a6832e2217" aria-selected="false">
+                                    <a id="requests-tab-65035a8437cd665035a840aeb521" class="nav-link" href="#requests-tab-panel-65035a8437cd665035a840aeb521" data-toggle="tab" data-action="show-requests-section" role="tab" aria-controls="requests-tab-panel-65035a8437cd665035a840aeb521" aria-selected="false">
                                         Requests
                                         <span class="badge badge-primary bg-primary ml-2 hidden" data-region="contact-request-count" aria-label="There are 0 pending contact requests">
                                             0
@@ -1530,7 +1563,7 @@ document.body.className += ' jsenabled';
                             </ul>
                         </div>
                         <div class="tab-content d-flex flex-column h-100">
-                                            <div class="tab-pane fade show active h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="contacts-tab-panel-65035a684f20665035a6832e2217" data-section="contacts" role="tabpanel" aria-labelledby="contacts-tab-65035a684f20665035a6832e2217">
+                                            <div class="tab-pane fade show active h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="contacts-tab-panel-65035a8437cd665035a840aeb521" data-section="contacts" role="tabpanel" aria-labelledby="contacts-tab-65035a8437cd665035a840aeb521">
                     
                     <div class="hidden text-center p-2" data-region="empty-message-container">
                         No contacts
@@ -1611,7 +1644,7 @@ document.body.className += ' jsenabled';
                     </div>
                 </div>
                 
-                                            <div class="tab-pane fade h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="requests-tab-panel-65035a684f20665035a6832e2217" data-section="requests" role="tabpanel" aria-labelledby="requests-tab-65035a684f20665035a6832e2217">
+                                            <div class="tab-pane fade h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="requests-tab-panel-65035a8437cd665035a840aeb521" data-section="requests" role="tabpanel" aria-labelledby="requests-tab-65035a8437cd665035a840aeb521">
                     
                     <div class="hidden text-center p-2" data-region="empty-message-container">
                         No contact requests
@@ -1943,12 +1976,12 @@ document.body.className += ' jsenabled';
                 <div class="hidden" aria-hidden="true" data-region="view-group-info">
                     <div class="pt-3 h-100 d-flex flex-column" data-region="group-info-content-container" style="overflow-y: auto"></div>
                 </div>                <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview" data-user-id="3732">
-                    <div id="message-drawer-view-overview-container-65035a684f20665035a6832e2217" class="d-flex flex-column h-100" style="overflow-y: auto">
+                    <div id="message-drawer-view-overview-container-65035a8437cd665035a840aeb521" class="d-flex flex-column h-100" style="overflow-y: auto">
                             
                             
                             <div class="section border-0 card" data-region="view-overview-favourites">
                                 <div id="view-overview-favourites-toggle" class="card-header p-0" data-region="toggle">
-                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-favourites-target-65035a684f20665035a6832e2217" aria-expanded="false" aria-controls="view-overview-favourites-target-65035a684f20665035a6832e2217">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-favourites-target-65035a8437cd665035a840aeb521" aria-expanded="false" aria-controls="view-overview-favourites-target-65035a8437cd665035a840aeb521">
                                         <span class="collapsed-icon-container">
                                             <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
                                         </span>
@@ -1967,7 +2000,7 @@ document.body.className += ' jsenabled';
                                         </span>
                                     </button>
                                 </div>
-                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-favourites-target-65035a684f20665035a6832e2217" aria-labelledby="view-overview-favourites-toggle" data-parent="#message-drawer-view-overview-container-65035a684f20665035a6832e2217">
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-favourites-target-65035a8437cd665035a840aeb521" aria-labelledby="view-overview-favourites-toggle" data-parent="#message-drawer-view-overview-container-65035a8437cd665035a840aeb521">
                                 
                                 <div class="hidden text-center p-2" data-region="empty-message-container">
                                             <p class="text-muted mt-2">No starred conversations</p>
@@ -1990,7 +2023,7 @@ document.body.className += ' jsenabled';
                             
                             <div class="section border-0 card" data-region="view-overview-group-messages">
                                 <div id="view-overview-group-messages-toggle" class="card-header p-0" data-region="toggle">
-                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-group-messages-target-65035a684f20665035a6832e2217" aria-expanded="false" aria-controls="view-overview-group-messages-target-65035a684f20665035a6832e2217">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-group-messages-target-65035a8437cd665035a840aeb521" aria-expanded="false" aria-controls="view-overview-group-messages-target-65035a8437cd665035a840aeb521">
                                         <span class="collapsed-icon-container">
                                             <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
                                         </span>
@@ -2009,7 +2042,7 @@ document.body.className += ' jsenabled';
                                         </span>
                                     </button>
                                 </div>
-                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-group-messages-target-65035a684f20665035a6832e2217" aria-labelledby="view-overview-group-messages-toggle" data-parent="#message-drawer-view-overview-container-65035a684f20665035a6832e2217">
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-group-messages-target-65035a8437cd665035a840aeb521" aria-labelledby="view-overview-group-messages-toggle" data-parent="#message-drawer-view-overview-container-65035a8437cd665035a840aeb521">
                                 
                                 <div class="hidden text-center p-2" data-region="empty-message-container">
                                             <p class="text-muted mt-2">No group conversations</p>
@@ -2032,7 +2065,7 @@ document.body.className += ' jsenabled';
                             
                             <div class="section border-0 card" data-region="view-overview-messages">
                                 <div id="view-overview-messages-toggle" class="card-header p-0" data-region="toggle">
-                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-messages-target-65035a684f20665035a6832e2217" aria-expanded="false" aria-controls="view-overview-messages-target-65035a684f20665035a6832e2217">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-messages-target-65035a8437cd665035a840aeb521" aria-expanded="false" aria-controls="view-overview-messages-target-65035a8437cd665035a840aeb521">
                                         <span class="collapsed-icon-container">
                                             <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
                                         </span>
@@ -2051,7 +2084,7 @@ document.body.className += ' jsenabled';
                                         </span>
                                     </button>
                                 </div>
-                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-messages-target-65035a684f20665035a6832e2217" aria-labelledby="view-overview-messages-toggle" data-parent="#message-drawer-view-overview-container-65035a684f20665035a6832e2217">
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-messages-target-65035a8437cd665035a840aeb521" aria-labelledby="view-overview-messages-toggle" data-parent="#message-drawer-view-overview-container-65035a8437cd665035a840aeb521">
                                 
                                 <div class="hidden text-center p-2" data-region="empty-message-container">
                                             <p class="text-muted mt-2">No private conversations</p>
@@ -2125,14 +2158,14 @@ document.body.className += ' jsenabled';
                                 <fieldset>
                                     <legend class="sr-only">Accept messages from:</legend>
                                         <div class="custom-control custom-radio mb-2">
-                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-65035a684f20665035a6832e2217-1" value="1">
-                                            <label class="custom-control-label ml-2" for="block-noncontacts-65035a684f20665035a6832e2217-1">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-65035a8437cd665035a840aeb521-1" value="1">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-65035a8437cd665035a840aeb521-1">
                                                 My contacts only
                                             </label>
                                         </div>
                                         <div class="custom-control custom-radio mb-2">
-                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-65035a684f20665035a6832e2217-0" value="0">
-                                            <label class="custom-control-label ml-2" for="block-noncontacts-65035a684f20665035a6832e2217-0">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-65035a8437cd665035a840aeb521-0" value="0">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-65035a8437cd665035a840aeb521-0">
                                                 My contacts and anyone in my courses
                                             </label>
                                         </div>
@@ -2146,8 +2179,8 @@ document.body.className += ' jsenabled';
                             <h3 class="mb-2 mt-4 h6 font-weight-bold">General</h3>
                             <div data-preference="entertosend">
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-65035a684f20665035a6832e2217">
-                                    <label class="custom-control-label" for="enter-to-send-65035a684f20665035a6832e2217">
+                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-65035a8437cd665035a840aeb521">
+                                    <label class="custom-control-label" for="enter-to-send-65035a8437cd665035a840aeb521">
                                         Use enter to send
                                     </label>
                                 </div>
@@ -2416,41 +2449,9 @@ M.util.js_pending("core/first");require(['core/first'], function() {
 require(['core/prefetch']);
 ;
 
-require(['jquery', 'core_calendar/calendar_filter'], function($, CalendarFilter) {
-    CalendarFilter.init($("#event-filter-65035a6832e1f65035a6832e221"));
-});
-;
-
-require([
-    'jquery',
-    'core_calendar/selectors',
-    'core_calendar/events',
-], function(
-    $,
-    CalendarSelectors,
-    CalendarEvents
-) {
-
-    $('body').on(CalendarEvents.filterChanged, function(e, data) {
-        M.util.js_pending("month-mini-65035a6844aa265035a6832e222-filterChanged");
-        // A filter value has been changed.
-        // Find all matching cells in the popover data, and hide them.
-        $("#month-mini-2023-August-65035a6844aa265035a6832e222")
-            .find(CalendarSelectors.popoverType[data.type])
-            .toggleClass('hidden', !!data.hidden);
-        M.util.js_complete("month-mini-65035a6844aa265035a6832e222-filterChanged");
-    });
-});
-;
-
-require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
-    CalendarMini.init($("#calendar-month-2023-August-65035a6844aa265035a6832e222"), !0);
-});
-;
-
 require(['jquery'], function($) {
     require(['theme_boost/bootstrap/popover'], function() {
-        var target = $("#calendar-day-popover-link-1-2023-256-65035a6844aa265035a6832e222");
+        var target = $("#calendar-day-popover-link-1-2023-256-65035a8412e0465035a840aeb52");
         target.popover({
             content: function() {
                 var source = target.next().find("> *:not('.hidden')");
@@ -2480,19 +2481,19 @@ require([
 ) {
 
     $('body').on(CalendarEvents.filterChanged, function(e, data) {
-        M.util.js_pending("month-mini-65035a6844aa265035a6832e222-filterChanged");
+        M.util.js_pending("month-mini-65035a8412e0465035a840aeb52-filterChanged");
         // A filter value has been changed.
         // Find all matching cells in the popover data, and hide them.
-        $("#month-mini-2023-September-65035a6844aa265035a6832e222")
+        $("#month-mini-2023-September-65035a8412e0465035a840aeb52")
             .find(CalendarSelectors.popoverType[data.type])
             .toggleClass('hidden', !!data.hidden);
-        M.util.js_complete("month-mini-65035a6844aa265035a6832e222-filterChanged");
+        M.util.js_complete("month-mini-65035a8412e0465035a840aeb52-filterChanged");
     });
 });
 ;
 
 require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
-    CalendarMini.init($("#calendar-month-2023-September-65035a6844aa265035a6832e222"), !0);
+    CalendarMini.init($("#calendar-month-2023-September-65035a8412e0465035a840aeb52"), !0);
 });
 ;
 
@@ -2505,26 +2506,83 @@ require([
     CalendarSelectors,
     CalendarEvents
 ) {
+    var root = $('#month-upcoming-mini-65035a842887765035a840aeb53');
 
     $('body').on(CalendarEvents.filterChanged, function(e, data) {
-        M.util.js_pending("month-mini-65035a6844aa265035a6832e222-filterChanged");
+        M.util.js_pending("month-upcoming-mini-65035a842887765035a840aeb53-filterChanged");
+
         // A filter value has been changed.
         // Find all matching cells in the popover data, and hide them.
-        $("#month-mini-2023-October-65035a6844aa265035a6832e222")
-            .find(CalendarSelectors.popoverType[data.type])
-            .toggleClass('hidden', !!data.hidden);
-        M.util.js_complete("month-mini-65035a6844aa265035a6832e222-filterChanged");
+        var target = $("#month-upcoming-mini-65035a842887765035a840aeb53").find(CalendarSelectors.eventType[data.type]);
+
+        var transitionPromise = $.Deferred();
+        if (data.hidden) {
+            transitionPromise.then(function() {
+                return target.slideUp('fast').promise();
+            });
+        } else {
+            transitionPromise.then(function() {
+                return target.slideDown('fast').promise();
+            });
+        }
+
+        transitionPromise.then(function() {
+            M.util.js_complete("month-upcoming-mini-65035a842887765035a840aeb53-filterChanged");
+
+            return;
+        });
+
+        transitionPromise.resolve();
     });
 });
 ;
 
-require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
-    CalendarMini.init($("#calendar-month-2023-October-65035a6844aa265035a6832e222"), !0);
+require(['jquery', 'core_calendar/calendar_view'], function($, CalendarView) {
+    CalendarView.init($("#calendar-upcoming-block-65035a842887765035a840aeb53"), 'upcoming');
 });
 ;
 
-require(['jquery', 'core_calendar/calendar_threemonth'], function($, CalendarThreeMonth) {
-    CalendarThreeMonth.init($("#calendar-multi-65035a6844aa265035a6832e222"));
+require(
+[
+    'jquery',
+    'block_timeline/main',
+],
+function(
+    $,
+    Main
+) {
+    var root = $('#block-timeline-65035a842cf2865035a840aeb54');
+    Main.init(root);
+});
+;
+
+require(
+[
+    'jquery',
+    'block_myoverview/main',
+],
+function(
+    $,
+    Main
+) {
+    var root = $('#block-myoverview-65035a84317ea65035a840aeb55');
+    Main.init(root);
+});
+;
+
+require(
+[
+    'jquery',
+    'block_recentlyaccessedcourses/main'
+],
+function(
+    $,
+    Main
+) {
+    var root = $('#block-recentlyaccessedcourses-65035a84326cb65035a840aeb56');
+    var userid = root.attr('data-userid');
+
+    Main.init(userid, root);
 });
 ;
 
@@ -2545,14 +2603,14 @@ function(
     $,
     Popover
 ) {
-    var toggle = $('#message-drawer-toggle-65035a684cb4a65035a6832e228');
+    var toggle = $('#message-drawer-toggle-65035a843539465035a840aeb512');
     Popover.init(toggle);
 });
 ;
 
 require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
-    var root = $('#message-drawer-65035a684f20665035a6832e2217');
-    MessageDrawer.init(root, '65035a684f20665035a6832e2217', false);
+    var root = $('#message-drawer-65035a8437cd665035a840aeb521');
+    MessageDrawer.init(root, '65035a8437cd665035a840aeb521', false);
 });
 ;
 
@@ -2567,12 +2625,7 @@ require(['theme_boost/drawer'], function(drawer) {
     M.util.js_complete('theme_boost/drawer');
 });
 ;
-
-require(['jquery', 'core_calendar/calendar_view'], function($, CalendarView) {
-    CalendarView.init($("#calendar-upcoming-65035a686891765035a6832e2218"), 'upcoming');
-});
-;
-M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1, [], true); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(93127, [], true); M.util.js_complete('core/notification');});;
 M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
 M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
 });
@@ -2580,7 +2633,7 @@ M.util.js_pending('core/page_global'); require(['core/page_global'], function(am
 </script>
 <script>
 //<![CDATA[
-M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","cancel":"Cancel","changesmadereallygoaway":"You have made changes. Are you sure you want to navigate away and lose your changes?","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
 //]]>
 </script>
 <script>
@@ -2590,7 +2643,7 @@ M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error",
 Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
 });
 M.util.help_popups.setup(Y);
- M.util.js_pending('random65035a6832e2221'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random65035a6832e2221'); });
+ M.util.js_pending('random65035a840aeb522'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random65035a840aeb522'); });
 })();
 //]]>
 </script>
