@@ -7,7 +7,7 @@ from domapi import make_document_from_str, Document, Element
 from locals import *
 from sys import exit
 
-RECOGNITION = False
+RECOGNITION = True
 
 if RECOGNITION: import is_same_device
 import webbrowser
@@ -184,8 +184,10 @@ def build_view_class_assns():
 		utils.cache_get_src(regis)
 	)
 
+	if moodle.current_url != "https://moodle.regis.org/calendar/view.php": moodle.get("https://moodle.regis.org/calendar/view.php")
+
 	moodle_document = make_document_from_str(
-		utils.cache_get_src(moodle, "https://moodle.regis.org/my/", milliseconds=70)
+		utils.cache_get_src(moodle, "https://moodle.regis.org/calendar/view.php", milliseconds=70)
 	)
 
 	tests_div = document.querySelector("#myprimarykey_34 > div > div")
@@ -200,41 +202,35 @@ def build_view_class_assns():
 
 	tests = [test for test in tests if subj in test]
 
-	# TODO: SHOW ASSIGNMENTS FOR THE CLASS
-
-	# assn_elements = moodle.find_elements(ElementFindMethod.CSS_SELECTOR, "#inst21750 > div > div > div > div > div.event")
+	assn_elements = moodle_document.querySelector("div.eventlist.my-1").children
 	
-	# assns = []
+	assns: list[str] = []
+	assn_links: list[str] = []
 
-	# for elem in assn_elements:
-	# 	elem.find_element(ElementFindMethod.CSS_SELECTOR, "a[data-type=event]").click() # click assn to see class
+	for elem in assn_elements:		
+		classname = elem.querySelector("div > div.description.card-body > div.row.mt-1 > div.col-11 > a").textContent
 		
+		if not classname.startswith(subj): continue
 
-	# 	# classname = moodle.find_element(ElementFindMethod.CSS_SELECTOR, "#page-my-index > div.modal.moodle-has-zindex.show > div > div > div.modal-body > div > div > div:nth-child(4) > div.col-11 > a").text
+		link = elem.querySelector("div > div.card-footer > a").getAttribute("href")
+		
+		title = elem.getAttribute("data-event-title")
 
-	# 	while 1:
-	# 		try:
-	# 			moodle.find_element(ElementFindMethod.CSS_SELECTOR, "#page-my-index > div.modal.moodle-has-zindex.show > div > div > div.modal-header.calendar_event_course > button") # click cancel button to go back to reg screen
-	# 			break
-	# 		except NoSuchElementException: continue
+		assns.append(title)
+		assn_links.append(link)
 
-	# 	# if not classname.startswith(subj): continue
+	buttonize = {}
 
-	# 	assns.append(elem.find_element(ElementFindMethod.CSS_SELECTOR, 'a').text+f" ({elem.find_element(ElementFindMethod.CSS_SELECTOR, 'div.date').text})")
-	
-	# # assn_links = [child.querySelector('a').getAttribute("href") for child in assns_div.children[1:]]
+	def createaction(link: str):
+		return lambda: webbrowser.open(link)
 
+	for i, link in enumerate(assn_links):
+		buttonize[i] = createaction(link)
 
 	width = size()[0]
 
 	build_list_box(tests, f"Upcoming Tests for {subj}", (5, 100), width-(width/6.5))
-
-	screen.blit(
-		get_default_text("See Assignments on the Assignments page for now", color="white", background=DEFAULT_TEXT_BACKGROUND_COLOR),
-		(600, 100+locals.SCROLL_OFFSET)
-	)
-
-	# build_list_box(assns, f"Upcoming Assignments for {subj}", (600, 100), width-width/10, background_color_cycle=(DEFAULT_SCREEN_BACKGROUND_COLOR,))
+	build_list_box(assns, f"Upcoming Assignments for {subj}", (600, 100), width-width/10, background_color_cycle=(DEFAULT_SCREEN_BACKGROUND_COLOR,), buttonize=buttonize)
 
 def build_assignments():
 	boilerpage()
@@ -530,6 +526,8 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 		todays_schedule.index("Lunch"): lambda: changepage("lunch")
 	}
 
+	tmrw_buttonize = {}
+
 	if "Community Time" in todays_schedule:
 		buttonize[todays_schedule.index("Community Time")] = lambda: changepage("comm_time_events")
 
@@ -546,6 +544,12 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 		
 		buttonize[i] = make_action(subj)
 
+	for i, subj in enumerate(tomorrows_schedule):
+		if subj in ("Lunch", "Community Time", "Assembly"): continue
+		if ("Advisement" in subj) or subj.endswith("Free"): continue
+		
+		tmrw_buttonize[i] = make_action(subj)
+
 	build_list_box(
 		todays_schedule,
 		"Today's Classes",
@@ -560,7 +564,8 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 		"Next School Day's Classes",
 		(pos[0]+width/2, pos[1]+30),
 		width*(3/4),
-		background_color_cycle=utils.get_schedule_colors(tmrw_div)
+		background_color_cycle=utils.get_schedule_colors(tmrw_div),
+		buttonize=tmrw_buttonize
 	)
 	
 def get_default_text(text: str, color: pygame.Color="black", background: pygame.Color=None):
@@ -754,6 +759,9 @@ def build_widget_menu(maxheight: int):
 def changepage(page: str):
 	BUTTON_HANDLERS.clear() # clear these so the next page can add its own
 	locals.page = page
+
+	if moodle.current_url != "https://moodle.regis.org/my/":
+		moodle.get("https://moodle.regis.org/my/")
 
 def refresh_page():
 	regisaux_not_reloaded = False

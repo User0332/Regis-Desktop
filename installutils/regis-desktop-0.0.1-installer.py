@@ -1,5 +1,5 @@
 import uuid
-UUID = None
+UUID = 345052807176
 
 import sys
 
@@ -162,50 +162,50 @@ def pack_leave():
 
 	return leave
 
-def configure():
-	configure_box = tk.Frame(root)
+# def configure():
+# 	configure_box = tk.Frame(root)
 
-	title = tk.Label(configure_box, font=("Segoe UI", 15), text="Please enter the Chrome Profile that you use to login to the Intranet")
-	title.grid(row=0, column=0)
+# 	title = tk.Label(configure_box, font=("Segoe UI", 15), text="Please enter the Chrome Profile that you use to login to the Intranet")
+# 	title.grid(row=0, column=0)
 
-	label2 = tk.Label(configure_box, text="Chrome Profile Path:")
-	label2.grid(row=1, column=0, columnspan=3)
+# 	label2 = tk.Label(configure_box, text="Chrome Profile Path:")
+# 	label2.grid(row=1, column=0, columnspan=3)
 
-	profilevar = tk.StringVar(configure_box, value="")
+# 	profilevar = tk.StringVar(configure_box, value="")
 
-	profile_path = tk.Entry(configure_box, textvariable=profilevar)
-	profile_path.grid(row=1, column=1)
+# 	profile_path = tk.Entry(configure_box, textvariable=profilevar)
+# 	profile_path.grid(row=1, column=1)
 
-	how = tk.Label(
-		configure_box,
-		text=" To get your Chrome Profile Path, open Chrome in the profile that you use to login to the Intranet and go to chrome://version. Copy the filepath next to 'Profile Path' "
-	)
-	how.grid(row=2, column=0, columnspan=5)
+# 	how = tk.Label(
+# 		configure_box,
+# 		text=" To get your Chrome Profile Path, open Chrome in the profile that you use to login to the Intranet and go to chrome://version. Copy the filepath next to 'Profile Path' "
+# 	)
+# 	how.grid(row=2, column=0, columnspan=5)
 
-	btnbox = tk.Frame(configure_box)
+# 	btnbox = tk.Frame(configure_box)
 
-	okbtn = tk.Button(btnbox, text=" Ok ", command=configure_box.destroy)
-	okbtn.grid(row=0, column=0, padx=10)
+# 	okbtn = tk.Button(btnbox, text=" Ok ", command=configure_box.destroy)
+# 	okbtn.grid(row=0, column=0, padx=10)
 
-	leave = tk.Button(btnbox, text=" Exit Installer ", command=exit_install)
-	leave.grid(row=0, column=1)
+# 	leave = tk.Button(btnbox, text=" Exit Installer ", command=exit_install)
+# 	leave.grid(row=0, column=1)
 
-	btnbox.grid(row=3, column=0, columnspan=2)
+# 	btnbox.grid(row=3, column=0, columnspan=2)
 
-	configure_box.pack()
+# 	configure_box.pack()
 
-	configure_box.wait_window()
+# 	configure_box.wait_window()
 
-	path = profilevar.get()
+# 	path = profilevar.get()
 	
-	with open("installation/config.json", 'r') as f:
-		try: config = json.load(f)
-		except json.decoder.JSONDecodeError: config = DEFAULT_CONFIG
+# 	with open("installation/config.json", 'r') as f:
+# 		try: config = json.load(f)
+# 		except json.decoder.JSONDecodeError: config = DEFAULT_CONFIG
 
-	config["profilePath"] = path
+# 	config["profilePath"] = path
 
-	with open("installation/config.json", 'w') as f:
-		json.dump(config, f, indent=4)
+# 	with open("installation/config.json", 'w') as f:
+# 		json.dump(config, f, indent=4)
 
 def install():
 	global INSTALLING
@@ -311,7 +311,7 @@ def install():
 	details = tk.Button(root, text=" View details ", command=lambda: pipoutput.pack() if not pipoutput.winfo_ismapped() else None)
 	details.pack()
 
-	pip = subprocess.Popen(["python", "-m", "pip", "install", "-r", "requirements.txt"], stdout=subprocess.PIPE)
+	pip = subprocess.Popen(["py", "-m", "pip", "install", "-r", "requirements.txt"], stdout=subprocess.PIPE)
 
 	while 1:
 		byte = pip.stdout.read(1).decode()
@@ -355,7 +355,7 @@ def install():
 	for child in root.winfo_children(): # clear root
 		child.destroy()
 
-	configure()
+	# configure()
 
 	INSTALLING = None
 

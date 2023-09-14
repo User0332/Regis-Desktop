@@ -49,7 +49,7 @@ https://intranet.regis.org/
             
             </span>
 			
-			<span class="glyphicon glyphicon-option-vertical titleDivider hideonSmall"></span> A Day - Mon, Sep 11 
+			<span class="glyphicon glyphicon-option-vertical titleDivider hideonSmall"></span> C Day - Wed, Sep 13 
 			
 			</div>
           </div>
@@ -82,6 +82,8 @@ https://intranet.regis.org/
 
 <div class="row">
 
+    
+    
     
     <style>
         
@@ -281,7 +283,7 @@ Click to Display All Modules
 
 
 
-<div class="tag"><a href="https://forms.gle/TbAjtewTdmAv4ggMA" target="_blank">Candid Photo Submission for The Regian</a></div>
+<div class="tag"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdgUhkXcshXc9aT3GXXczBVmEL2_b-cLDSB1rtpsU3oXOCKCQ/viewform" target="_blank">Candid Photo Submission for The Regian</a></div>
 			
 
 
@@ -302,6 +304,16 @@ Click to Display All Modules
                             <h4>Upcoming Exams/Papers/Projects</h4>
 					
 			
+<div style="margin-bottom: 10px;">    
+<strong>September 26, 2023</strong>
+
+<div style="margin-left: 10px;"> 
+Math 10 (Alg 2) (2C) | Test     
+
+</div>    
+
+</div>    
+
 <div style="margin-bottom: 10px;">    
 <strong>September 27, 2023</strong>
 
@@ -430,6 +442,28 @@ US History (2D-2) | Project/Paper
             </div></div></li>
                 
 			
+						<li id="myprimarykey_45" class="hideOnSmall" style="">
+                        
+                        
+  
+ 
+                        <div class="card"><div class="content">
+						
+						    
+                            
+                            <h4>Upcoming Field Trips</h4>
+					
+			
+<div style="margin-bottom: 10px;">    
+<strong>November 29, 2023</strong>
+<div style="margin-left: 10px;">    
+<a href="/fieldtrip/details.cfm?FTID=58">Quests 219 &amp; 220</a>  
+</div>    
+</div>    
+
+            </div></div></li>
+                
+			
 						<li id="myprimarykey_39" class="hideOnSmall" style="">
                         
                         
@@ -475,7 +509,7 @@ US History (2D-2) | Project/Paper
 
 
 
-<div class="sb" style="margin-bottom:10px;"><div style="font-weight:bold;">Monday,  Sep 11</div>
+<div style="margin-bottom:10px;"><div style="font-weight:bold;">Monday,  Sep 11</div>
 <div style="margin-left:10px;">
 
 <i>No Birthdays Today</i><br>
@@ -498,12 +532,12 @@ US History (2D-2) | Project/Paper
 
 
 
-<div style="margin-bottom:10px;"><div style="font-weight:bold;">Wednesday,  Sep 13</div>
+<div class="sb" style="margin-bottom:10px;"><div style="font-weight:bold;">Wednesday,  Sep 13</div>
 <div style="margin-left:10px;">
-&nbsp;John Garnett<br>
-&nbsp;Jake Koehler<br>
-&nbsp;Arsi Tinaj<br>
-&nbsp;Rowan Woodard<br>
+<a href="mailto:jgarnett26@regis.org?Subject=Happy Birthday!" title="Email John a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;John Garnett<br>
+<a href="mailto:jkoehler24@regis.org?Subject=Happy Birthday!" title="Email Jake a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;Jake Koehler<br>
+<a href="mailto:atinaj26@regis.org?Subject=Happy Birthday!" title="Email Arsi a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;Arsi Tinaj<br>
+<a href="mailto:rwoodard26@regis.org?Subject=Happy Birthday!" title="Email Rowan a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;Rowan Woodard<br>
 
 </div>
 
@@ -605,9 +639,54 @@ US History (2D-2) | Project/Paper
 								
 					
 			
-          <div class="alert alert-danger text-center">
-              No Events Today
-            </div>  
+    
+   
+     
+       
+  <div class="row">
+  
+      <div class="col-md-12">
+  <div class="panel panel-default">
+  <div class="panel-heading">Community Events</div>
+  <div class="panel-body" style="padding-bottom: 0px;">
+      <table class="table table-condensed table-striped" style="margin-bottom: 10px;">
+  
+  <tbody><tr><td>
+  
+ 
+              <span style="font-weight:bold; font-size:.9em; color:#d31145;">
+              
+              
+			  <a href="/community/details.cfm?mdlCourseID=254">
+			  Regis Repertory</a>
+              
+              </span>
+                  </td>
+                  <td width="250px;" style="text-align: right;">
+                  
+                  
+      
+      
+          
+          
+                  <span style="font-size:.8em; margin-left:0px; color:#333333;">
+                      <time>3:15 PM - 5:55 PM</time> | Room: Auditorium
+               
+               
+               
+                  </span>
+                  </td></tr>      
+  
+      </tbody></table>
+  
+       </div>
+       </div>
+      </div>
+  
+      </div>
+  <div style="clear: both;"></div>
+       
+   
       </div></div></li>
                  
                 
@@ -680,7 +759,7 @@ US History (2D-2) | Project/Paper
 </div>
 
 <div class="col-xs-1" style="padding-right:0px; padding-left:0px;font-size:12px; width:11%;">
-     <div style="text-align:center; padding-top:10px; background-color:#69ba2c; box-shadow: 0px 0px 10px #888; border:1px solid #69ba2c; height:40px; font-size:16px;">
+     <div style="text-align:center; padding-top:10px; opacity: 0.90; border:1px solid #e4e4e4;color:#FFFFFF; background-color:#666666; height:40px; font-size:16px;">
 <strong>A</strong> 
      </div>
 </div>
@@ -692,7 +771,7 @@ US History (2D-2) | Project/Paper
 </div>
 
 <div class="col-xs-1" style="padding-right:0px; padding-left:0px;font-size:12px; width:11%;">
-     <div style="text-align:center; padding-top:10px; opacity: 0.90; border:1px solid #e4e4e4;color:#FFFFFF; background-color:#666666; height:40px; font-size:16px;">
+     <div style="text-align:center; padding-top:10px; background-color:#69ba2c; box-shadow: 0px 0px 10px #888; border:1px solid #69ba2c; height:40px; font-size:16px;">
 <strong>C</strong> 
      </div>
 </div>
@@ -989,7 +1068,7 @@ US History (2D-2) | Project/Paper
 
 
 
-<div class="col-xs-1" style="padding-right:0px; padding-left:0px;font-size:11px; width:11%; box-shadow: 0px 10px 20px #999;">
+<div class="col-xs-1" style="padding-right:0px; padding-left:0px;font-size:11px; width:11%; opacity: 0.90;">
 
 
      <div style="text-align:center; padding-top:10px; background-color:#ffc65e; border:1px solid #fff; height:90px;">
@@ -1240,7 +1319,7 @@ Anselme (411) | <a href="https://regis-org.zoom.us/j/8945739923" target="_new" t
 
 
 <strong>French II (A)</strong><br>
-Acosta (411) | <a href="https://regis-org.zoom.us/j/9897213826" target="_new" title="Acosta Zoom Room">Zoom</a>
+Acosta (408) | <a href="https://regis-org.zoom.us/j/9897213826" target="_new" title="Acosta Zoom Room">Zoom</a>
 
 <br><br>
 (2:15 pm - 3:00 pm)
@@ -1264,7 +1343,7 @@ Martorell (510) | <a href="https://regis-org.zoom.us/j/3818804752" target="_new"
 </div>
 
 
-<div class="col-xs-1" style="padding-right:0px; padding-left:0px;font-size:11px; width:11%; opacity: 0.90;">
+<div class="col-xs-1" style="padding-right:0px; padding-left:0px;font-size:11px; width:11%; box-shadow: 0px 10px 20px #999;">
 
 
      <div style="text-align:center; padding-top:10px; background-color:#ffc65e; border:1px solid #fff; height:90px;">
@@ -2127,30 +2206,65 @@ Martorell (510) | <a href="https://regis-org.zoom.us/j/3818804752" target="_new"
 </thead>
 	
 	<tbody><tr>	
-        <td><strong>airpod pro</strong></td>
-		<td>9/8/23</td>
-		<td>Library</td>
-		<td></td>
-    </tr>
-	
-	<tr>	
-        <td><strong>Green waterbottle</strong></td>
-		<td>9/7/23</td>
+        <td><strong>Water bottle</strong>: <em>Black, grey handle, 'Locknlock'</em></td>
+		<td>9/12/23</td>
 		<td></td>
 		<td></td>
     </tr>
 	
 	<tr>	
-        <td><strong>Glasses oval, purple leopard</strong></td>
-		<td>9/6/23</td>
-		<td></td>
+        <td><strong>Instrument </strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
+		<td>Leo Lee </td>
+    </tr>
+	
+	<tr>	
+        <td><strong>Black Vinny's Loafers size 46</strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
 		<td></td>
     </tr>
 	
 	<tr>	
-        <td><strong>Book: The Great Gatsby</strong></td>
-		<td>9/6/23</td>
+        <td><strong>Atlantic City Hoop Group T Shirt size XL</strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
 		<td></td>
+    </tr>
+	
+	<tr>	
+        <td><strong>Van Heusen Blue Slim Fit button down shirt size Medium</strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
+		<td></td>
+    </tr>
+	
+	<tr>	
+        <td><strong>Van Heusen dark blue tie </strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
+		<td></td>
+    </tr>
+	
+	<tr>	
+        <td><strong>Pink Floyd Jean Cap</strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
+		<td></td>
+    </tr>
+	
+	<tr>	
+        <td><strong>Grey tube socks </strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
+		<td></td>
+    </tr>
+	
+	<tr>	
+        <td><strong>Middlebury blue water bottle </strong></td>
+		<td>9/11/23</td>
+		<td>Locker Room</td>
 		<td></td>
     </tr>
 	
@@ -2165,13 +2279,6 @@ Martorell (510) | <a href="https://regis-org.zoom.us/j/3818804752" target="_new"
         <td><strong>Crucifix gold necklace</strong></td>
 		<td>9/5/23</td>
 		<td></td>
-		<td></td>
-    </tr>
-	
-	<tr>	
-        <td><strong>Necklace: AMDG St. John Francis Regis</strong></td>
-		<td>6/26/23</td>
-		<td>Gym</td>
 		<td></td>
     </tr>
 	

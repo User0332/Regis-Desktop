@@ -58,7 +58,7 @@ https://intranet.regis.org/dining/
             
             </span>
 			
-			<span class="glyphicon glyphicon-option-vertical titleDivider hideonSmall"></span> A Day - Mon, Sep 11 
+			<span class="glyphicon glyphicon-option-vertical titleDivider hideonSmall"></span> C Day - Wed, Sep 13 
 			
 			</div>
           </div>
@@ -241,7 +241,7 @@ Click to Display All Modules
 
 
 
-<div class="tag"><a href="https://forms.gle/TbAjtewTdmAv4ggMA" target="_blank">Candid Photo Submission for The Regian</a></div>
+<div class="tag"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdgUhkXcshXc9aT3GXXczBVmEL2_b-cLDSB1rtpsU3oXOCKCQ/viewform" target="_blank">Candid Photo Submission for The Regian</a></div>
 			
 
 
@@ -257,6 +257,16 @@ Click to Display All Modules
 <h4>Upcoming Exams/Papers/Projects</h4>
 
 			
+<div style="margin-bottom: 10px;">    
+<strong>September 26, 2023</strong>
+
+<div style="margin-left: 10px;"> 
+Math 10 (Alg 2) (2C) | Test     
+
+</div>    
+
+</div>    
+
 <div style="margin-bottom: 10px;">    
 <strong>September 27, 2023</strong>
 
@@ -389,6 +399,23 @@ US History (2D-2) | Project/Paper
   
   <div class="content">
 
+<h4>Upcoming Field Trips</h4>
+
+			
+<div style="margin-bottom: 10px;">    
+<strong>November 29, 2023</strong>
+<div style="margin-left: 10px;">    
+<a href="/fieldtrip/details.cfm?FTID=58">Quests 219 &amp; 220</a>  
+</div>    
+</div>    
+
+        </div>  </div> </div> 
+            
+        <div class="hideOnSmall">
+        <div class="card">
+  
+  <div class="content">
+
 <h4>Event Sign Up</h4>
 
 			
@@ -420,7 +447,7 @@ US History (2D-2) | Project/Paper
 
 
 
-<div class="sb" style="margin-bottom:10px;"><div style="font-weight:bold;">Monday,  Sep 11</div>
+<div style="margin-bottom:10px;"><div style="font-weight:bold;">Monday,  Sep 11</div>
 <div style="margin-left:10px;">
 
 <i>No Birthdays Today</i><br>
@@ -443,12 +470,12 @@ US History (2D-2) | Project/Paper
 
 
 
-<div style="margin-bottom:10px;"><div style="font-weight:bold;">Wednesday,  Sep 13</div>
+<div class="sb" style="margin-bottom:10px;"><div style="font-weight:bold;">Wednesday,  Sep 13</div>
 <div style="margin-left:10px;">
-&nbsp;John Garnett<br>
-&nbsp;Jake Koehler<br>
-&nbsp;Arsi Tinaj<br>
-&nbsp;Rowan Woodard<br>
+<a href="mailto:jgarnett26@regis.org?Subject=Happy Birthday!" title="Email John a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;John Garnett<br>
+<a href="mailto:jkoehler24@regis.org?Subject=Happy Birthday!" title="Email Jake a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;Jake Koehler<br>
+<a href="mailto:atinaj26@regis.org?Subject=Happy Birthday!" title="Email Arsi a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;Arsi Tinaj<br>
+<a href="mailto:rwoodard26@regis.org?Subject=Happy Birthday!" title="Email Rowan a Birthday Wish"><span class="glyphicon glyphicon-gift"></span></a>&nbsp;Rowan Woodard<br>
 
 </div>
 
@@ -553,7 +580,7 @@ US History (2D-2) | Project/Paper
     <div class="col-md-6">
 
 
-<div class="panel panel-primary" style="min-height:700px;">
+<div class="panel panel-default" style="min-height:700px;">
   	<div class="panel-heading" style="font-weight:bold; text-align:center;">Monday, Sep 11 2023
     </div>
   
@@ -808,19 +835,19 @@ US History (2D-2) | Project/Paper
        
        
         
-          Cheesesteak Hero  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Soy,Wheat)</span>
-<br>
-          
-            
-            
-            
-            Chicken Bacon Avocado Wrap  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Eggs,Soy,Wheat)</span>
+          Chicken Bacon Avocado Wrap  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Eggs,Soy,Wheat)</span>
 <br>
           
             
             
             
             Chicken, Bacon Quesadilla  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Wheat)</span>
+<br>
+          
+            
+            
+            
+            Cuban Hero  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Soy,Wheat)</span>
 <br>
           
             
@@ -930,7 +957,7 @@ US History (2D-2) | Project/Paper
     <div class="col-md-6">
 
 
-<div class="panel panel-default" style="min-height:700px;">
+<div class="panel panel-primary" style="min-height:700px;">
   	<div class="panel-heading" style="font-weight:bold; text-align:center;">Wednesday, Sep 13 2023
     </div>
   
@@ -996,7 +1023,7 @@ US History (2D-2) | Project/Paper
        
        
         
-          Buffalo Chicken Quesadilla  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Soy,Wheat)</span>
+          Cheesesteak Hero  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Soy,Wheat)</span>
 <br>
           
             
@@ -1020,7 +1047,7 @@ US History (2D-2) | Project/Paper
             
             
             
-            Texas Toast Bacon Grilled Cheese  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Eggs,Soy,Wheat)</span>
+            Turkey Melt  - <em>$7.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Wheat)</span>
 <br>
           
             
@@ -1092,13 +1119,7 @@ US History (2D-2) | Project/Paper
        
        
         
-          Caesar Salad  - <em>$6.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Eggs,Soy,Wheat)</span>
-<br>
-          
-            
-            
-            
-            Chicken Caesar Salad  - <em>$6.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Eggs,Soy,Wheat)</span>
+          Chicken Caesar Salad  - <em>$6.50</em> <span style="font-size: .8em; font-style: italic; color: #686868;">(Dairy,Eggs,Soy,Wheat)</span>
 <br>
           
             

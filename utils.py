@@ -179,8 +179,6 @@ def was_created_today(file: str) -> bool:
 
 def write_nonvolatile_cache():
 	for i, (site, data) in enumerate(locals.cache.items()):
-		if "moodle" in site: continue # moodle is volatile
-
 		with open(f"cache/{i}", 'w', encoding="utf-8") as f:
 			f.write(f"{site}\n{data}")
 
@@ -210,10 +208,10 @@ def load_planners() -> list[Planner]:
 def load_config() -> dict[str, str | list[str]]:
 	conf: dict[str, str | list[str]] = json.load(open("installation/config.json"))
 
-	if not conf.get("profilePath"):
-		# make this a gui message
-		print("Fatal Error: Chrome profile path not specified in config! Run the Regis Desktop Installer to configure (unable to autofix)")
-		exit(1)
+	# if not conf.get("profilePath"):
+	# 	# make this a gui message
+	# 	print("Fatal Error: Chrome profile path not specified in config! Run the Regis Desktop Installer to configure (unable to autofix)")
+	# 	exit(1)
 
 	widgets: list[str] = conf.get("userWidgets")
 

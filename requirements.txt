@@ -5,3 +5,4 @@ tinycss
 perfcount
 notify-py
 pygame
+typing_extensions
