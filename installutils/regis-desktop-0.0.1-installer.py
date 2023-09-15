@@ -43,8 +43,9 @@ except ImportError:
 	import pyshortcuts
 
 from tkinter import filedialog
-from win32com.shell import shell, shellcon
-import win32com
+if os.name == "nt":
+	from win32com.shell import shell, shellcon
+	import win32com
 import tkinter as tk
 try: import requests
 except ImportError:
