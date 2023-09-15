@@ -1,4 +1,4 @@
-UUID = None
+UUID = 'UUID31444335-3135-5144-5A54-545131354435'
 
 import sys
 import os
@@ -37,7 +37,9 @@ import time
 import os
 try: import pyshortcuts
 except ImportError:
-	os.system("py -m pip install pyshortcuts")
+	if os.name == "nt": os.system("py -m pip install pyshortcuts")
+
+	os.system("python3 -m pip install pyshortcuts")
 	import pyshortcuts
 
 from tkinter import filedialog
@@ -46,7 +48,9 @@ import win32com
 import tkinter as tk
 try: import requests
 except ImportError:
-	os.system("py -m pip install requests")
+	if os.name == "nt": os.system("py -m pip install requests")
+
+	os.system("python3 -m pip install requests")
 	import requests
 
 import webbrowser
@@ -130,7 +134,9 @@ def raise_err_str(err: str, fail=False):
 	raise_error(master, label, fail)
 
 def validate_python(): # TODO: print errors to user on tkinter window
-	try: ver = subprocess.check_output(["python", "-V"]).decode().removeprefix("Python ")
+	try:
+		args = ["py" if os.name == "nt" else "python3", "-V"]
+		ver = subprocess.check_output(args).decode().removeprefix("Python ")
 	except (OSError, subprocess.CalledProcessError):
 		master = tk.Toplevel(root)
 		wrapper = tk.Frame(master)
