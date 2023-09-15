@@ -1,4 +1,4 @@
-UUID = 'UUID31444335-3135-5144-5A54-545131354435'
+UUID = None
 
 import sys
 import os
