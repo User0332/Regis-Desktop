@@ -337,10 +337,11 @@ def install():
 	details = tk.Button(root, text=" View details ", command=lambda: pipoutput.pack() if not pipoutput.winfo_ismapped() else None)
 	details.pack()
 
-	pip = subprocess.Popen(["py", "-m", "pip", "install", "-r", "requirements.txt"], stdout=subprocess.PIPE)
+	pip = subprocess.Popen(["py" if os.name == "nt" else "python3", "-m", "pip", "install", "-r", "requirements.txt"], stdout=subprocess.PIPE)
 
 	while 1:
-		byte = pip.stdout.read(1).decode()
+		try: byte = pip.stdout.read(1).decode()
+		except Exception: continue
 		
 		if not byte: break # don't use pip.poll() in case user wants to see all details
 

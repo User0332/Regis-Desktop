@@ -819,7 +819,7 @@ No Active Event Sign Ups
 <div class="col-xs-1" style="padding-right:0px; padding-left:0px; width:11%;">
     
     
-<div style="text-align:center;background-color:#ddd; border:1px solid #e4e4e4; font-size:16px; height:90px;">
+<div style="text-align:center;background-color:#ececec; border:1px solid #e4e4e4; font-size:16px; height:90px;">
 <strong>8:30 am
     <div style="font-size: .8em; font-weight: normal;">
     Mod 0 
@@ -828,7 +828,7 @@ No Active Event Sign Ups
 </div>
     
     
-<div style="text-align:center;background-color:#ddd; border:1px solid #e4e4e4; font-size:16px; height:90px;">
+<div style="text-align:center;background-color:#ececec; border:1px solid #e4e4e4; font-size:16px; height:90px;">
 <strong>8:45 am
     <div style="font-size: .8em; font-weight: normal;">
     Mod 1 
@@ -837,7 +837,7 @@ No Active Event Sign Ups
 </div>
     
     
-<div style="text-align:center;background-color:#ddd; border:1px solid #e4e4e4; font-size:16px; height:90px;">
+<div style="text-align:center;background-color:#ececec; border:1px solid #e4e4e4; font-size:16px; height:90px;">
 <strong>9:00 am
     <div style="font-size: .8em; font-weight: normal;">
     Mod 2 
@@ -846,7 +846,7 @@ No Active Event Sign Ups
 </div>
     
     
-<div style="text-align:center;background-color:#ddd; border:1px solid #e4e4e4; font-size:16px; height:90px;">
+<div style="text-align:center;background-color:#ececec; border:1px solid #e4e4e4; font-size:16px; height:90px;">
 <strong>9:15 am
     <div style="font-size: .8em; font-weight: normal;">
     Mod 3 
@@ -855,7 +855,7 @@ No Active Event Sign Ups
 </div>
     
     
-<div style="text-align:center;background-color:#ddd; border:1px solid #e4e4e4; font-size:16px; height:90px;">
+<div style="text-align:center;background-color:#ececec; border:1px solid #e4e4e4; font-size:16px; height:90px;">
 <strong>9:30 am
     <div style="font-size: .8em; font-weight: normal;">
     Mod 4 
@@ -2222,13 +2222,6 @@ Martorell (510) | <a href="https://regis-org.zoom.us/j/3818804752" target="_new"
 		<td>9/12/23</td>
 		<td></td>
 		<td></td>
-    </tr>
-	
-	<tr>	
-        <td><strong>Instrument </strong></td>
-		<td>9/11/23</td>
-		<td>Locker Room</td>
-		<td>Leo Lee </td>
     </tr>
 	
 	<tr>	

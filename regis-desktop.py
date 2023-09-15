@@ -238,16 +238,28 @@ def build_assignments():
 	document = make_document_from_str(
 		utils.cache_get_src(regis)
 	)
+
+	if moodle.current_url != "https://moodle.regis.org/calendar/view.php": moodle.get("https://moodle.regis.org/calendar/view.php")
+
 	moodle_document = make_document_from_str(
-		utils.cache_get_src(moodle, "https://moodle.regis.org/my/", milliseconds=70), 
+		utils.cache_get_src(moodle, "https://moodle.regis.org/calendar/view.php", milliseconds=70)
 	)
 
 	tests_div = document.querySelector("#myprimarykey_34 > div > div")
 	tests = [test.textContent.strip().replace("\n\n \n", " - ").replace("     \n\n     - ", ", ") for test in tests_div.children[1:]]
 
-	assns_div = moodle_document.querySelector("#inst21750 > div > div > div > div")
-	assns = [child.querySelector('a').textContent+f" ({child.querySelector('div.date').textContent})" for child in assns_div.children[1:]]
-	assn_links = [child.querySelector('a').getAttribute("href") for child in assns_div.children[1:]]
+	assn_elements = moodle_document.querySelector("div.eventlist.my-1").children
+	
+	assns: list[str] = []
+	assn_links: list[str] = []
+
+	for elem in assn_elements:		
+		link = elem.querySelector("div > div.card-footer > a").getAttribute("href")
+		
+		title = elem.getAttribute("data-event-title")
+
+		assns.append(title)
+		assn_links.append(link)
 
 	buttonize = {}
 
@@ -759,9 +771,6 @@ def build_widget_menu(maxheight: int):
 def changepage(page: str):
 	BUTTON_HANDLERS.clear() # clear these so the next page can add its own
 	locals.page = page
-
-	if moodle.current_url != "https://moodle.regis.org/my/":
-		moodle.get("https://moodle.regis.org/my/")
 
 def refresh_page():
 	regisaux_not_reloaded = False
