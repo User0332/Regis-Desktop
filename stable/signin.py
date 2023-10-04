@@ -28,24 +28,32 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 	moodleopt.add_argument(f"--user-data-dir={locals.SELF_PATH}/moodle-data/")
 	moodleopt.add_argument(f"--profile-directory=Default")	
 
-	regis = webdriver.Chrome(options=options, service=chrome_service)
+	signinbrowser = webdriver.Chrome(options=options, service=chrome_service)
+	regis = webdriver.Chrome(options=headless, service=chrome_service)
+	regisaux = webdriver.Chrome(options=headless, service=chrome_service)
+
+
+	signin(
+		signinbrowser,
+		"https://intranet.regis.org/myRegis",
+		("https://intranet.regis.org/myRegis/", "https://intranet.regis.org/myRegis/index.cfm"),
+		"Regis Intranet"
+	)
+	
+	signinbrowser.close()
 
 	signin(
 		regis,
-		"https://intranet.regis.org/login/MS_SignIn.cfm",
-		"https://intranet.regis.org/myRegis/",
+		"https://intranet.regis.org/myRegis",
+		("https://intranet.regis.org/myRegis/", "https://intranet.regis.org/myRegis/index.cfm"),
 		"Regis Intranet"
 	)
 
-	regis.minimize_window()
-
-	regisaux = webdriver.Chrome(options=headless, service=chrome_service)
-
 	signin(
 		regisaux,
-		"https://intranet.regis.org/login/MS_SignIn.cfm",
-		"https://intranet.regis.org/myRegis/",
-		"Regis Intranet",
+		"https://intranet.regis.org/myRegis",
+		("https://intranet.regis.org/myRegis/", "https://intranet.regis.org/myRegis/index.cfm"),
+		"Regis Intranet"
 	)
 
 	moodle = webdriver.Chrome(options=moodleopt, service=chrome_service)
@@ -53,7 +61,7 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 	signin(
 		moodle,
 		"https://moodle.regis.org/login/index.php",
-		"https://moodle.regis.org/my/",
+		("https://moodle.regis.org/my/",),
 		"Dashboard"
 	)
 
@@ -63,20 +71,14 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 
 	return regis, moodle, regisaux
 
-def signin(driver: webdriver.Chrome, signin_page: str, homepage: str, homepage_title: str, headless: bool=False):
+def signin(driver: webdriver.Chrome, signin_page: str, homepages: tuple[str], homepage_title: str, headless: bool=False):
 	if headless:
 		try:
-			driver.get(signin_page)
+			driver.get(homepages[0])
 
-			time.sleep(1)
-
-			print(driver.current_url)
-			print(driver.find_element(By.CSS_SELECTOR, "#lightbox > div:nth-child(2) > img"))
-
-
-			if (driver.current_url != homepage) or (driver.title != homepage_title): raise InvalidArgumentException()
+			if (driver.current_url not in homepages) or (driver.title != homepage_title): raise InvalidArgumentException()
 		except InvalidArgumentException:
-			print(f"ERR: You are not signed in to '{homepage}' ({homepage_title})!")
+			print(f"ERR: You are not signed in to '{homepages[0]}' ({homepage_title})!")
 			exit(1)
 
 		return
@@ -84,7 +86,6 @@ def signin(driver: webdriver.Chrome, signin_page: str, homepage: str, homepage_t
 	driver.get(signin_page)
 
 	while (
-		(driver.current_url != homepage) and 
-		(driver.title != homepage_title)
+		(driver.current_url not in homepages)
 	): pass
 	

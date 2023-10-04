@@ -110,15 +110,14 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 
 		while "" in classes: classes[classes.index("")] = "Free"
 
-	late_classes = classes.copy()
-
-	while late_classes.count("Assembly") not in (1, 0): late_classes.remove("Assembly")
+	late_classes = classes[:8]+classes[11:] # remove 10:30 - 11:15
 
 	if "Assembly" in late_classes: late_classes[late_classes.index("Assembly")] = "Assembly (Probably Free)"
 
+
 	return (
 		{ TIMES[i]: _class for i, _class in enumerate(classes) },
-		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in late_classes if x != "Community Time"]) }
+		{ LATE_TIMES[i]: _class for i, _class in enumerate(late_classes) }
 	)
 
 def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.org/", milliseconds: int=30):
