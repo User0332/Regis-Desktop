@@ -4,7 +4,7 @@ https://moodle.regis.org/calendar/view.php
     <link rel="shortcut icon" href="https://moodle.regis.org/theme/image.php/boost/theme/1694858409/favicon">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="keywords" content="moodle, Regis Moodle: Calendar: Upcoming events">
-<link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_17_2_1_1696425819838_8" src="https://moodle.regis.org/theme/yui_combo.php?m/1694858409/core/event/event-min.js&amp;m/1694858409/filter_mathjaxloader/loader/loader-min.js" async=""></script><link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1696425819838_19" href="https://moodle.regis.org/theme/yui_combo.php?3.17.2/cssbutton/cssbutton-min.css"><script charset="utf-8" id="yui_3_17_2_1_1696425819838_20" src="https://moodle.regis.org/theme/yui_combo.php?m/1694858409/core/widget/widget-focusafterclose-min.js&amp;3.17.2/plugin/plugin-min.js&amp;m/1694858409/core/lockscroll/lockscroll-min.js&amp;m/1694858409/core/notification/notification-dialogue-min.js&amp;m/1694858409/core/notification/notification-alert-min.js&amp;m/1694858409/core/notification/notification-exception-min.js&amp;m/1694858409/core/notification/notification-ajaxexception-min.js&amp;m/1694858409/filter_glossary/autolinker/autolinker-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/styles.php/boost/1694858409_1/all">
+<link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css"><script charset="utf-8" id="yui_3_17_2_1_1696429604672_8" src="https://moodle.regis.org/theme/yui_combo.php?m/1694858409/core/event/event-min.js&amp;m/1694858409/filter_mathjaxloader/loader/loader-min.js" async=""></script><link charset="utf-8" rel="stylesheet" id="yui_3_17_2_1_1696429604672_19" href="https://moodle.regis.org/theme/yui_combo.php?3.17.2/cssbutton/cssbutton-min.css"><script charset="utf-8" id="yui_3_17_2_1_1696429604672_20" src="https://moodle.regis.org/theme/yui_combo.php?m/1694858409/core/widget/widget-focusafterclose-min.js&amp;3.17.2/plugin/plugin-min.js&amp;m/1694858409/core/lockscroll/lockscroll-min.js&amp;m/1694858409/core/notification/notification-dialogue-min.js&amp;m/1694858409/core/notification/notification-alert-min.js&amp;m/1694858409/core/notification/notification-exception-min.js&amp;m/1694858409/core/notification/notification-ajaxexception-min.js&amp;m/1694858409/filter_glossary/autolinker/autolinker-min.js" async=""></script><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.regis.org/theme/styles.php/boost/1694858409_1/all">
 <script>
 //<![CDATA[
 var M = {}; M.yui = {};
@@ -62,10 +62,10 @@ document.body.className += ' jsenabled';
                 <li class="nav-item">
     <a class="nav-item nav-link" href="https://my.regis.org">myRegis</a>
 </li><li class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-651d675acd415651d675ab34cc4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-651d675acd415651d675ab34cc4">
+    <a class="dropdown-toggle nav-link" id="drop-down-651d762415631651d7623ee46d4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-651d762415631651d7623ee46d4">
         Courses
     </a>
-    <div class="dropdown-menu" role="menu" id="drop-down-menu-651d675acd415651d675ab34cc4" aria-labelledby="drop-down-651d675acd415651d675ab34cc4">
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-651d762415631651d7623ee46d4" aria-labelledby="drop-down-651d762415631651d7623ee46d4">
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=15">Advisement Groups</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=11">Arts</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=2">Computer Science</a>
@@ -81,10 +81,10 @@ document.body.className += ' jsenabled';
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=20">J Term</a>
     </div>
 </li><li class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-651d675acd575651d675ab34cc5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-651d675acd575651d675ab34cc5">
+    <a class="dropdown-toggle nav-link" id="drop-down-651d76241578b651d7623ee46d5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-651d76241578b651d7623ee46d5">
         Groups
     </a>
-    <div class="dropdown-menu" role="menu" id="drop-down-menu-651d675acd575651d675ab34cc5" aria-labelledby="drop-down-651d675acd575651d675ab34cc5">
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-651d76241578b651d7623ee46d5" aria-labelledby="drop-down-651d76241578b651d7623ee46d5">
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=13">Admin Depts</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=16">Athletics</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=18">Committees</a>
@@ -92,10 +92,10 @@ document.body.className += ' jsenabled';
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=1">Miscellaneous</a>
     </div>
 </li><li class="dropdown nav-item">
-    <a class="dropdown-toggle nav-link" id="drop-down-651d675acd622651d675ab34cc6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-651d675acd622651d675ab34cc6">
+    <a class="dropdown-toggle nav-link" id="drop-down-651d762415838651d7623ee46d6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" aria-controls="drop-down-menu-651d762415838651d7623ee46d6">
         REACH
     </a>
-    <div class="dropdown-menu" role="menu" id="drop-down-menu-651d675acd622651d675ab34cc6" aria-labelledby="drop-down-651d675acd622651d675ab34cc6">
+    <div class="dropdown-menu" role="menu" id="drop-down-menu-651d762415838651d7623ee46d6" aria-labelledby="drop-down-651d762415838651d7623ee46d6">
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/index.php?categoryid=17">Courses</a>
                 <a class="dropdown-item" role="menuitem" href="https://moodle.regis.org/course/view.php?id=205">Mentors</a>
     </div>
@@ -110,12 +110,12 @@ document.body.className += ' jsenabled';
                 <!-- navbar_plugin_output -->
                 <li class="nav-item">
                     <div class="popover-region collapsed popover-region-notifications" id="nav-notification-popover-container" data-userid="3732" data-region="popover-region">
-    <div class="popover-region-toggle nav-link" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-651d675ace2ee651d675ab34cc7" aria-haspopup="true" aria-label="Show notification window with no new notifications" tabindex="0">
+    <div class="popover-region-toggle nav-link" data-region="popover-region-toggle" role="button" aria-controls="popover-region-container-651d76241650f651d7623ee46d7" aria-haspopup="true" aria-label="Show notification window with no new notifications" tabindex="0">
                 <i class="icon fa fa-bell fa-fw " title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
         <div class="count-container hidden" data-region="count-container" aria-label="There are 0 unread notifications">0</div>
 
     </div>
-    <div id="popover-region-container-651d675ace2ee651d675ab34cc7" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Notification window" role="region">
+    <div id="popover-region-container-651d76241650f651d7623ee46d7" class="popover-region-container" data-region="popover-region-container" aria-expanded="false" aria-hidden="true" aria-label="Notification window" role="region">
         <div class="popover-region-header-container">
             <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
             <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button" href="#" title="Mark all as read" data-action="mark-all-read" role="button" aria-label="Mark all as read">
@@ -142,7 +142,7 @@ document.body.className += ' jsenabled';
                 </a>
     </div>
 </div><div class="popover-region collapsed" data-region="popover-region-messages">
-    <a id="message-drawer-toggle-651d675acef6b651d675ab34cc8" class="nav-link d-inline-block popover-region-toggle position-relative" href="#" role="button">
+    <a id="message-drawer-toggle-651d7624171c5651d7623ee46d8" class="nav-link d-inline-block popover-region-toggle position-relative" href="#" role="button">
         <i class="icon fa fa-comment fa-fw " title="Toggle messaging drawer" aria-label="Toggle messaging drawer"></i>
         <div class="count-container hidden" data-region="count-container" aria-label="There are 0 unread conversations">0</div>
     </a>
@@ -449,7 +449,7 @@ document.body.className += ' jsenabled';
                 <section id="region-main" class="has-blocks mb-3" aria-label="Content">
 
                     <span class="notifications" id="user-notifications"></span>
-                    <div role="main"><span id="maincontent"></span><div data-region="calendar" class="maincalendar"><div class="heightcontainer"><div id="calendar-upcoming-651d675af1e7c651d675ab34cc18" data-template="core_calendar/upcoming_detailed">
+                    <div role="main"><span id="maincontent"></span><div data-region="calendar" class="maincalendar"><div class="heightcontainer"><div id="calendar-upcoming-651d762439ead651d7623ee46d18" data-template="core_calendar/upcoming_detailed">
     <div class="header d-flex flex-wrap p-1">
         <div data-region="view-selector">
             <button id="calendarviewdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -636,7 +636,7 @@ document.body.className += ' jsenabled';
                             </div>
                             <div class="row mt-1">
                                 <div class="col-1"><i class="icon fa fa-align-left fa-fw " title="Description" aria-label="Description"></i></div>
-                                <div class="description-content col-11"><h3 style="text-align:left;"><strong>On va faire des exercices&nbsp; et des lectures (readings) au sujet du passe' simple (about the passe' simple): on va lire cet extrait, et va changer le passe' litte'raire au passe' compose'; on va e'couter une vide'o au sujet des dicte'es; Un extrait litte'raire: Changez le passe' simple au passe' compose':</strong></h3><h3><strong></strong></h3><p><strong><span lang="fr" xml:lang="fr">********************************************</span></strong></p><strong></strong><p><strong><span lang="fr" xml:lang="fr">Ma sœur et moi, nous entrâmes dans la maison abandonnée,
+                                <div class="description-content col-11"><h3 style="text-align:left;"><strong>On va faire des exercices&nbsp; et des lectures (readings) au sujet du passe' simple (about the passe' simple): on va lire cet extrait, et on va changer le passe' litte'raire au passe' compose'; on va e'couter une vide'o au sujet des dicte'es; Un extrait litte'raire: Changez le passe' simple au passe' compose':</strong></h3><h3><strong></strong></h3><p><strong><span lang="fr" xml:lang="fr">********************************************</span></strong></p><strong></strong><p><strong><span lang="fr" xml:lang="fr">Ma sœur et moi, nous entrâmes dans la maison abandonnée,
 et nous vîmes des meubles délabrés, éparpillés partout, et couverts de plusieurs
 couches de poussière. On entendit des mugissements qui venaient des murs et du
 grenier, des bruits affreux et déconcertants. Tout soudain la grande porte du
@@ -719,7 +719,7 @@ par les chemins vides. Nous arrivâmes chez nous et nous nous cachâmes. </span>
 première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</span></b></p>
 
 <p><b><span lang="fr" xml:lang="fr">2)&nbsp;&nbsp;&nbsp; </span></b><b><span lang="fr" xml:lang="fr">Une interro
-écrite au sujet du passé simple et du passé composé</span></b></p><br></div>
+écrite au sujet du passé simple et du passé composé et de la lecture au sujet de Clovis;</span></b></p><br></div>
                             </div>
                             <div class="row mt-1">
                                 <div class="col-1"><i class="icon fa fa-graduation-cap fa-fw " title="Course" aria-label="Course"></i></div>
@@ -826,12 +826,12 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
 </div></div><div class="bottom">
         <div class="singlebutton">
             <form method="get" action="https://moodle.regis.org/calendar/export.php">
-                <button type="submit" class="btn btn-secondary" id="single_button651d675ab34cc19" title="">Export calendar</button>
+                <button type="submit" class="btn btn-secondary" id="single_button651d7623ee46d19" title="">Export calendar</button>
             </form>
         </div>
         <div class="singlebutton">
             <form method="get" action="https://moodle.regis.org/calendar/managesubscriptions.php">
-                <button type="submit" class="btn btn-secondary" id="single_button651d675ab34cc20" title="">Manage subscriptions</button>
+                <button type="submit" class="btn btn-secondary" id="single_button651d7623ee46d20" title="">Manage subscriptions</button>
             </form>
         </div>
 </div></div></div>
@@ -842,15 +842,15 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                 <section data-region="blocks-column" class="d-print-none" aria-label="Blocks">
                     <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip Events key</a>
 
-<section id="block-651d675ac84dd" class=" block block_fake  card mb-3" role="complementary" data-block="_fake" aria-labelledby="instance-fakeid-651d675ac84e1-header">
+<section id="block-651d76241049a" class=" block block_fake  card mb-3" role="complementary" data-block="_fake" aria-labelledby="instance-fakeid-651d76241049e-header">
 
     <div class="card-body p-3">
 
-            <h5 id="instance-fakeid-651d675ac84e1-header" class="card-title d-inline">Events key</h5>
+            <h5 id="instance-fakeid-651d76241049e-header" class="card-title d-inline">Events key</h5>
 
 
         <div class="card-text content mt-3">
-            <div id="event-filter-651d675ab34ca651d675ab34cc1" class="calendar_filters mt-2">
+            <div id="event-filter-651d7623ee46b651d7623ee46d1" class="calendar_filters mt-2">
     <ul>
             <li>
                 <a href="#" data-action="filter-event-type" data-eventtype="site" data-eventtype-hidden="">
@@ -924,18 +924,18 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
 
   <span id="sb-1"></span><a href="#sb-2" class="sr-only sr-only-focusable">Skip Monthly view</a>
 
-<section id="block-651d675ac8a89" class=" block block_fake  card mb-3" role="complementary" data-block="_fake" aria-labelledby="instance-fakeid-651d675ac8a8b-header">
+<section id="block-651d762410aaf" class=" block block_fake  card mb-3" role="complementary" data-block="_fake" aria-labelledby="instance-fakeid-651d762410ab2-header">
 
     <div class="card-body p-3">
 
-            <h5 id="instance-fakeid-651d675ac8a8b-header" class="card-title d-inline">Monthly view</h5>
+            <h5 id="instance-fakeid-651d762410ab2-header" class="card-title d-inline">Monthly view</h5>
 
 
         <div class="card-text content mt-3">
-            <div id="calendar-multi-651d675ac511d651d675ab34cc2">
+            <div id="calendar-multi-651d76240ce3b651d7623ee46d2">
         <div data-period="month" class="calendarwrapper" data-previous-year="2023" data-previous-month="8" data-next-year="2023" data-next-month="10">
-            <div id="calendar-month-2023-September-651d675ac511d651d675ab34cc2" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
-                <div id="month-mini-2023-September-651d675ac511d651d675ab34cc2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="9" data-year="2023" data-day="1" data-view="month">
+            <div id="calendar-month-2023-September-651d76240ce3b651d7623ee46d2" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
+                <div id="month-mini-2023-September-651d76240ce3b651d7623ee46d2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="9" data-year="2023" data-day="1" data-view="month">
                     <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
                         <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
                     </span>
@@ -1082,15 +1082,15 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
             </div>
         </div>
         <div data-period="month" class="calendarwrapper" data-previous-year="2023" data-previous-month="9" data-next-year="2023" data-next-month="11">
-            <div id="calendar-month-2023-October-651d675ac511d651d675ab34cc2" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
-                <div id="month-mini-2023-October-651d675ac511d651d675ab34cc2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="10" data-year="2023" data-day="4" data-view="month">
+            <div id="calendar-month-2023-October-651d76240ce3b651d7623ee46d2" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
+                <div id="month-mini-2023-October-651d76240ce3b651d7623ee46d2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="10" data-year="2023" data-day="4" data-view="month">
                     <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
                         <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
                     </span>
                     <table class="minicalendar calendartable">
                         <caption class="calendar-controls">
                                 <h3>
-                                    <a href="https://moodle.regis.org/calendar/view.php?view=month&amp;time=1696425818" title="This month">October 2023</a>
+                                    <a href="https://moodle.regis.org/calendar/view.php?view=month&amp;time=1696429603" title="This month">October 2023</a>
                                 </h3>
                         </caption>
                         <thead>
@@ -1130,7 +1130,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                                             3
                                         </td>
                                     <td class="day text-center today" data-day-timestamp="1696392000">
-                                                            <a id="calendar-day-popover-link-1-2023-276-651d675ac511d651d675ab34cc2" href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1696392000" data-container="body" data-toggle="popover" data-html="true" data-region="mini-day-link" data-trigger="hover focus" data-placement="top" data-year="2023" data-month="10" data-courseid="1" data-categoryid="0" data-title="Today Wednesday, 4 October" data-alternate="No events" aria-label="Today Wednesday, 4 October">4</a>
+                                                            <a id="calendar-day-popover-link-1-2023-276-651d76240ce3b651d7623ee46d2" href="https://moodle.regis.org/calendar/view.php?view=day&amp;time=1696392000" data-container="body" data-toggle="popover" data-html="true" data-region="mini-day-link" data-trigger="hover focus" data-placement="top" data-year="2023" data-month="10" data-courseid="1" data-categoryid="0" data-title="Today Wednesday, 4 October" data-alternate="No events" aria-label="Today Wednesday, 4 October">4</a>
                 <div class="hidden">
                     
                 </div>
@@ -1235,8 +1235,8 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
             </div>
         </div>
         <div data-period="month" class="calendarwrapper" data-previous-year="2023" data-previous-month="10" data-next-year="2023" data-next-month="12">
-            <div id="calendar-month-2023-November-651d675ac511d651d675ab34cc2" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
-                <div id="month-mini-2023-November-651d675ac511d651d675ab34cc2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="11" data-year="2023" data-day="1" data-view="month">
+            <div id="calendar-month-2023-November-651d76240ce3b651d7623ee46d2" data-template="core_calendar/month_mini" data-includenavigation="false" data-mini="true">
+                <div id="month-mini-2023-November-651d76240ce3b651d7623ee46d2" class="calendarwrapper" data-courseid="1" data-categoryid="0" data-month="11" data-year="2023" data-day="1" data-view="month">
                     <span class="overlay-icon-container hidden" data-region="overlay-icon-container">
                         <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw " title="Loading" aria-label="Loading"></i></span>
                     </span>
@@ -1396,8 +1396,8 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
             </div>
         </div>
     </div>
-    <div id="drawer-651d675ad2987651d675ab34cc17" class=" drawer bg-white hidden" aria-expanded="false" aria-hidden="true" data-region="right-hand-drawer" role="region" tabindex="0">
-            <div id="message-drawer-651d675ad2987651d675ab34cc17" class="message-app" data-region="message-drawer" role="region">
+    <div id="drawer-651d76241ac80651d7623ee46d17" class=" drawer bg-white hidden" aria-expanded="false" aria-hidden="true" data-region="right-hand-drawer" role="region" tabindex="0">
+            <div id="message-drawer-651d76241ac80651d7623ee46d17" class="message-app" data-region="message-drawer" role="region">
             <div class="closewidget bg-light border-bottom text-right">
                 <a class="text-dark" data-action="closedrawer" href="#">
                      <i class="icon fa fa-window-close fa-fw " title="Close" aria-label="Close"></i>
@@ -1530,12 +1530,12 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                         <div class="p-3 border-bottom">
                             <ul class="nav nav-pills nav-fill" role="tablist">
                                 <li class="nav-item">
-                                    <a id="contacts-tab-651d675ad2987651d675ab34cc17" class="nav-link active" href="#contacts-tab-panel-651d675ad2987651d675ab34cc17" data-toggle="tab" data-action="show-contacts-section" role="tab" aria-controls="contacts-tab-panel-651d675ad2987651d675ab34cc17" aria-selected="true">
+                                    <a id="contacts-tab-651d76241ac80651d7623ee46d17" class="nav-link active" href="#contacts-tab-panel-651d76241ac80651d7623ee46d17" data-toggle="tab" data-action="show-contacts-section" role="tab" aria-controls="contacts-tab-panel-651d76241ac80651d7623ee46d17" aria-selected="true">
                                         Contacts
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a id="requests-tab-651d675ad2987651d675ab34cc17" class="nav-link" href="#requests-tab-panel-651d675ad2987651d675ab34cc17" data-toggle="tab" data-action="show-requests-section" role="tab" aria-controls="requests-tab-panel-651d675ad2987651d675ab34cc17" aria-selected="false">
+                                    <a id="requests-tab-651d76241ac80651d7623ee46d17" class="nav-link" href="#requests-tab-panel-651d76241ac80651d7623ee46d17" data-toggle="tab" data-action="show-requests-section" role="tab" aria-controls="requests-tab-panel-651d76241ac80651d7623ee46d17" aria-selected="false">
                                         Requests
                                         <span class="badge badge-primary bg-primary ml-2 hidden" data-region="contact-request-count" aria-label="There are 0 pending contact requests">
                                             0
@@ -1545,7 +1545,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                             </ul>
                         </div>
                         <div class="tab-content d-flex flex-column h-100">
-                                            <div class="tab-pane fade show active h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="contacts-tab-panel-651d675ad2987651d675ab34cc17" data-section="contacts" role="tabpanel" aria-labelledby="contacts-tab-651d675ad2987651d675ab34cc17">
+                                            <div class="tab-pane fade show active h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="contacts-tab-panel-651d76241ac80651d7623ee46d17" data-section="contacts" role="tabpanel" aria-labelledby="contacts-tab-651d76241ac80651d7623ee46d17">
                     
                     <div class="hidden text-center p-2" data-region="empty-message-container">
                         No contacts
@@ -1626,7 +1626,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                     </div>
                 </div>
                 
-                                            <div class="tab-pane fade h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="requests-tab-panel-651d675ad2987651d675ab34cc17" data-section="requests" role="tabpanel" aria-labelledby="requests-tab-651d675ad2987651d675ab34cc17">
+                                            <div class="tab-pane fade h-100 lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="requests-tab-panel-651d76241ac80651d7623ee46d17" data-section="requests" role="tabpanel" aria-labelledby="requests-tab-651d76241ac80651d7623ee46d17">
                     
                     <div class="hidden text-center p-2" data-region="empty-message-container">
                         No contact requests
@@ -1958,12 +1958,12 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                 <div class="hidden" aria-hidden="true" data-region="view-group-info">
                     <div class="pt-3 h-100 d-flex flex-column" data-region="group-info-content-container" style="overflow-y: auto"></div>
                 </div>                <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview" data-user-id="3732">
-                    <div id="message-drawer-view-overview-container-651d675ad2987651d675ab34cc17" class="d-flex flex-column h-100" style="overflow-y: auto">
+                    <div id="message-drawer-view-overview-container-651d76241ac80651d7623ee46d17" class="d-flex flex-column h-100" style="overflow-y: auto">
                             
                             
                             <div class="section border-0 card" data-region="view-overview-favourites">
                                 <div id="view-overview-favourites-toggle" class="card-header p-0" data-region="toggle">
-                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-favourites-target-651d675ad2987651d675ab34cc17" aria-expanded="false" aria-controls="view-overview-favourites-target-651d675ad2987651d675ab34cc17">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-favourites-target-651d76241ac80651d7623ee46d17" aria-expanded="false" aria-controls="view-overview-favourites-target-651d76241ac80651d7623ee46d17">
                                         <span class="collapsed-icon-container">
                                             <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
                                         </span>
@@ -1982,7 +1982,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                                         </span>
                                     </button>
                                 </div>
-                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-favourites-target-651d675ad2987651d675ab34cc17" aria-labelledby="view-overview-favourites-toggle" data-parent="#message-drawer-view-overview-container-651d675ad2987651d675ab34cc17">
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-favourites-target-651d76241ac80651d7623ee46d17" aria-labelledby="view-overview-favourites-toggle" data-parent="#message-drawer-view-overview-container-651d76241ac80651d7623ee46d17">
                                 
                                 <div class="hidden text-center p-2" data-region="empty-message-container">
                                             <p class="text-muted mt-2">No starred conversations</p>
@@ -2005,7 +2005,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                             
                             <div class="section border-0 card" data-region="view-overview-group-messages">
                                 <div id="view-overview-group-messages-toggle" class="card-header p-0" data-region="toggle">
-                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-group-messages-target-651d675ad2987651d675ab34cc17" aria-expanded="false" aria-controls="view-overview-group-messages-target-651d675ad2987651d675ab34cc17">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-group-messages-target-651d76241ac80651d7623ee46d17" aria-expanded="false" aria-controls="view-overview-group-messages-target-651d76241ac80651d7623ee46d17">
                                         <span class="collapsed-icon-container">
                                             <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
                                         </span>
@@ -2024,7 +2024,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                                         </span>
                                     </button>
                                 </div>
-                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-group-messages-target-651d675ad2987651d675ab34cc17" aria-labelledby="view-overview-group-messages-toggle" data-parent="#message-drawer-view-overview-container-651d675ad2987651d675ab34cc17">
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-group-messages-target-651d76241ac80651d7623ee46d17" aria-labelledby="view-overview-group-messages-toggle" data-parent="#message-drawer-view-overview-container-651d76241ac80651d7623ee46d17">
                                 
                                 <div class="hidden text-center p-2" data-region="empty-message-container">
                                             <p class="text-muted mt-2">No group conversations</p>
@@ -2047,7 +2047,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                             
                             <div class="section border-0 card" data-region="view-overview-messages">
                                 <div id="view-overview-messages-toggle" class="card-header p-0" data-region="toggle">
-                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-messages-target-651d675ad2987651d675ab34cc17" aria-expanded="false" aria-controls="view-overview-messages-target-651d675ad2987651d675ab34cc17">
+                                    <button class="btn btn-link w-100 text-left p-1 p-sm-2 d-flex align-items-center overview-section-toggle collapsed" data-toggle="collapse" data-target="#view-overview-messages-target-651d76241ac80651d7623ee46d17" aria-expanded="false" aria-controls="view-overview-messages-target-651d76241ac80651d7623ee46d17">
                                         <span class="collapsed-icon-container">
                                             <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"></i>
                                         </span>
@@ -2066,7 +2066,7 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                                         </span>
                                     </button>
                                 </div>
-                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-messages-target-651d675ad2987651d675ab34cc17" aria-labelledby="view-overview-messages-toggle" data-parent="#message-drawer-view-overview-container-651d675ad2987651d675ab34cc17">
+                                                            <div class="collapse border-bottom  lazy-load-list" aria-live="polite" data-region="lazy-load-list" data-user-id="3732" id="view-overview-messages-target-651d76241ac80651d7623ee46d17" aria-labelledby="view-overview-messages-toggle" data-parent="#message-drawer-view-overview-container-651d76241ac80651d7623ee46d17">
                                 
                                 <div class="hidden text-center p-2" data-region="empty-message-container">
                                             <p class="text-muted mt-2">No private conversations</p>
@@ -2140,14 +2140,14 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                                 <fieldset>
                                     <legend class="sr-only">Accept messages from:</legend>
                                         <div class="custom-control custom-radio mb-2">
-                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-651d675ad2987651d675ab34cc17-1" value="1">
-                                            <label class="custom-control-label ml-2" for="block-noncontacts-651d675ad2987651d675ab34cc17-1">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-651d76241ac80651d7623ee46d17-1" value="1">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-651d76241ac80651d7623ee46d17-1">
                                                 My contacts only
                                             </label>
                                         </div>
                                         <div class="custom-control custom-radio mb-2">
-                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-651d675ad2987651d675ab34cc17-0" value="0">
-                                            <label class="custom-control-label ml-2" for="block-noncontacts-651d675ad2987651d675ab34cc17-0">
+                                            <input type="radio" name="message_blocknoncontacts" class="custom-control-input" id="block-noncontacts-651d76241ac80651d7623ee46d17-0" value="0">
+                                            <label class="custom-control-label ml-2" for="block-noncontacts-651d76241ac80651d7623ee46d17-0">
                                                 My contacts and anyone in my courses
                                             </label>
                                         </div>
@@ -2161,8 +2161,8 @@ première partie de la prière du Seigneur (The Lord’s Prayer) = une interro</
                             <h3 class="mb-2 mt-4 h6 font-weight-bold">General</h3>
                             <div data-preference="entertosend">
                                 <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-651d675ad2987651d675ab34cc17">
-                                    <label class="custom-control-label" for="enter-to-send-651d675ad2987651d675ab34cc17">
+                                    <input type="checkbox" class="custom-control-input" id="enter-to-send-651d76241ac80651d7623ee46d17">
+                                    <label class="custom-control-label" for="enter-to-send-651d76241ac80651d7623ee46d17">
                                         Use enter to send
                                     </label>
                                 </div>
@@ -2432,7 +2432,7 @@ require(['core/prefetch']);
 ;
 
 require(['jquery', 'core_calendar/calendar_filter'], function($, CalendarFilter) {
-    CalendarFilter.init($("#event-filter-651d675ab34ca651d675ab34cc1"));
+    CalendarFilter.init($("#event-filter-651d7623ee46b651d7623ee46d1"));
 });
 ;
 
@@ -2447,25 +2447,25 @@ require([
 ) {
 
     $('body').on(CalendarEvents.filterChanged, function(e, data) {
-        M.util.js_pending("month-mini-651d675ac511d651d675ab34cc2-filterChanged");
+        M.util.js_pending("month-mini-651d76240ce3b651d7623ee46d2-filterChanged");
         // A filter value has been changed.
         // Find all matching cells in the popover data, and hide them.
-        $("#month-mini-2023-September-651d675ac511d651d675ab34cc2")
+        $("#month-mini-2023-September-651d76240ce3b651d7623ee46d2")
             .find(CalendarSelectors.popoverType[data.type])
             .toggleClass('hidden', !!data.hidden);
-        M.util.js_complete("month-mini-651d675ac511d651d675ab34cc2-filterChanged");
+        M.util.js_complete("month-mini-651d76240ce3b651d7623ee46d2-filterChanged");
     });
 });
 ;
 
 require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
-    CalendarMini.init($("#calendar-month-2023-September-651d675ac511d651d675ab34cc2"), !0);
+    CalendarMini.init($("#calendar-month-2023-September-651d76240ce3b651d7623ee46d2"), !0);
 });
 ;
 
 require(['jquery'], function($) {
     require(['theme_boost/bootstrap/popover'], function() {
-        var target = $("#calendar-day-popover-link-1-2023-276-651d675ac511d651d675ab34cc2");
+        var target = $("#calendar-day-popover-link-1-2023-276-651d76240ce3b651d7623ee46d2");
         target.popover({
             content: function() {
                 var source = target.next().find("> *:not('.hidden')");
@@ -2495,19 +2495,19 @@ require([
 ) {
 
     $('body').on(CalendarEvents.filterChanged, function(e, data) {
-        M.util.js_pending("month-mini-651d675ac511d651d675ab34cc2-filterChanged");
+        M.util.js_pending("month-mini-651d76240ce3b651d7623ee46d2-filterChanged");
         // A filter value has been changed.
         // Find all matching cells in the popover data, and hide them.
-        $("#month-mini-2023-October-651d675ac511d651d675ab34cc2")
+        $("#month-mini-2023-October-651d76240ce3b651d7623ee46d2")
             .find(CalendarSelectors.popoverType[data.type])
             .toggleClass('hidden', !!data.hidden);
-        M.util.js_complete("month-mini-651d675ac511d651d675ab34cc2-filterChanged");
+        M.util.js_complete("month-mini-651d76240ce3b651d7623ee46d2-filterChanged");
     });
 });
 ;
 
 require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
-    CalendarMini.init($("#calendar-month-2023-October-651d675ac511d651d675ab34cc2"), !0);
+    CalendarMini.init($("#calendar-month-2023-October-651d76240ce3b651d7623ee46d2"), !0);
 });
 ;
 
@@ -2522,24 +2522,24 @@ require([
 ) {
 
     $('body').on(CalendarEvents.filterChanged, function(e, data) {
-        M.util.js_pending("month-mini-651d675ac511d651d675ab34cc2-filterChanged");
+        M.util.js_pending("month-mini-651d76240ce3b651d7623ee46d2-filterChanged");
         // A filter value has been changed.
         // Find all matching cells in the popover data, and hide them.
-        $("#month-mini-2023-November-651d675ac511d651d675ab34cc2")
+        $("#month-mini-2023-November-651d76240ce3b651d7623ee46d2")
             .find(CalendarSelectors.popoverType[data.type])
             .toggleClass('hidden', !!data.hidden);
-        M.util.js_complete("month-mini-651d675ac511d651d675ab34cc2-filterChanged");
+        M.util.js_complete("month-mini-651d76240ce3b651d7623ee46d2-filterChanged");
     });
 });
 ;
 
 require(['jquery', 'core_calendar/calendar_mini'], function($, CalendarMini) {
-    CalendarMini.init($("#calendar-month-2023-November-651d675ac511d651d675ab34cc2"), !0);
+    CalendarMini.init($("#calendar-month-2023-November-651d76240ce3b651d7623ee46d2"), !0);
 });
 ;
 
 require(['jquery', 'core_calendar/calendar_threemonth'], function($, CalendarThreeMonth) {
-    CalendarThreeMonth.init($("#calendar-multi-651d675ac511d651d675ab34cc2"));
+    CalendarThreeMonth.init($("#calendar-multi-651d76240ce3b651d7623ee46d2"));
 });
 ;
 
@@ -2560,14 +2560,14 @@ function(
     $,
     Popover
 ) {
-    var toggle = $('#message-drawer-toggle-651d675acef6b651d675ab34cc8');
+    var toggle = $('#message-drawer-toggle-651d7624171c5651d7623ee46d8');
     Popover.init(toggle);
 });
 ;
 
 require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
-    var root = $('#message-drawer-651d675ad2987651d675ab34cc17');
-    MessageDrawer.init(root, '651d675ad2987651d675ab34cc17', false);
+    var root = $('#message-drawer-651d76241ac80651d7623ee46d17');
+    MessageDrawer.init(root, '651d76241ac80651d7623ee46d17', false);
 });
 ;
 
@@ -2584,7 +2584,7 @@ require(['theme_boost/drawer'], function(drawer) {
 ;
 
 require(['jquery', 'core_calendar/calendar_view'], function($, CalendarView) {
-    CalendarView.init($("#calendar-upcoming-651d675af1e7c651d675ab34cc18"), 'upcoming');
+    CalendarView.init($("#calendar-upcoming-651d762439ead651d7623ee46d18"), 'upcoming');
 });
 ;
 M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1, [], true); M.util.js_complete('core/notification');});;
@@ -2605,7 +2605,7 @@ M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error",
 Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
 });
 M.util.help_popups.setup(Y);
- M.util.js_pending('random651d675ab34cc21'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random651d675ab34cc21'); });
+ M.util.js_pending('random651d7623ee46d21'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random651d7623ee46d21'); });
 })();
 //]]>
 </script>

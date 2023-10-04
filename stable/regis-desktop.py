@@ -410,6 +410,12 @@ def build_homescreen():
 	make_button("Assignments :)", lambda: changepage("assignments"), (5, 400), "see-assns")
 	make_button("Schedule :)", lambda: changepage("schedule"), (5, 430), "see-schedule")
 	make_button("Digital Planners :)", lambda: changepage("planner_menu"), (5, 460), "see-planner")
+	make_button(
+		"Submit Feedback :)",
+		lambda: webbrowser.open("https://docs.google.com/forms/d/e/1FAIpQLSdmddX38lW-OcPQATwafwGZThD1fAPqJ2oNNJ-s0mdIvcuQvQ/viewform?usp=sf_link"),
+		(5, 490),
+		"submit-feedback"
+	)
 
 	width, height = size()
 
