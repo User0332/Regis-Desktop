@@ -376,8 +376,7 @@ def install():
 		wscript.save()
 	else:
 		userfolders = pyshortcuts.darwin.get_folders()
-		if working_dir is None:
-			working_dir = ''
+		working_dir = ''
 
 		scut = pyshortcuts.shortcut("regis-desktop.py", userfolders, name="Regis Desktop", description="Regis Desktop Launcher Shortcut",
 			working_dir=working_dir, icon="assets/regis-icon.icns")

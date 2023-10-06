@@ -140,6 +140,9 @@ def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.or
 
 	return res
 
+def get_today_and_tmrw_letter_day(timehighlight: Element) -> tuple[str, str]:
+	pass
+
 def get_current_and_next_class(schedule_div: Element) -> str:
 	normal_schedule, late_schedule = schedule_convert_15min(schedule_div)
 
