@@ -1,5 +1,6 @@
-from domapi import Element
+from domapi import Element, make_document_from_str
 from selenium.webdriver import Chrome
+from selenium.webdriver.common.by import By as ElementFindMethod
 from contextlib import redirect_stdout
 from dataclasses import dataclass
 from typing import TypedDict
@@ -110,15 +111,14 @@ def schedule_convert_15min(schedule_div: Element) -> tuple[
 
 		while "" in classes: classes[classes.index("")] = "Free"
 
-	late_classes = classes.copy()
-
-	while late_classes.count("Assembly") not in (1, 0): late_classes.remove("Assembly")
+	late_classes = classes[:8]+classes[11:] # remove 10:30 - 11:15
 
 	if "Assembly" in late_classes: late_classes[late_classes.index("Assembly")] = "Assembly (Probably Free)"
 
+
 	return (
 		{ TIMES[i]: _class for i, _class in enumerate(classes) },
-		{ LATE_TIMES[i]: _class for i, _class in enumerate([x for x in late_classes if x != "Community Time"]) }
+		{ LATE_TIMES[i]: _class for i, _class in enumerate(late_classes) }
 	)
 
 def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.org/", milliseconds: int=30):
@@ -140,6 +140,53 @@ def cache_get_src(browser: Chrome, url_accessing: str="https://intranet.regis.or
 	locals.cache_fails[url_accessing] = 0
 
 	return res
+
+def get_today_and_tmrw_letter_day(timehighlight: Element, regisaux: Chrome) -> tuple[str, str, bool, bool]:
+	# return fmt
+	# return day1, day2, latestart1, latestart2
+
+	parent = Element(timehighlight._root.getparent())
+
+	try: letter_day = parent.getElementsByTagName("letterday")[0].textContent.strip()
+	except IndexError: letter_day = "not a school/letter"
+
+	late_start = bool(parent.getElementsByTagName("timeorder"))
+
+	sib = parent._root.getnext()
+
+	if sib is None:
+		weeksib = parent._root.getparent().getnext()
+
+		if weeksib is None: # next month
+			regisaux.find_element(ElementFindMethod.CSS_SELECTOR, "body > div > div > div > div:nth-child(2) > div.col-md-6 > div:nth-child(4) > a").click()
+
+			nextmonthdoc = make_document_from_str(
+				cache_get_src(
+					regisaux,
+					"https://intranet.regis.org/calendar?nextmonth"
+				)
+			)
+			
+			next_day_parent = nextmonthdoc.querySelector("body > div > div > div > div.calendar > div:nth-child(2) > div:not(.nonMonthDay)")
+
+			try: next_letter_day = next_day_parent.getElementsByTagName("letterday")[0].textContent.strip()
+			except IndexError: next_letter_day = "not a school/letter"
+
+			next_late_start = bool(next_day_parent.getElementsByTagName("timeorder"))
+
+
+			return letter_day, next_letter_day, late_start, next_late_start # TODO: find out next month day
+
+		sib = weeksib.getchildren()[0]
+
+	next_day_parent = Element(sib)
+
+	try: next_letter_day = next_day_parent.getElementsByTagName("letterday")[0].textContent.strip()
+	except IndexError: next_letter_day = "not a school/letter"
+
+	next_late_start = bool(next_day_parent.getElementsByTagName("timeorder"))
+
+	return letter_day, next_letter_day, late_start, next_late_start
 
 def get_current_and_next_class(schedule_div: Element) -> str:
 	normal_schedule, late_schedule = schedule_convert_15min(schedule_div)

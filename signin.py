@@ -35,7 +35,7 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 
 	signin(
 		signinbrowser,
-		"https://intranet.regis.org/myRegis",
+		"https://intranet.regis.org/login/MS_SignIn.cfm",
 		("https://intranet.regis.org/myRegis/", "https://intranet.regis.org/myRegis/index.cfm"),
 		"Regis Intranet"
 	)
@@ -44,7 +44,7 @@ def makebrowsers(path: str) -> tuple[webdriver.Chrome, webdriver.Chrome, webdriv
 
 	signin(
 		regis,
-		"https://intranet.regis.org/myRegis",
+		"https://intranet.regis.org/login/MS_SignIn.cfm",
 		("https://intranet.regis.org/myRegis/", "https://intranet.regis.org/myRegis/index.cfm"),
 		"Regis Intranet"
 	)

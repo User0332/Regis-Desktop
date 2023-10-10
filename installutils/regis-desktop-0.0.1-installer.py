@@ -374,22 +374,20 @@ def install():
 		wscript.Description = "Regis Desktop Launcher Shortcut"
 		wscript.IconLocation = os.path.abspath("assets/regis-icon.ico")
 		wscript.save()
-	else:
+
 		userfolders = pyshortcuts.darwin.get_folders()
 		working_dir = ''
 
 		scut = pyshortcuts.shortcut("regis-desktop.py", userfolders, name="Regis Desktop", description="Regis Desktop Launcher Shortcut",
 			working_dir=working_dir, icon="assets/regis-icon.icns")
 
-		osascript = '"%s" %s' % (scut.full_script, scut.arguments)
+		osascript = '%s %s' % (scut.full_script, scut.arguments)
 		osascript = osascript.replace(' ', '\\ ')
 		prefix = os.path.normpath(sys.prefix)
-		if executable is None:
-			executable = pyshortcuts.darwin.get_pyexe()
+		
+		executable = pyshortcuts.darwin.get_pyexe()
 
 		executable = os.path.normpath(executable)
-		if os.path.realpath(scut.full_script) == os.path.realpath(executable):
-			executable = ''
 
 		if not os.path.exists(scut.desktop_dir):
 			os.makedirs(scut.desktop_dir)
@@ -407,7 +405,7 @@ def install():
 		opts = dict(
 			name=scut.name,
 			desc=scut.description,
-			script=scut.full_script,
+			script=f'"{scut.full_script}"',
 			workdir=scut.working_dir,
 			args=scut.arguments,
 			prefix=prefix,

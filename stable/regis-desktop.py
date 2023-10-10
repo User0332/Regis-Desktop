@@ -154,7 +154,16 @@ def build_schedule():
 		utils.cache_get_src(regis)
 	)
 
-	make_schedule_box(document, (5, 100))
+
+	chgauxpage("https://intranet.regis.org/calendar/")
+	auxdoc = make_document_from_str(
+		utils.cache_get_src(
+			regisauxpage,
+			"https://intranet.regis.org/calendar/"
+		)
+	)
+
+	make_schedule_box(document, auxdoc, (5, 100))
 
 def build_planner():
 	boilerpage(from_planner=True)
@@ -274,7 +283,7 @@ def build_assignments():
 	build_list_box(tests, "Upcoming Tests", (5, 100), width-(width/6.5))
 	build_list_box(assns, "Upcoming Assignments", (600, 100), width-width/10, background_color_cycle=(DEFAULT_SCREEN_BACKGROUND_COLOR,), buttonize=buttonize)
 
-def get_current_class_widget(largefont: pygame.font.Font, document: Document):
+def get_current_class_widget(largefont: pygame.font.Font, document: Document, auxdoc: Document):
 	surf = pygame.Surface((650, 230))
 
 	surf.fill(DEFAULT_SCREEN_BACKGROUND_COLOR)
@@ -298,7 +307,10 @@ def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 	)
 
 
-	letter_day = get_letter_day(document.querySelector("#myprimarykey_43 > div > div > div:nth-child(4)"))
+	letter_day, _, late_start, _  = utils.get_today_and_tmrw_letter_day(
+		auxdoc.getElementsByTagName("timehighlight")[0], regisauxpage
+	) # get_letter_day(document.querySelector("#myprimarykey_43 > div > div > div:nth-child(4)"))
+
 
 	if letter_day == "not a school/letter":
 		surf.blit(
@@ -312,35 +324,36 @@ def get_current_class_widget(largefont: pygame.font.Font, document: Document):
 		document.querySelector("#myprimarykey_43 > div > div > div:nth-child(6)").children[string.ascii_uppercase.index(letter_day)+1]
 	)
 
-	surf.blit(
-		largefont.render("Normal Timing", True, "black"),
-		(10, 10)
-	)
+	if not late_start:
+		surf.blit(
+			largefont.render("Normal Timing", True, "black"),
+			(10, 10)
+		)
 
-	surf.blit(
-		largefont.render("Late Start Timing", True, "black"),
-		(10, 130)
-	)
+		surf.blit(
+			get_default_text(f"Current Mod: {normal_classes[0]}", "black"),
+			(10, 50)
+		)
 
-	surf.blit(
-		get_default_text(f"Current Mod: {normal_classes[0]}", "black"),
-		(10, 50)
-	)
+		surf.blit(
+			get_default_text(f"Next Mod: {normal_classes[1]}", "black"),
+			(10, 80)
+		)
+	else:
+		surf.blit(
+			largefont.render("Late Start", True, "black"),
+			(10, 10)
+		)
 
-	surf.blit(
-		get_default_text(f"Next Mod: {normal_classes[1]}", "black"),
-		(10, 80)
-	)
+		surf.blit(
+			get_default_text(f"Current Mod: {late_classes[0]}", "black"),
+			(10, 50)
+		)
 
-	surf.blit(
-		get_default_text(f"Current Mod: {late_classes[0]}", "black"),
-		(10, 170)
-	)
-
-	surf.blit(
-		get_default_text(f"Next Mod: {late_classes[1]}", "black"),
-		(10, 200)
-	)
+		surf.blit(
+			get_default_text(f"Next Mod: {late_classes[1]}", "black"),
+			(10, 80)
+		)
 
 	return surf, surf_rect
 
@@ -398,6 +411,14 @@ def build_homescreen():
 		utils.cache_get_src(regis)
 	)
 
+	chgauxpage("https://intranet.regis.org/calendar/")
+	auxdoc = make_document_from_str(
+		utils.cache_get_src(
+			regisauxpage,
+			"https://intranet.regis.org/calendar/"
+		)
+	)
+
 	firstname = document.querySelector("body > nav > div > div.navbar-header > div > span:nth-child(1)").textContent.split()[0]
 
 	largefont = pygame.font.SysFont("Helvetica", 30, bold=True)
@@ -430,7 +451,7 @@ def build_homescreen():
 	)
 
 	if "currentClass" in CONFIG["userWidgets"]:
-		widget, rect = get_current_class_widget(largefont, document)
+		widget, rect = get_current_class_widget(largefont, document, auxdoc)
 		
 		screen.blit(
 			widget,
@@ -518,8 +539,10 @@ def get_letter_day(parent_div: Element) -> str:
 		
 	return "not a school/letter"
 
-def make_schedule_box(document: Document, pos: tuple[int, int]):
-	letter_day = get_letter_day(document.querySelector("#myprimarykey_43 > div > div > div:nth-child(4)"))
+def make_schedule_box(document: Document, auxdoc: Document, pos: tuple[int, int]):
+	letter_day, tmrw_letter_day, late_start_today, late_start_tmrw = utils.get_today_and_tmrw_letter_day(
+		auxdoc.getElementsByTagName("timehighlight")[0], regisauxpage
+	)
 
 	width = size()[0]
 
@@ -528,27 +551,9 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 		(pos[0], pos[1]+locals.SCROLL_OFFSET)
 	)
 
-	if letter_day == "not a school/letter": return
-
 	# make a column for today and tmrw schedule AND events
 	schedule_elements = document.querySelector("#myprimarykey_43 > div > div > div:nth-child(6)").children
 	
-	today_div = schedule_elements[string.ascii_uppercase.index(letter_day)+1]
-	try: tmrw_div = schedule_elements[string.ascii_uppercase.index(letter_day)+2]
-	except IndexError: tmrw_div = schedule_elements[1]
-
-	todays_schedule = utils.parse_schedule(today_div)
-	tomorrows_schedule = utils.parse_schedule(tmrw_div)
-
-	buttonize = {
-		todays_schedule.index("Lunch"): lambda: changepage("lunch")
-	}
-
-	tmrw_buttonize = {}
-
-	if "Community Time" in todays_schedule:
-		buttonize[todays_schedule.index("Community Time")] = lambda: changepage("comm_time_events")
-
 	def make_action(subj: str):
 		def inner():
 			locals.VIEW_CLASS_ASSNS = subj[:subj.index('(')].strip()
@@ -556,35 +561,63 @@ def make_schedule_box(document: Document, pos: tuple[int, int]):
 
 		return inner
 
-	for i, subj in enumerate(todays_schedule):
-		if subj in ("Lunch", "Community Time", "Assembly"): continue
-		if ("Advisement" in subj) or subj.endswith("Free"): continue
-		
-		buttonize[i] = make_action(subj)
+	try:
+		today_div = schedule_elements[string.ascii_uppercase.index(letter_day)+1]
 
-	for i, subj in enumerate(tomorrows_schedule):
-		if subj in ("Lunch", "Community Time", "Assembly"): continue
-		if ("Advisement" in subj) or subj.endswith("Free"): continue
-		
-		tmrw_buttonize[i] = make_action(subj)
+		todays_schedule = utils.parse_schedule(today_div)
 
-	build_list_box(
-		todays_schedule,
-		"Today's Classes",
-		(pos[0], pos[1]+30),
-		width*(3/4),
-		background_color_cycle=utils.get_schedule_colors(today_div),
-		buttonize=buttonize
-	)
+		buttonize = {
+			todays_schedule.index("Lunch"): lambda: changepage("lunch")
+		}
 
-	build_list_box(
-		tomorrows_schedule,
-		"Next School Day's Classes",
-		(pos[0]+width/2, pos[1]+30),
-		width*(3/4),
-		background_color_cycle=utils.get_schedule_colors(tmrw_div),
-		buttonize=tmrw_buttonize
-	)
+		if "Community Time" in todays_schedule:
+			buttonize[todays_schedule.index("Community Time")] = lambda: changepage("comm_time_events")
+
+		for i, subj in enumerate(todays_schedule):
+			if subj in ("Lunch", "Community Time", "Assembly"): continue
+			if ("Advisement" in subj) or subj.endswith("Free"): continue
+			
+			buttonize[i] = make_action(subj)
+	except ValueError: pass # not a letter day
+	try:
+		tmrw_div = schedule_elements[string.ascii_uppercase.index(tmrw_letter_day)+1]
+		tomorrows_schedule = utils.parse_schedule(tmrw_div)
+
+		tmrw_buttonize = {}
+
+		for i, subj in enumerate(tomorrows_schedule):
+			if subj in ("Lunch", "Community Time", "Assembly"): continue
+			if ("Advisement" in subj) or subj.endswith("Free"): continue
+			
+			tmrw_buttonize[i] = make_action(subj)
+	except ValueError: pass # not a letter day
+
+
+	if letter_day not in ("not a school/letter", "<unknown>"):
+		build_list_box(
+			todays_schedule,
+			"Today's Schedule" if not late_start_today else "Today's Schedule (Late Start)",
+			(pos[0], pos[1]+30),
+			width*(3/4),
+			background_color_cycle=utils.get_schedule_colors(today_div),
+			buttonize=buttonize
+		)
+	else: pass
+
+	if tmrw_letter_day not in ("not a school/letter", "<unknown>"):
+		build_list_box(
+			tomorrows_schedule,
+			"Tomorrow's Schedule" if not late_start_tmrw else "Tomorrow's Schedule (Late Start)",
+			(pos[0]+width/2, pos[1]+30),
+			width*(3/4),
+			background_color_cycle=utils.get_schedule_colors(tmrw_div),
+			buttonize=tmrw_buttonize
+		)
+	else:
+		screen.blit(
+			get_default_text(f"Tomorrow is not a school/letter day! :)))", "black"),
+			(pos[0]+width/2, pos[1]+locals.SCROLL_OFFSET)
+		)
 	
 def get_default_text(text: str, color: pygame.Color="black", background: pygame.Color=None):
 	return font.render(f" {text} ", True, color, background) # f" {text} " for background padding
