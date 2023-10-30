@@ -15,6 +15,17 @@ import os
 
 with redirect_stdout(open(NULL_DEV,'w')): import pygame
 
+class GradeTrackerAssignmentEntry(TypedDict):
+	name: str
+	grade: float
+	category: str
+
+class GradeTrackerClass(TypedDict):
+	weights: dict[str, float]
+	entries: list[GradeTrackerAssignmentEntry]
+
+GradeTrackerConfig = dict[str, GradeTrackerClass]
+
 class Assignment(TypedDict):
 	date: str
 	description: str
@@ -279,3 +290,43 @@ def load_config() -> dict[str, str | list[str]]:
 
 def write_config(conf: dict[str, str | list[str]]):
 	json.dump(conf, open("installation/config.json", 'w'), indent='\t')
+
+def load_grade_tracker() -> GradeTrackerConfig:
+	conf: GradeTrackerConfig = json.load(open("installation/grades.json", 'r'))
+
+	# TODO: validate config
+
+	return conf
+
+def write_grade_tracker(conf: GradeTrackerConfig):
+	json.dump(conf, open("installation/grades.json", 'w'))
+
+def calc_grades_percentage(weights: list[float], entries: list[GradeTrackerAssignmentEntry]) -> tuple[dict[str, tuple[float, float]], float]: # (percent_contribution_for_each_category, final_grade)
+	category_contrib: dict[str, float] = {
+		category: 0 for category in weights
+	}
+
+	category_num_assns: dict[str, int] = {
+		category: 0 for category in weights
+	}
+
+	categories_with_contrib: dict[str, bool] = {
+		category: False for category in weights
+	}
+
+	for entry in entries:
+		if categories_with_contrib[entry["category"]] is False:
+			categories_with_contrib[entry["category"]] = True
+
+		category_contrib[entry["category"]]+=entry["grade"]
+		category_num_assns[entry["category"]]+=1
+
+	for category in (key for key in categories_with_contrib if not categories_with_contrib[key]):
+		category_contrib[category] = 1
+		category_num_assns[category] = 1
+
+	new_category_contrib: dict[str, tuple[float, float]] = {
+		category: ((val/category_num_assns[category])*weights[category]*100, ((val/category_num_assns[category])*100)) for category, val in category_contrib.items()
+	}
+
+	return new_category_contrib, sum(item[0] for item in new_category_contrib.values())

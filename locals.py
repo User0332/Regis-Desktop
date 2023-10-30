@@ -75,3 +75,8 @@ WIDGET_SURFS: dict[str, dict[str, pygame.Surface, pygame.Rect]] = {
 VIEW_PLANNER: str = None
 VIEW_CLASS_ASSNS: str = None
 SELF_PATH = os.path.abspath('.')
+GRADE_TRACKING_SUBJ: str = None
+GRADE_TRACKING_CATEGORY: str = None
+
+LEFT_CLICK = 1
+RIGHT_CLICK = 3

@@ -12,6 +12,7 @@ RECOGNITION = True
 if RECOGNITION: import is_same_device
 import webbrowser
 import secrets
+import tkinter as tk
 import time
 import string
 import utils
@@ -21,6 +22,7 @@ import signin
 with redirect_stdout(open(NULL_DEV,'w')): import pygame
 
 CONFIG = utils.load_config()
+GRADE_TRACKER = utils.load_grade_tracker()
 
 utils.load_nonvolatile_cache()
 
@@ -31,7 +33,7 @@ BUTTON_HANDLERS: dict[str, dict[str, pygame.Rect | Callable[[dict[str]], None] |
 def chgauxpage(page: str):
 	if regisauxpage.current_url != page: PromiseFuncWrap(lambda: regisauxpage.get(page))
 
-def boilerpage(home=False, from_sched=False, from_planner=False):
+def boilerpage(home=False, from_sched=False, from_planner=False, from_tracker=False, from_tracking_subj=False, from_track_assns=False):
 	screen.fill(
 		DEFAULT_SCREEN_BACKGROUND_COLOR
 	)
@@ -42,7 +44,14 @@ def boilerpage(home=False, from_sched=False, from_planner=False):
 		make_button("Back to Schedule", lambda: changepage("schedule"), (size()[0]-320, 5), "back-to-sched")
 	if from_planner:
 		make_button("Back to My Planners", lambda: changepage("planner_menu"), (size()[0]-350, 5), "back-to-plan")
+	if from_tracker:
+		make_button("Back to Grade Tracker", lambda: changepage("grade_tracker"), (size()[0]-350, 5), "back-to-track")
+	if from_tracking_subj:
+		make_button(f"Back to {locals.GRADE_TRACKING_SUBJ} Grade Tracker", lambda: changepage("tracker_entry"), (size()[0]-500, 5), "back-to-tracking-subj")
+	if from_track_assns:
+		make_button(f"Back to {locals.GRADE_TRACKING_SUBJ} Assignment Grades", lambda: changepage("track_assns"), (size()[0]-600, 5), "back-to-tracking-assns")
 	
+
 	make_button("Back to Home", lambda: changepage("homescreen"), (size()[0]-150, 5), "back-btn")
 
 def build_lunch():
@@ -430,11 +439,12 @@ def build_homescreen():
 
 	make_button("Assignments :)", lambda: changepage("assignments"), (5, 400), "see-assns")
 	make_button("Schedule :)", lambda: changepage("schedule"), (5, 430), "see-schedule")
-	make_button("Digital Planners :)", lambda: changepage("planner_menu"), (5, 460), "see-planner")
+	make_button("Grade Tracker :)", lambda: changepage("grade_tracker"), (5, 460), "see-grades")
+	make_button("Digital Planners :)", lambda: changepage("planner_menu"), (5, 490), "see-planner")
 	make_button(
 		"Submit Feedback :)",
 		lambda: webbrowser.open("https://docs.google.com/forms/d/e/1FAIpQLSdmddX38lW-OcPQATwafwGZThD1fAPqJ2oNNJ-s0mdIvcuQvQ/viewform?usp=sf_link"),
-		(5, 490),
+		(5, 520),
 		"submit-feedback"
 	)
 
@@ -476,6 +486,198 @@ def build_homescreen():
 		}
 
 	# TODO: add events next to the current/next mod section
+
+def build_track_category():
+	boilerpage(from_track_assns=True)
+
+	screen.blit(
+		get_default_text(f"{locals.GRADE_TRACKING_SUBJ} {locals.GRADE_TRACKING_CATEGORY}", "black"),
+		(10, 80+locals.SCROLL_OFFSET)
+	)
+
+	subj_entry = GRADE_TRACKER[locals.GRADE_TRACKING_SUBJ]
+	weights, entries = subj_entry["weights"], subj_entry["entries"]
+
+	assns_for_category = [entry for entry in entries if entry["category"] == locals.GRADE_TRACKING_CATEGORY]
+
+	i = 120
+
+	for entry in assns_for_category:
+		screen.blit(
+			get_default_text(f"{entry['name']} -- {entry['grade']*100}%", "black"),
+			(20, i+locals.SCROLL_OFFSET)
+		)
+
+		i+=30
+
+def build_track_assns():
+	boilerpage(from_tracking_subj=True)
+
+	screen.blit(
+		get_default_text(f"Assignment Categories for {locals.GRADE_TRACKING_SUBJ}", "black"),
+		(10, 80+locals.SCROLL_OFFSET)
+	)
+
+	subj_entry = GRADE_TRACKER[locals.GRADE_TRACKING_SUBJ]
+	weights, entries = subj_entry["weights"], subj_entry["entries"]
+
+	def go_track(category: str):
+		locals.GRADE_TRACKING_CATEGORY = category
+		changepage("track_category")
+
+	i = 130
+	for category in weights:
+		make_button(category, eval("lambda: go_track(category)", { "go_track": go_track, "category": category }), (10, i), f"tracker-category-{category}-{i}")
+		i+=30
+
+	def add_category_popup():
+		root = tk.Tk()
+		root.title("Add Cateogry to Grade Tracker")
+		root.geometry("350x100")
+
+		namelbl = tk.Label(root, text="Category Name:")
+		namelbl.grid(column=0, row=0)
+
+		weightlbl = tk.Label(root, text="Category Weight %:")
+		weightlbl.grid(column=0, row=1)
+
+		nameinp = tk.Entry(root)
+		nameinp.grid(column=1, row=0)
+
+		weightinp = tk.Entry(root)
+		weightinp.grid(column=1, row=1)
+
+		def validate():
+			name, weight = nameinp.get(), weightinp.get()
+
+			if not name: # throw err
+				return
+			
+			if not weight: # throw err
+				return
+			
+			try:
+				fltweight = float(weight)/100
+				if not (0 <= fltweight < 1): raise ValueError()
+			except ValueError: return
+
+			GRADE_TRACKER[locals.GRADE_TRACKING_SUBJ]["weights"][name] = fltweight
+
+			root.destroy()
+
+		submit = tk.Button(root, text="Add Category", command=validate)
+		submit.grid(column=0, row=3)
+
+		root.mainloop()
+
+	def add_assn_popup():
+		root = tk.Tk()
+		root.title("Add Assignment to Grade Tracker")
+		root.geometry("350x100")
+
+		namelbl = tk.Label(root, text="Assignment Name:")
+		namelbl.grid(column=0, row=0)
+
+		grdlbl = tk.Label(root, text="Assignment Grade %:")
+		grdlbl.grid(column=0, row=1)
+
+		catlbl = tk.Label(root, text="Assignment Category:")
+		catlbl.grid(column=0, row=2)
+
+		nameinp = tk.Entry(root)
+		nameinp.grid(column=1, row=0)
+
+		grdinp = tk.Entry(root)
+		grdinp.grid(column=1, row=1)
+
+		categoryvar = tk.StringVar()
+
+		catinp = tk.OptionMenu(root, categoryvar, *[category for category in weights])
+		catinp.grid(column=1, row=2)
+
+		def validate():
+			name, grade, category = nameinp.get(), grdinp.get(), categoryvar.get()
+
+			if not name: # throw err
+				return
+			
+			if not grade: # throw err
+				return
+			
+			if not category: # throw err
+				return
+			
+			try:
+				fltgrade = float(grade)/100
+				if not (0 < fltgrade < 2): raise ValueError()
+			except ValueError: return
+
+			GRADE_TRACKER[locals.GRADE_TRACKING_SUBJ]["entries"].append(
+				utils.GradeTrackerAssignmentEntry(name=name, grade=fltgrade, category=category)
+			)
+
+			root.destroy()
+
+
+		submit = tk.Button(root, text="Add Assignment", command=validate)
+		submit.grid(column=0, row=3)
+
+		root.mainloop()
+
+	make_button(f"Add Assignment for {locals.GRADE_TRACKING_SUBJ}", lambda: PromiseFuncWrap(add_assn_popup), (10, i+20), f"add-assignment-to-track")
+	make_button(f"Manage Assignments for {locals.GRADE_TRACKING_SUBJ}", lambda: None, (10, i+50), f"manage-tracking-assns")
+
+	make_button(f"Add Category for {locals.GRADE_TRACKING_SUBJ}", lambda: PromiseFuncWrap(add_category_popup), (10, i+120), f"add-category")
+	make_button(f"Manage Categories for {locals.GRADE_TRACKING_SUBJ}", lambda: None, (10, i+150), f"manage-categories")
+
+
+def build_tracker_entry():
+	boilerpage(from_tracker=True)
+
+	screen.blit(
+		get_default_text(f"Grades for {locals.GRADE_TRACKING_SUBJ}", "black"),
+		(10, 80+locals.SCROLL_OFFSET)
+	)
+
+	subj_entry = GRADE_TRACKER[locals.GRADE_TRACKING_SUBJ]
+	weights, entries = subj_entry["weights"], subj_entry["entries"]
+
+	contribution, final = utils.calc_grades_percentage(weights, entries)
+
+	make_button("View Assignments", lambda: changepage("track_assns"), (10, 110), f"view-tracking-assns")
+
+	y = 150
+
+	for category, (contrib, avg) in contribution.items():
+		screen.blit(
+			get_default_text(f"{category}: average: {avg:.2f}%, contribution: {contrib:.2f}%", "black"),
+			(10, y+locals.SCROLL_OFFSET)
+		)
+
+		y+=40
+
+	screen.blit(
+		get_default_text(f"Aggregated Grade: {final:.2f}%", "black"),
+		(10, y+locals.SCROLL_OFFSET)
+	)
+
+def build_grade_tracker():
+	boilerpage()
+
+	def go_track(subj: str):
+		locals.GRADE_TRACKING_SUBJ = subj
+		changepage("tracker_entry")
+
+	screen.blit(
+		get_default_text(f"Grade Tracker", "black"),
+		(10, 80+locals.SCROLL_OFFSET)
+	)
+
+	i = 130
+	for subj_name in GRADE_TRACKER:
+		if subj_name == "$schema": continue
+		make_button(subj_name, eval("lambda: go_track(subj_name)", { "go_track": go_track, "subj_name": subj_name }), (10, i), f"tracker-entry-{subj_name}-{i}")
+		i+=30
 
 def build_list_box_on_surf(surf: pygame.Surface, _list: list, title: str, pos: tuple[int, int], maxwidth: int, color_cycle: tuple[pygame.Color]=("black",), background_color_cycle: tuple[pygame.Color]=(None,), title_color: pygame.Color="white", title_bg: pygame.Color=DEFAULT_TEXT_BACKGROUND_COLOR, buttonize: dict={}):
 	lines, line_parent_map = utils.wrap_text(_list, int(maxwidth/font.size('m')[0]))
@@ -869,7 +1071,7 @@ selected_button_handler: dict = None
 
 while 1:
 	for event in pygame.event.get():
-		if event.type == pygame.MOUSEBUTTONDOWN:
+		if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == LEFT_CLICK):
 			if logo_rect().collidepoint(*pygame.mouse.get_pos()): changepage("homescreen")
 			# click button
 			try:
@@ -886,7 +1088,7 @@ while 1:
 			except RuntimeError as e:
 				if str(e) == "dictionary changed size during iteration": continue # this means the page changed and BUTTON_HANDLERS was cleared
 				raise
-		if event.type == pygame.MOUSEBUTTONUP:
+		if (event.type == pygame.MOUSEBUTTONUP) and (event.button == LEFT_CLICK):
 			if (selected_button_handler is not None):
 				mouse_pos = pygame.mouse.get_pos()
 				if "parent_rect" in selected_button_handler["values"]:
@@ -903,6 +1105,7 @@ while 1:
 		if event.type == pygame.QUIT:
 			pygame.quit()
 			utils.write_config(CONFIG)
+			utils.write_grade_tracker(GRADE_TRACKER)
 			utils.write_nonvolatile_cache()
 			regis.quit()
 			regisauxpage.quit()

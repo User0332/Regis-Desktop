@@ -377,7 +377,10 @@ def install():
 
 		userfolders = pyshortcuts.darwin.get_folders()
 		working_dir = ''
-
+	else:
+		open("~/Desktop/Regis Desktop.command", 'w').write(f"python '{os.path.abspath('regis-desktop.py')}'")
+		os.system("chmod 555 '~/Desktop/Regis Desktop.command'")
+		
 		scut = pyshortcuts.shortcut("regis-desktop.py", userfolders, name="Regis Desktop", description="Regis Desktop Launcher Shortcut",
 			working_dir=working_dir, icon="assets/regis-icon.icns")
 

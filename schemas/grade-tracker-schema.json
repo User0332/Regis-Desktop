@@ -1,0 +1,36 @@
+{
+	"$schema": 	"http://json-schema.org/draft-04/schema",
+	"additionalProperties": {
+		"required": ["weights", "entries"],
+		"properties": {
+			"weights": {
+				"type": "object",
+				"additionalProperties": {
+					"type": "number",
+					"minimum": 0,
+					"maximum": 1,
+					"exclusiveMinimum": true,
+					"exclusiveMaximum": true
+				}
+			},
+			"entries": {
+				"type": "array",
+				"items": {
+					"type": "object",
+					"required": ["name", "grade", "category"],
+					"properties": {
+						"name": { "type": "string" },
+						"grade": {
+							"type": "number",
+							"minimum": 0,
+							"maximum": 2,
+							"exclusiveMaximum": true
+						},
+						"category": { "type": "string" }
+					}
+				}
+			}
+		},
+		"additionalProperties": false
+	}
+}

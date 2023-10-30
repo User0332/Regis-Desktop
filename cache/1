@@ -108,7 +108,7 @@ https://intranet.regis.org/calendar/
             
             </span>
 			
-			<span class="glyphicon glyphicon-option-vertical titleDivider hideonSmall"></span> D Day - Tue, Oct 10 
+			<span class="glyphicon glyphicon-option-vertical titleDivider hideonSmall"></span> Sat, Oct 28 
 			
 			</div>
           </div>
@@ -997,7 +997,7 @@ box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.25); z-index:100; padding-bottom:10p
 	
 				
 				
-				<timehighlight><span class="calHideonLarge">Tuesday, October </span>10</timehighlight> <letterday>
+				<time><span class="calHideonLarge">Tuesday, October </span>10</time> <letterday>
 					D</letterday>
 					
 					
@@ -2029,7 +2029,7 @@ box-shadow: 10px 10px 33px 0px rgba(0,0,0,0.25); z-index:100; padding-bottom:10p
 	
 				
 				
-				<time><span class="calHideonLarge">Saturday, October </span>28</time> 
+				<timehighlight><span class="calHideonLarge">Saturday, October </span>28</timehighlight> 
 					
 						<div class="eventDetailCal" style=" ">						
 									
