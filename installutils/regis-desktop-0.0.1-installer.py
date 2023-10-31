@@ -388,7 +388,7 @@ def install():
 
 		text.append(f"cd '{working_dir}'")
 
-		text.append("'$EXE' '$SCRIPT'")
+		text.append("$EXE '$SCRIPT'")
 
 		text.append('\n')
 		text = '\n'.join(text)
