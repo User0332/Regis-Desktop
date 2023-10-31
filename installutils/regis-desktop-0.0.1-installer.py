@@ -382,18 +382,12 @@ def install():
 
 		text = [
 			"#!/bin/bash",
-			f"export EXE='{sys.executable}'",
-			f"export SCRIPT='{os.path.abspath('regis-desktop.py')}'"
+			f"cd '{working_dir}'",
+			f"{sys.executable} regis-desktop.py",
+			'\n'
 		]
-
-		text.append(f"cd '{working_dir}'")
-
-		text.append("$EXE '$SCRIPT'")
-
-		text.append('\n')
-		text = '\n'.join(text)
-
-		open(f"{userfolders.desktop}/Regis Desktop.command", 'w').write(text)
+		
+		open(f"{userfolders.desktop}/Regis Desktop.command", 'w').write('\n'.join(text))
 		os.system(f"chmod +x '{userfolders.desktop}/Regis Desktop.command'")
 
 	leave.destroy()
