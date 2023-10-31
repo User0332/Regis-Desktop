@@ -394,7 +394,7 @@ def install():
 		text = '\n'.join(text)
 
 		open(f"{userfolders.desktop}/Regis Desktop.command", 'w').write(text)
-		os.system(f"chmod 555 '{userfolders.desktop}/Regis Desktop.command'")
+		os.system(f"chmod +x '{userfolders.desktop}/Regis Desktop.command'")
 
 	leave.destroy()
 
