@@ -386,7 +386,7 @@ def install():
 			f"export SCRIPT='{os.path.abspath('regis-desktop.py')}'"
 		]
 
-		text.append(f"cd {working_dir}")
+		text.append(f"cd '{working_dir}'")
 
 		text.append("'$EXE' '$SCRIPT'")
 
