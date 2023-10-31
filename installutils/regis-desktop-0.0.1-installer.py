@@ -380,58 +380,6 @@ def install():
 		userfolders = pyshortcuts.darwin.get_folders()
 		working_dir = os.getcwd()
 
-		open(f"{userfolders.desktop}/Regis Desktop.command", 'w').write(f"'{sys.executable}' '{os.path.abspath('regis-desktop.py')}'")
-		os.system(f"chmod 555 '{userfolders.desktop}/Regis Desktop.command'")
-
-		scut = pyshortcuts.shortcut("regis-desktop.py", userfolders, name="Regis Desktop", description="Regis Desktop Launcher Shortcut",
-			working_dir=working_dir, icon="assets/regis-icon.icns")
-
-		osascript = '%s %s' % (scut.full_script, scut.arguments)
-		osascript = osascript.replace(' ', '\\ ')
-		prefix = os.path.normpath(sys.prefix)
-		
-		executable = pyshortcuts.darwin.get_pyexe()
-
-		executable = os.path.normpath(executable)
-
-		if not os.path.exists(scut.desktop_dir):
-			os.makedirs(scut.desktop_dir)
-
-		dest = os.path.join(scut.desktop_dir, scut.target)
-
-		if os.path.exists(dest):
-			shutil.rmtree(dest)
-
-		os.mkdir(dest)
-		os.mkdir(os.path.join(dest, 'Contents'))
-		os.mkdir(os.path.join(dest, 'Contents', 'MacOS'))
-		os.mkdir(os.path.join(dest, 'Contents', 'Resources'))
-
-		opts = dict(
-			name=scut.name,
-			desc=scut.description,
-			script=f'"{scut.full_script}"',
-			workdir=scut.working_dir,
-			args=scut.arguments,
-			prefix=prefix,
-			exe=executable,
-			osascript=osascript
-		)
-
-		info = """<?xml version="1.0" encoding="UTF-8"?>
-	<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN"
-	"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-	<plist version="1.0">
-	<dict>
-	<key>CFBundleGetInfoString</key> <string>{desc:s}</string>
-	<key>CFBundleName</key> <string>{name:s}</string>
-	<key>CFBundleExecutable</key> <string>{name:s}</string>
-	<key>CFBundleIconFile</key> <string>{name:s}</string>
-	<key>CFBundlePackageType</key> <string>APPL</string>
-	</dict>
-	</plist>
-	"""
-
 		text = ['#!/bin/bash',
 				"export EXE={exe:s}",
 				"export SCRIPT={script:s}",
@@ -444,18 +392,8 @@ def install():
 		text.append('\n')
 		text = '\n'.join(text)
 
-		with open(os.path.join(dest, 'Contents', 'Info.plist'), 'w') as fout:
-			fout.write(info.format(**opts))
-
-		ascript_name = os.path.join(dest, 'Contents', 'MacOS', scut.name)
-		with open(ascript_name, 'w') as fout:
-			fout.write(text.format(**opts))
-
-		os.chmod(ascript_name, 493)  # = octal 755 / rwxr-xr-x
-		icon_dest = os.path.join(dest, 'Contents', 'Resources', scut.name + '.icns')
-		shutil.copy(scut.icon, icon_dest)
-
-
+		open(f"{userfolders.desktop}/Regis Desktop.command", 'w').write(text)
+		os.system(f"chmod 555 '{userfolders.desktop}/Regis Desktop.command'")
 
 	leave.destroy()
 
