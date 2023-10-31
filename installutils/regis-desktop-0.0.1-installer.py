@@ -376,18 +376,19 @@ def install():
 		wscript.save()
 
 
-	# else:
+	else:
 		userfolders = pyshortcuts.darwin.get_folders()
 		working_dir = os.getcwd()
 
-		text = ['#!/bin/bash',
-				"export EXE={exe:s}",
-				"export SCRIPT={script:s}",
-				"export ARGS='{args:s}'"]
+		text = [
+			"#!/bin/bash",
+			f"export EXE={sys.executable}",
+			f"export SCRIPT={os.path.abspath('regis-desktop.py')}"
+		]
 
-		text.append("cd {workdir:s}")
+		text.append(f"cd {working_dir}")
 
-		text.append("$EXE $SCRIPT $ARGS")
+		text.append("'$EXE' '$SCRIPT'")
 
 		text.append('\n')
 		text = '\n'.join(text)
