@@ -375,11 +375,13 @@ def install():
 		wscript.IconLocation = os.path.abspath("assets/regis-icon.ico")
 		wscript.save()
 
+
+	# else:
 		userfolders = pyshortcuts.darwin.get_folders()
-		working_dir = ''
-	else:
-		open("~/Desktop/Regis Desktop.command", 'w').write(f"{sys.executable} '{os.path.abspath('regis-desktop.py')}'")
-		os.system("chmod 555 '~/Desktop/Regis Desktop.command'")
+		working_dir = os.getcwd()
+
+		open(f"{userfolders.desktop}/Regis Desktop.command", 'w').write(f"'{sys.executable}' '{os.path.abspath('regis-desktop.py')}'")
+		os.system(f"chmod 555 '{userfolders.desktop}/Regis Desktop.command'")
 
 		scut = pyshortcuts.shortcut("regis-desktop.py", userfolders, name="Regis Desktop", description="Regis Desktop Launcher Shortcut",
 			working_dir=working_dir, icon="assets/regis-icon.icns")
@@ -435,10 +437,9 @@ def install():
 				"export SCRIPT={script:s}",
 				"export ARGS='{args:s}'"]
 
-		if scut.working_dir not in (None, ''):
-			text.append("cd {workdir:s}")
+		text.append("cd {workdir:s}")
 
-			text.append("$EXE $SCRIPT $ARGS")
+		text.append("$EXE $SCRIPT $ARGS")
 
 		text.append('\n')
 		text = '\n'.join(text)
